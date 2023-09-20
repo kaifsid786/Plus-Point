@@ -1,0 +1,61 @@
+.our-team-main{
+    width: 100%;
+}
+.our-team-banner{
+    width: 100%;
+    height: 45rem;
+    position: relative;
+}
+.our-team-banner-img{
+    width: 100%;
+    height: 100%;
+}
+.our-team-banner-grade{
+    position: absolute;
+    bottom: 0;
+   width: 100%;
+   height: 45%;
+   background: linear-gradient(0deg, black, transparent);
+}
+.our-team-banner-title{
+    position: absolute;
+    bottom: 2rem;
+    left: 8rem;
+    width: 60%;
+    color: #FFFCC8;
+    font-family: Poppins;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 5rem; /* 123.077% */
+    text-align: left;
+}
+.our-team-content{
+    width: 100%;
+    padding: 0 10rem;
+}
+.our-team-content-1{
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+.our-team-content-1 h5{
+    color: #4C341F;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.our-team-content-1 h3{
+    color: #1F1F1F;
+    font-family: Poppins;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.75rem;
+}
