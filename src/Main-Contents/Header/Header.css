@@ -1,10 +1,14 @@
 .main-header{
     width: 100%;
-    height: 20vh;
+    height: 8rem;
     background-color: #fff;
     display: flex;
     position: relative;
     padding: 0px 4rem;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    /* transition: all 1s ease; */
 }
 .disp{
     display: none;
@@ -16,6 +20,7 @@
     align-items: center;
     font-size: 35px;
     font-weight: 800;
+    margin-left: 40px;
 }
 .head-img{
     width: 180px;
@@ -26,6 +31,11 @@
     justify-content: space-between;
     align-items: center;
 }
+.right ul li a{
+    color: rgb(177, 174, 174);;
+    text-decoration: none;
+    font-style: normal;
+}
 .right ul{
     width: 100%;
     display: flex;
@@ -35,7 +45,7 @@
  .right ul li{
     position: relative;
     list-style: none;
-    font-size: 18px;
+    font-size: 0.85vw;
     color: rgb(177, 174, 174);
     font-weight: bolder;
     transition: 0.5s ease;
@@ -48,10 +58,9 @@
 }
 
 .head-contact{
-    width: 120px;
-    height: 40px;
+    width: 6.3vw;
+    height: 2.5vw;
     background-color: #4C341F;
-    color: white !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +80,7 @@
     opacity: 0;
     transition: all 1s ease;
     background-color: #fff;
-    box-shadow:2px 2px 2px 2px rgb(239, 238, 238);
+    /* box-shadow:2px 2px 2px 2px rgb(239, 238, 238); */
     gap: 2rem;
     z-index: 999;
 }
@@ -108,61 +117,91 @@
 }
 .right-ham-content{
     visibility: hidden;
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 50%;
+    height: 500px;
+    position: fixed;
+    left: 0;
+    /* transform: translateX(-50%); */
     top: 20vh;
     animation: slide 0.5s ease;
+    z-index: 999;
+    background-color: #fff;
+    overflow-y: auto;
+    visibility: hidden !important;
 }
 .disp-ham{
     left: -100%;
     animation: slideBack 0.5s;
 }
+.right-ham-content ul{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    margin-top: 3rem;
+}
+.right-ham-content ul li{
+    width: 100%;
+    min-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-ham-content ul li span{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 1.5rem;
+    color: rgb(134, 133, 133);
+}
+.right-ham-content ul li span a{
+    text-decoration: none;
+    color: rgb(134, 133, 133);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.right-ham-content ul li ul{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   transition: all 0.5s ease;
+   margin-top: 0;
+}
+.right-ham-content ul li ul li{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 1.5rem;
+}
+.right-ham-content ul li ul li a{
+    text-decoration: none;
+    color: rgb(134, 133, 133);
+}
+
+/* Animations --------------> */
 @keyframes slide{
     0%{
-        left: 0;
+        left: -20%;
     }
     100%{
-        left: 50%;
+        left: 0;
     }
 }
 @keyframes slideBack{
     0%{
-        left:50%
+        left:50%;
     }
     100%{
         left: 150%;
     }
-}
-.right-ham-content ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    background-color: #fff;
-    box-shadow:2px 2px 2px 2px rgb(239, 238, 238);
-}
-.right-ham-content ul li{
-     width: 90%;
-     min-height: 2rem;
-     box-shadow: 2px 2px rgb(239, 238, 238);
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     color: rgb(156, 152, 152);
-    font-weight: bolder;
-}
-.right-ham-content ul li .drop-down-ham{
-    width: 100%;
-    height: 100%;
-    font-size: 15px;
-    font-weight: 300;
-    animation: slide2 0.5s ease ;
 }
 @keyframes slide2{
     0%{
@@ -177,44 +216,62 @@
     }
 }
 /* Responsiveness ---------------> */
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1400px) {
     .main-header{
-        padding: 0rem !important;
+        height: 6rem;
     }
-    .right ul li{
-        font-size: 12px;
-    }
-    .head-contact{
-        width: 80px;
-        font-size: 10px !important;
+    .left-logo{
+        flex: 1 0 90px;
     }
     .head-img{
-        width: 130px;
+        width: 90px;
+    }
+    .head-contact{
+        width: 7vw;
+        height: 3vw;
+    }
+    .right ul li{
+        font-size: 1vw !important;
+    }
+    .right-ham-content{
+        visibility: hidden !important;
     }
 }
-@media screen and (max-width:780px){
+@media screen and (max-width:900px){
+    .main-header{
+        padding: 2rem;
+    }
     .right-ham-menu-img{
         display: flex;
     }
     .right-ham-content{
-        visibility: visible;
+        visibility: visible !important;
+        top: 6rem;
     }
     .right{
         display: none;
     }
     .left-logo{
         justify-content: flex-start;
-        margin-left: 50px;
+        margin-left: 30px;
     }
 }
 @media screen and (max-width:480px) {
     .right-ham-content{
-        width: 100%;
+        width: 60%;
+        top: 6rem;
     }
     .head-img{
         width: 100px;
     }
     .ham-img{
         font-size: 2.5rem;
+    }
+    .ham-img{
+        width: 100px;
+    }
+    .main-header{
+        padding: 0;
+        height: 6rem;
     }
 }

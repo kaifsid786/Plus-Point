@@ -1,9 +1,20 @@
-import React, { useState }  from "react";
+import React, { useEffect, useRef, useState }  from "react";
 import img from '../../images/PlusPointBrown.png';
 import {AiOutlineDown} from 'react-icons/ai';
 import {GiHamburgerMenu} from "react-icons/gi";
 import  './Header.css';
 export default function Header(){
+
+    useEffect(()=>{},window.addEventListener("scroll",()=>{
+         if( window.innerWidth > 1000 && window.pageYOffset > 10 && window.pageYOffset < 1500)
+           setShowHead(false);
+         else if( window.innerWidth <= 1000 && window.pageYOffset > 10 && window.pageYOffset < 600)
+         setShowHead(false);
+        else
+        setShowHead(true);
+    }))
+    
+    const [showHead,setShowHead]=useState(true);
     const [showMenu , setShowMenu] = useState(false);
     const [showHamMenu , setShowHamMenu] = useState(false);
     const [showHamAbout , setShowHamAbout] = useState(false);
@@ -23,38 +34,38 @@ export default function Header(){
     }
     return(
         <>
-        <div className="main-header">
+        <div className="main-header" id="1" style={showHead?{}:{display:"none"}}>
             <div className="left-logo">
                 <img src={img} alt="" className="head-img" />
             </div>
             <div className={!showMenu ? "right" : "disp"}>
                 <ul>
-                    <li>Home</li>  
-                    <li>Who we are <span> <AiOutlineDown/> </span>
+                    <li> <a href="/">Home</a></li>  
+                    <li> <a href="ourTeam">Who we are <span> <AiOutlineDown/> </span></a>
                       <ul className="drop-down">
-                          <li>About-1</li>
-                          <li>About-2</li>
-                          <li>About-3</li>
+                          <li> <a href="">About-1</a></li>
+                          <li> <a href="">About-2</a></li>
+                          <li> <a href="">About-3</a></li>
                       </ul>
                     </li>
-                    <li>What we do</li>
-                    <li>Media <span> <AiOutlineDown/> </span>
+                    <li> <a href="">What we do</a></li>
+                    <li> <a href="/media">Media <span> <AiOutlineDown/></span></a>
                     <ul className="drop-down">
-                          <li>Media-1</li>
-                          <li>Media-2</li>
-                          <li>Media-3</li>
-                          <li>Media-4</li>
+                          <li> <a href="">Media-1</a></li>
+                          <li> <a href="">Media-2</a></li>
+                          <li> <a href="">Media-3</a></li>
+                          <li> <a href="">Media-4</a></li>
                       </ul>
                     </li>
-                    <li>Products <span> <AiOutlineDown/> </span>
+                    <li> <a href="">Products <span> <AiOutlineDown/> </span></a>
                     <ul className="drop-down">
-                          <li>Products-1</li>
-                          <li>Products-2</li>
-                          <li>Products-3</li>
+                          <li> <a href="">Products-1</a></li>
+                          <li> <a href="">Products-2</a></li>
+                          <li> <a href="">Products-3</a></li>
                       </ul>
                     </li>
-                    <li>Blog</li>
-                    <li className="head-contact">Contact</li>
+                    <li> <a href="">Blog</a></li>
+                    <li className="head-contact"> <a href="" style={{color:"#fff"}}>Contact</a></li>
                 </ul>
             </div>
 
@@ -63,36 +74,37 @@ export default function Header(){
                     <GiHamburgerMenu className="ham-img" onClick={show}/>
                  </div>
             </div>
-            <div className={showHamMenu ? "right-ham-content":"right-ham-content disp-ham"}>
-                 <ul>
-                    <li>Home</li>  
-                    <li onClick={showAbout}>Who we are <span> <AiOutlineDown/> </span>
-                      <ul className="drop-down-ham"  style={showHamAbout ?{display:"flex"}:{display:"none"}}>
-                        <li>About-1</li>
-                        <li>About-1</li>
-                        <li>About-1</li>
-                      </ul>
-                    </li>
-                    <li>What we do</li>
-                    <li onClick={showMedia}>Media <span> <AiOutlineDown/> </span>
-                       <ul className="drop-down-ham"  style={showHamMedia ?{display:"flex"}:{display:"none"}}>
-                          <li>Media-1</li>
-                          <li>Media-1</li>
-                          <li>Media-1</li>
-                       </ul>
-                    </li>
-                    <li onClick={showProducts}>Products <span> <AiOutlineDown/> </span> 
-                        <ul className="drop-down-ham"  style={showHamProducts ?{display:"flex"}:{display:"none"}}>
-                            <li>Product-1</li>
-                            <li>Product-1</li>
-                            <li>Product-1</li>
+        </div>
+         <div className={showHamMenu ? "right-ham-content":"right-ham-content disp-ham"} style={showHead?{}:{height:"0"}}>
+                 <ul style={showHead?{}:{display:"none"}}>
+                    <li><span><a href="">Home</a></span></li>
+                    <li><span><a href="">Who we are</a> <AiOutlineDown onClick={showAbout}/></span>
+                        <ul style={showHamAbout?{height:"10rem",marginTop:"20px"}:{height:"0"}}>
+                            <li><a href="">About-1</a></li>
+                            <li><a href="">About-2</a></li>
+                            <li><a href="">About-3</a></li>
                         </ul>
                     </li>
-                    <li>Blog</li>
-                    <li>Contact</li>
-                </ul>
-                 </div>
-        </div>
+                    <li><span><a href="">What we do</a></span></li>
+                    <li><span><a href="/media">Media</a> <AiOutlineDown onClick={showMedia}/></span>
+                        <ul style={showHamMedia?{height:"15rem",marginTop:"20px"}:{height:"0"}}>
+                            <li><a href="">Media-1</a></li>
+                            <li><a href="">Media-2</a></li>
+                            <li><a href="">Media-3</a></li>
+                            <li><a href="">Media-4</a></li>
+                        </ul>
+                    </li>
+                    <li><span><a href="">Products</a> <AiOutlineDown onClick={showProducts}/></span>
+                          <ul style={showHamProducts?{height:"10rem",marginTop:"20px"}:{height:"0"}}>
+                            <li><a href="">Product-1</a></li>
+                            <li><a href="">Product-2</a></li>
+                            <li><a href="">Product-3</a></li>
+                        </ul>
+                    </li>
+                    <li><span><a href="">Blogs</a></span></li>
+                    <li><span><a href="">Contacts</a></span></li>
+                 </ul>
+             </div>
         </>
     )
 }

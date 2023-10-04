@@ -1,0 +1,74 @@
+.main-homeAccordian{
+    width: 100%;
+    min-height: 50rem;
+    position: relative;
+}
+.homeAccordian-left{
+    width: calc(50% - 20px);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+}
+.homeAccordian-left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.homeAccordian-right{
+    width: calc(50% - 20px);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.homeAccordian-right p{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: aquamarine;
+    color: #4C341F;
+    font-family: Poppins;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.07281rem; /* 110.548% */
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.homeAccord-onClick{
+    height: 10rem !important;
+    background-color: #4C341F !important;
+    color: #FFF !important;
+    font-size: 3.125rem !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: 2.07281rem !important; /* 66.329% */
+}
+
+/* Responsiveness -------------------------------------------> */
+@media screen and (max-width:1400px) {
+    .homeAccordian-left,.homeAccordian-right{
+        height: 80%;
+    }
+    .homeAccordian-right p{
+        font-size: 1.5rem;
+        height: 4rem;
+    }
+    .homeAccord-onClick{
+        font-size: 2rem !important;
+        height: 7rem !important;
+    }
+}
+@media screen and (max-width:900px){
+  .main-homeAccordian{
+    display: none;
+  }
+}

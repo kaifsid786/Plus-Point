@@ -1,21 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import Header from './Main-Contents/Header/Header';
-import Footer from './Main-Contents/Footer/Footer';
-import PreFooter from './Main-Contents/PreFooter/PreFooter';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './Main-Contents/Home/Home';
 import Ourteam from './Main-Contents/OurTeam/Ourteam';
-import OurteamCard from './Main-Contents/OurTeam/OurteamCard/OurteamCard';
+import Vision from './Main-Contents/Vision/Vision';
+import FAQs from './Main-Contents/FAQs/FAQs';
+import Media from './Main-Contents/Media/Media';
 function App() {
   return (
     <div className="App">
-      {/* <Header />
-       <div style={{width:"100%",height:"100vh",background:"red"}}>
-         Cheeck
-       </div>
-      <PreFooter />
-      <Footer /> */}
-       {/* <Ourteam /> */}
-      <OurteamCard />
+        <BrowserRouter>
+           <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/ourTeam' element={<Ourteam />} />
+              <Route path='/ourVision' element={<Vision />} />
+              <Route path='/media' element={<Media />} />
+              <Route path='/faqs' element={<FAQs />} />
+           </Routes>
+        </BrowserRouter>
     </div>
   );
 }
