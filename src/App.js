@@ -5,17 +5,25 @@ import Footer from './Main-Contents/Footer/Footer';
 import PreFooter from './Main-Contents/PreFooter/PreFooter';
 import Ourteam from './Main-Contents/OurTeam/Ourteam';
 import OurteamCard from './Main-Contents/OurTeam/OurteamCard/OurteamCard';
+import Experties from './Main-Contents/Experties/Experties';
+import Blogs from './Main-Contents/Blogs/Blogs';
+import BlogInside from './Main-Contents/Blog-inside/BlogInside';
+import Welcome from './Main-Contents/Welcome/Welcome';
 function App() {
   return (
     <div className="App">
-      {/* <Header />
-       <div style={{width:"100%",height:"100vh",background:"red"}}>
+       <Header />
+       {/* <div style={{width:"100%",height:"100vh",background:"red"}}>
          Cheeck
-       </div>
+       </div> */}
+       {/* <Experties /> */}
+       {/* <Blogs /> */}
+       {/* <BlogInside /> */}
+       {/* <Welcome /> */}
       <PreFooter />
-      <Footer /> */}
+      <Footer /> 
        {/* <Ourteam /> */}
-      <OurteamCard />
+      {/* <OurteamCard /> */}
     </div>
   );
 }

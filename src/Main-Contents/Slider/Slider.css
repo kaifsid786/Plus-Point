@@ -1,0 +1,79 @@
+html {
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+  body {
+    overflow-y: visible;
+    position: relative;
+    overflow-x: hidden;
+  }
+  html,
+  body {
+    margin: 0;
+  }
+
+  
+  .container-slide {
+    width: 600vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .firstContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: yellow;
+  }
+  
+  .lastContainer {
+    display: flex;
+    height: 100vh;
+    background: yellow;
+  }
+  
+  .panel {
+    width: 100vw;
+    height: 100vh;
+  }
+  .red {
+    background: blue;
+  }
+  .red {
+    background: red;
+  }
+  .orange {
+    background: orange;
+  }
+  .purple {
+    background: purple;
+  }
+  .blue {
+    background-color: blue;
+  }
+  
+
+
+
+  .slide1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+    padding: 0px 7rem;
+  }
+  .s-img>img{
+    border-radius: 15px;
+    height: 22rem;
+  }
+  .s-left,.s-right{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
