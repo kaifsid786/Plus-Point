@@ -125,15 +125,47 @@ width: 75rem;
     border-radius: 10px;
     width: 100%;
 }
+.p-b-i {
+    position: relative;
+    
+  }
+  
+  .p-b-i>img {
+    width: 100%;
+    height: auto;
+    
+  }
+  
+  .p-b-i .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     background-color: transparent; 
+    padding: 10px;
+    color: white; /* Text color */
+    opacity: 0; /* Initially hidden */
+    transition: ease-in-out;
+  }
+  
+  .p-b-i:hover .overlay-text {
+    background: #4C341F; 
+    opacity: 1; /* Show the text on hover */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
 .material-protray{
     font-size: 3rem;
     text-align: left;
     font-weight: 500;
     line-height: 3rem;
     color: #4C341F;
-
-
-    
 }
 
 @media screen and (max-width: 767px) {

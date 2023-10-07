@@ -4,6 +4,7 @@
 .w-pp{
     display: flex;
     margin-top: 2rem;
+    padding: 20px 50px;
 }
 .left-pp{
     display: flex;
@@ -31,6 +32,34 @@
 
 
 
-/* slider */
+.wel-h{
+    font-size: 3rem;
+}
+/* .hide-btn>button{
+    padding: 6px 15px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    
+} */
+.hide-btn{
+    display: none
+}
+    @media screen and (max-width:768px){
+      .w-pp{
+        flex-direction: column;
+        padding: 10px 25px;
+      }
+      .left-pp{
+        align-items: flex-start;
+      }
+      .wel-h{
+        font-size: 2rem;
+      }
+      
+    }
 
  

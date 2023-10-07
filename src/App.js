@@ -19,7 +19,7 @@ function App() {
        {/* <Experties /> */}
        {/* <Blogs /> */}
        {/* <BlogInside /> */}
-       {/* <Welcome /> */}
+       <Welcome />
       <PreFooter />
       <Footer /> 
        {/* <Ourteam /> */}

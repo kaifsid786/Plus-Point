@@ -22,44 +22,14 @@ html {
     flex-wrap: wrap;
   }
   
-  .firstContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: yellow;
-  }
   
-  .lastContainer {
-    display: flex;
-    height: 100vh;
-    background: yellow;
-  }
   
   .panel {
     width: 100vw;
     height: 100vh;
   }
-  .red {
-    background: blue;
-  }
-  .red {
-    background: red;
-  }
-  .orange {
-    background: orange;
-  }
-  .purple {
-    background: purple;
-  }
-  .blue {
-    background-color: blue;
-  }
-  
-
-
-
+ 
+ 
   .slide1{
     display: flex;
     justify-content: center;
@@ -76,4 +46,41 @@ html {
     display: flex;
     flex: 1;
     flex-direction: column;
+  }
+  .history-year{
+    columns: #4C341F;
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width:768px) {
+    .slide1{
+      flex-direction: column-reverse;
+      width: 100vw;
+    }
+    .container-slide{
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .s-right{
+      width: 90vw;
+      flex: none;
+    }
+    .s-img{
+      height: 23vh;
+    }
+    .s-img>img{
+      height: 100%;
+    }
+    .s-left{
+      width: 100vw;
+    padding: 0 20px;
+    height: fit-content;
+    flex: none;
+
+    }
+    .s-left>h1{
+      font-size: 2rem;
+    }
   }

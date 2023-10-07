@@ -2,48 +2,14 @@ import React, { useEffect, useState } from "react";
 import Exp1 from "../../images/Experties.png";
 import "./Welcome.css";
 import { useRef } from "react";
-import SliderPage from "../Slider-page/SliderPage";
+
 import Gallery from "../Gallery/index";
 import Slider from "../Slider/Slider";
 const Welcome = () => {
-  const ref = useRef(null);  
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [scrolling, setScrolling] = useState(false);
-
-  const slides = ["Slide 1", "Slide 2", "Slide 3"];
-  const scrollHandler = (e) => {
-    if (e.deltaY > 0 && currentIndex < slides.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else if (e.deltaY < 0 && currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-    setScrolling(true);
-  };
-
-  useEffect(() => {
-    let timeout;
-
-    const handleScrollStop = () => {
-      if (timeout) {
-        clearTimeout(timeout);
-      }
-
-      timeout = setTimeout(() => {
-        setScrolling(false);
-      }, 250); // Adjust the delay time as needed
-    };
-
-    window.addEventListener("wheel", scrollHandler);
-    window.addEventListener("scroll", handleScrollStop);
-
-    return () => {
-      window.removeEventListener("wheel", scrollHandler);
-      window.removeEventListener("scroll", handleScrollStop);
-    };
-  }, [currentIndex]);
-
-  const translateX = -currentIndex * 100;
-
+  const [seeContent,setSeeContent]=useState(true);
+  const handleSeeMore=()=>{
+    setSeeContent((prev)=>!prev);
+  }
   return (
     <div className="welcome">
       <div className="top-sec">
@@ -52,9 +18,9 @@ const Welcome = () => {
         </div>
       </div>
       <div className="container-welcome">
-        <div style={{padding:'20px 50px'}} className="w-pp">
+        <div className="w-pp">
           <div className="left-pp">
-            <h1 style={{ color: "rgba(0, 0, 0, 0.51)", fontSize: "3rem" }}>
+            <h1 className="wel-h" style={{ color: "rgba(0, 0, 0, 0.51)"}}>
               Welcome to the <br /> World of
               <br />
               <span style={{ color: "#4C341F" }}>Plus Point</span>
@@ -84,6 +50,10 @@ const Welcome = () => {
               could turn out to be like. But we worked. We worked in a
               relentless pursuit of perfection.
             </div>
+            <div>
+              <button onClick={handleSeeMore} className="s-m-btn">{seeContent?"See Less":"See More"}</button>
+            </div>
+            {seeContent?
             <div style={{ color: "1F1F1F" }} className="w-h-1">
               <span>
                 Having jewelled up lacs of homes during this course, we now
@@ -106,6 +76,7 @@ const Welcome = () => {
               <br />
               So come on in, join our family, and experience the magic unfold.
             </div>
+            :""}
           </div>
         </div>
 
@@ -121,7 +92,7 @@ const Welcome = () => {
         <SliderPage />
         </div> */}
 
-        <Slider/>
+        <Slider />
       </div>
     </div>
   );

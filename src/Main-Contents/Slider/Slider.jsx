@@ -3,6 +3,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 import "./Slider.css";
 
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Slider() {
@@ -31,14 +33,11 @@ export default function Slider() {
 
   return (
     <div className="Slider" ref={component}>
-      {/* <div className="firstContainer">
-        <h1>Testing horizontal scrolling w/ three sections</h1>
-        <h2>First Container</h2>
-      </div> */}
+     
       <div ref={slider} className="container-slide">
         <div className="slide1 panel">
           <div className="s-left">
-            <h1 style={{ color: "#4C3`41F", fontSize: "3rem" }}>
+            <h1 className="history-year">
               1942
               <br />
               Building a Legacy:
@@ -67,7 +66,7 @@ export default function Slider() {
         </div>
         <div className="slide1 panel">
           <div className="s-left">
-            <h1 style={{ color: "#4C3`41F", fontSize: "3rem" }}>
+            <h1 className="history-year">
               1942
               <br />
               Building a Legacy:
@@ -96,7 +95,7 @@ export default function Slider() {
         </div>
         <div className="slide1 panel">
           <div className="s-left">
-            <h1 style={{ color: "#4C3`41F", fontSize: "3rem" }}>
+            <h1 className="history-year">
               1942
               <br />
               Building a Legacy:
@@ -123,9 +122,7 @@ export default function Slider() {
             </div>
           </div>
         </div>
-        {/* <div className="panel red">ONE</div>
-        <div className="panel orange">TWO</div>
-        <div className="panel purple">THREE</div> */}
+       
       </div>
     </div>
   );
