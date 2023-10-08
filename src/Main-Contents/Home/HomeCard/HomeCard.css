@@ -12,6 +12,13 @@
     border: 1px solid #000;
     box-shadow: 0px 7px 14px 0px rgba(0, 0, 0, 0.20);
     cursor: pointer;
+    transition: all 1s ease;
+}
+.main-homeCard:hover{
+    background-color: #4C341F;
+}
+.main-homeCard:hover > *{
+    color: white !important;
 }
 .homeCard-img{
     width: 20%;
@@ -36,11 +43,14 @@
 
 
 /* Responsiveness ------------>>>>>>>>>>>>>>>>> */
-@media screen and (max-width:1400px) {
+@media screen and (max-width:480px){
     .homeCard-title{
-        font-size: 1.7rem !important;
+        font-size: 1.5rem !important;
     }
     .homeCard-info{
-        font-size: 1rem;
+        font-size: 1rem !important;
+    }
+    .main-homeCard{
+        width: 100% !important;
     }
 }

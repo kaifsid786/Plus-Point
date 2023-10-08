@@ -64,7 +64,7 @@
 }
 
 /* Responsiveness -----------------------------> */
-@media screen and (max-width:1400px) {
+/* @media screen and (max-width:1400px) {
     .main-homeNews{
         gap: 50px;
     }
@@ -81,7 +81,7 @@
     .homeNews-content p{
         font-size: 0.85rem;
     }
-}
+} */
 @media screen and (max-width:900px){
     .homeNews-para{
         width: 100%;

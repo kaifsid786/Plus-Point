@@ -28,7 +28,7 @@ export default function Footer(){
                          <TiSocialLinkedinCircular />
                        </div>
                    </div>
-                   <div className="foot-col-2 foot-col">
+                   <div className="foot-col-2 foot-col target">
                      <h3>Quick Links</h3>
                      <a href="">Home</a>
                      <a href="">Discover</a>

@@ -37,7 +37,7 @@
     font-size: 3.125rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 3.44175rem; /* 110.137% */
+    line-height: 3.44175rem; 
 }
 .homeUSP-left-content p{
     color: #1F1F1F;
@@ -46,7 +46,7 @@
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.875rem; /* 150% */
+    line-height: 1.875rem; 
 }
 .homeUSP-right-content{
     width: 100%;
@@ -67,7 +67,7 @@
     font-size: 1.875rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 2.45994rem; /* 131.196% */
+    line-height: 2.45994rem; 
 }
 .homeUSP-right-content p{
     color: #FFF;
@@ -80,7 +80,7 @@
 }
 
 /* Responsiveness -----------------> */
-@media screen and (max-width:1400px) {
+/* @media screen and (max-width:1400px) {
     .homeUSP-left-content h1{
         font-size: 3rem;
     }
@@ -93,9 +93,9 @@
     .homeUSP-right-content p{
         font-size: 1rem;
     }
-}
+} */
 
-@media screen and (max-width:900px){
+@media screen and (max-width:789px){
    .main-homeUSP{
     display: flex;
     position:unset;
@@ -118,7 +118,7 @@
    }
 }
 
-@media screen and (max-width:550px){
+@media screen and (max-width:480px){
     .homeUSP-left h1{
         font-size: 1.8rem !important;
     }

@@ -43,7 +43,7 @@
     cursor: pointer;
     border-radius: 10px;
 }
-.homeAccord-onClick{
+.homeAccord-onMousonMouseOver{
     height: 10rem !important;
     background-color: #4C341F !important;
     color: #FFF !important;
@@ -54,20 +54,20 @@
 }
 
 /* Responsiveness -------------------------------------------> */
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1300px) {
     .homeAccordian-left,.homeAccordian-right{
-        height: 80%;
+        height: 95%;
     }
     .homeAccordian-right p{
-        font-size: 1.5rem;
-        height: 4rem;
+        font-size: 1.8rem;
+        height: 6rem;
     }
-    .homeAccord-onClick{
-        font-size: 2rem !important;
-        height: 7rem !important;
+    .homeAccord-onMousonMouseOver{
+        font-size: 2.5rem !important;
+        height: 10rem !important;
     }
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:789px){
   .main-homeAccordian{
     display: none;
   }

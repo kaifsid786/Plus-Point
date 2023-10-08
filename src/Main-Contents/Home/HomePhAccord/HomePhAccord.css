@@ -49,14 +49,14 @@
         display: none;
     }
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width:768px) {
     .main-homePhAccord{
         display: flex;
     }
 }
-@media screen and (max-width:550px) {
+@media screen and (max-width:480px) {
     .homePhAccord-top{
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
     .homePhstyle{
         font-size: 1.1rem;

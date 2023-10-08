@@ -19,49 +19,49 @@ export default function HomeAccordian() {
                   <img src={doorPull} alt="" />
               </div>
               <div className="homeAccordian-right">
-                 <p className={state1 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.50)"}} onClick={()=>{
+                 <p className={state1 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.50)"}}onMouseOver={()=>{
                     setState1(!state1);setState2(false);setState3(false);
                     setState4(false);setState5(false);setState6(false);
                     setState7(false);setState8(false);setState9(false);
                  }} >Mortise Locks</p>
-                 <p className={state2 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.50)"}} onClick={()=>{
+                 <p className={state2 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.50)"}}onMouseOver={()=>{
                      if(state2 === false){
                         setState1(false);setState2(!state2);setState3(false);
                         setState4(false);setState5(false);setState6(false);
                         setState7(false);setState8(false);setState9(false);
                      }
                  }}>Door Pull Handles</p>
-                 <p className={state3 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.50)"}} onClick={()=>{
+                 <p className={state3 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.50)"}}onMouseOver={()=>{
                       setState1(false);setState2(false);setState3(!state3);
                       setState4(false);setState5(false);setState6(false);
                       setState7(false);setState8(false);setState9(false);
                  }}>Aldrop Door Kits</p>
-                 <p className={state4 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.40)"}} onClick={()=>{
+                 <p className={state4 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.40)"}}onMouseOver={()=>{
                         setState1(false);setState2(false);setState3(false);
                         setState4(!state4);setState5(false);setState6(false);
                         setState7(false);setState8(false);setState9(false);
                  }}>Main Door Locks</p>
-                 <p className={state5 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.30)"}} onClick={()=>{
+                 <p className={state5 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.30)"}}onMouseOver={()=>{
                      setState1(false);setState2(false);setState3(false);
                      setState4(false);setState5(!state5);setState6(false);
                      setState7(false);setState8(false);setState9(false);
                  }}>Cabinet Locks</p>
-                 <p className={state6 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.20)"}} onClick={()=>{
+                 <p className={state6 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.20)"}}onMouseOver={()=>{
                      setState1(false);setState2(false);setState3(false);
                      setState4(false);setState5(false);setState6(!state6);
                      setState7(false);setState8(false);setState9(false);
                  }}>Cabinet Handles</p>
-                 <p className={state7 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.15)"}} onClick={()=>{
+                 <p className={state7 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.15)"}}onMouseOver={()=>{
                      setState1(false);setState2(false);setState3(false);
                      setState4(false);setState5(false);setState6(false);
                      setState7(!state7);setState8(false);setState9(false);
                  }}>Door Decorative Accessories</p>
-                 <p className={state8 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.15)"}} onClick={()=>{
+                 <p className={state8 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.15)"}}onMouseOver={()=>{
                      setState1(false);setState2(false);setState3(false);
                      setState4(false);setState5(false);setState6(false);
                      setState7(false);setState8(!state8);setState9(false);
                  }}>Door Hinges</p>
-                 <p className={state9 ?'homeAccord-onClick':""} style={{background:"rgba(150, 105, 66, 0.12)"}} onClick={()=>{
+                 <p className={state9 ?'homeAccord-onMousonMouseOver':""} style={{background:"rgba(150, 105, 66, 0.12)"}}onMouseOver={()=>{
                      setState1(false);setState2(false);setState3(false);
                      setState4(false);setState5(false);setState6(false);
                      setState7(false);setState8(false);setState9(!state9);

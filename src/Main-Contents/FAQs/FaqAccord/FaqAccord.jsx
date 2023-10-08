@@ -14,7 +14,7 @@ export default function FaqAccord(props) {
               <div className="faqAccord-icon" onClick={()=>setFaqs(!faq)} style={faq ? {display:"flex",color:"white"}:{display:"none"}}><AiOutlineMinus /></div>
           </div>
           <div className="faqAccord-hide" style={faq ?{maxHeight:"fit-content",padding:"2rem"}:{padding:"0 2rem",maxHeight:"0"}}>
-             <p>
+             <p style={{marginTop:"-1.5rem"}}>
               {props.des}
              </p>
           </div>

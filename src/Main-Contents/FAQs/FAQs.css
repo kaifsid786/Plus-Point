@@ -60,7 +60,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-top: 3rem;
-    gap: 20px;
+    gap: 50px;
 }
 
 /* Responsiveness --------------------------> */
@@ -68,17 +68,13 @@
     .main-FAQs{
         top: 6rem;
     }
-    .faq-content-left-title{
-        font-size: 3.5rem !important;
-    }
-    .faq-content-left-info{
-        font-size: 1rem !important;
-    }
-    .faq-content-left-view{
-        font-size: 1.2rem;
-    }
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:1024px) {
+   .FAQ-content-left{
+    gap:50px;
+   }
+}
+@media screen and (max-width:768px){
   .FAQ-content{
     flex-direction: column;
     position: relative;
@@ -108,12 +104,13 @@
         border-bottom: 5px solid #4C341F;
     }
 }
-@media screen and (max-width:550px){
+@media screen and (max-width:480px){
     .FAQ-content{
-        padding: 3rem 2rem;
-        gap: 20px;
+        padding: 1rem;
+        gap: 10px;
     }
     .FAQ-content-left{
+        align-items: center;
         gap: 10px;
     }
     .faq-content-left-title{
@@ -121,10 +118,15 @@
         line-height: 1.625rem;
        }
        .faq-content-left-info{
+        width: 65%;
         font-size: 0.625rem !important;
+        line-height: 0.875rem;
+       }
+       .faq-content-left-view{
+        bottom: -15px;
        }
        .FAQ-content-right{
-          gap: 0 !important;
+          gap: 10px !important;
           margin-bottom: 20px;
        }
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState }  from "react";
-import img from '../../images/PlusPointBrown.png';
+import img from '../../images/PlusPointLogo.png';
 import {AiOutlineDown} from 'react-icons/ai';
 import {GiHamburgerMenu} from "react-icons/gi";
 import  './Header.css';
@@ -15,6 +15,7 @@ export default function Header(){
     }))
     
     const [showHead,setShowHead]=useState(true);
+    const [showUl,setShowUl]=useState(false);
     const [showMenu , setShowMenu] = useState(false);
     const [showHamMenu , setShowHamMenu] = useState(false);
     const [showHamAbout , setShowHamAbout] = useState(false);
@@ -22,6 +23,7 @@ export default function Header(){
     const [showHamProducts , setShowHamProducts] = useState(false);
     const show = ()=>{
         setShowHamMenu(!showHamMenu);
+        setShowUl(true);
     }
     const showAbout = ()=>{
         setShowHamAbout(!showHamAbout);
@@ -75,10 +77,10 @@ export default function Header(){
                  </div>
             </div>
         </div>
-         <div className={showHamMenu ? "right-ham-content":"right-ham-content disp-ham"} style={showHead?{}:{height:"0"}}>
-                 <ul style={showHead?{}:{display:"none"}}>
-                    <li><span><a href="">Home</a></span></li>
-                    <li><span><a href="">Who we are</a> <AiOutlineDown onClick={showAbout}/></span>
+         <div className={showHamMenu ? "right-ham-content":"right-ham-content disp-ham"} style={(showHead && showUl)?{}:{height:"0"}}>
+                 <ul style={(showUl && showHead)?{}:{display:"none"}}>
+                    <li><span><a href="/">Home</a></span></li>
+                    <li><span><a href="/ourTeam">Who we are</a> <AiOutlineDown onClick={showAbout}/></span>
                         <ul style={showHamAbout?{height:"10rem",marginTop:"20px"}:{height:"0"}}>
                             <li><a href="">About-1</a></li>
                             <li><a href="">About-2</a></li>

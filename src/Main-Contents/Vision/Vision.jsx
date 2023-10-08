@@ -16,18 +16,18 @@ export default function Vision() {
             </div>
             <div className="vision-text-slide">
                 <div className="vision-marque">
-                  <span>Mission, Mission, Mission</span>
+                  <span>Mission, Mission, Mission,</span>
                 </div>
                 <div className="vision-marque marque-2">
-                  <span>Mission, Mission, Mission</span>
+                  <span>Mission, Mission, Mission,</span>
                 </div>
             </div>
             <div className="vision-text-slide">
                   <div className="vision-marque v-2 ">
-                    <span>Vision, Vision, Vision</span>
+                    <span>Vision,  Vision,  Vision, Vision,</span>
                   </div>
-                  <div className="vision-marque v-2  marque-2">
-                    <span>Vision, Vision, Vision</span>
+                  <div className="vision-marque v-2  marque-v2">
+                    <span>Vision,  Vision,  Vision, Vision,</span>
                   </div>
             </div>
             <div className="vision-content">

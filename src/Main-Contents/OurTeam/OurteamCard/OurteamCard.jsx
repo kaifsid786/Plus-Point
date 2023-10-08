@@ -5,7 +5,7 @@ export default function OurteamCard(props) {
   return (
     <>
        <div className="our-team-card">
-             <img src={img} alt="" className="our-team-card-img"/>
+             <img src={props.img} alt="" className="our-team-card-img"/>
           <div className="our-team-card-Tpost">
             <h3 className="our-team-card-name">
                     {props.name}

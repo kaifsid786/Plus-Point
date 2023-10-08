@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import PreFooter from '../PreFooter/PreFooter';
 import Footer from '../Footer/Footer';
 import media1 from '../../video/media-1.mp4';
+import {motion} from 'framer-motion';
 import './Media.css';
 import col1 from './col1'
 import col2 from './col2'
@@ -17,23 +18,21 @@ import vector2 from '../../images/media-vector2.svg'
 export default function Media() {
 
   const [height,setHeight] = useState(false);
-  const [wrap,setWrap] = useState(false);
-    
-  useEffect(()=>{
-  },window.addEventListener("scroll",()=>{
-    if(window.pageYOffset > 10)
-    setWrap(true);
+  const [breadth,setBreadth] = useState(false);
+  useEffect(()=>{},window.addEventListener("scroll",()=>{
     if( window.innerWidth >= 1000 && window.pageYOffset > 400 ){
         setHeight(true);
     }
-    else if(window.innerWidth <= 1000 & window.pageYOffset > 100){
+    else if(window.innerWidth <= 1000 & window.pageYOffset > 50){
         setHeight(true);
+        setBreadth(true);
     }
     else{
-      setWrap(false);
+      // setWrap(false);
       setHeight(false);
     } 
   }));
+
   
   return (
     <>
@@ -43,14 +42,21 @@ export default function Media() {
                   <div className={height?"media-content-1-title1 med-hOn":"media-content-1-title1 med-hOf"}>Plus</div>
                   <video src={media1} autoPlay loop muted className={height?"med-hOn":""} style={height?{display:"none"}:{}} ></video>
                   <div className={height?"media-content-1-title2 med-hOn":"media-content-1-title2 med-hOf2"}>Point</div>
-                  <div className={wrap?"media-content-1-wrapper med-wrapOn":"media-content-1-wrapper"}>
+                  <div className={height?"media-content-1-wrapper med-wrapOn":"media-content-1-wrapper"}>
                       <div className="media-content-1-col1 med-col1">
                          <div className="media-content-1-img">
                            {col1.map((val)=>{
                               return(
-                                <div className="div" style={{width:"100%",height:"fit-content",overflow:"hidden",top:""}}>
+                                <motion.div 
+                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
+                                whileInView={{y:"0"}}
+                                transition={{
+                                  duration:1,
+                                  type:'ease'
+                                }}
+                                className="div" style={{width:"100%",height:"fit-content",overflow:"hidden",top:""}}>
                                 <img src={val.img} alt="" />
-                                </div>
+                                </motion.div>
                               )
                            })}
                          </div>
@@ -59,9 +65,15 @@ export default function Media() {
                           <div className="media-content-1-img">
                           {col2.map((val)=>{
                               return(
-                                <div className="div" style={{width:"100%",height:"fit-content",overflow:"hidden"}}>
+                                <motion.div 
+                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
+                                whileInView={{y:"0"}}
+                                transition={{
+                                  duration:1,
+                                  type:'ease'
+                                }} className="div" style={{width:"100%",height:"fit-content",overflow:"hidden"}}>
                                 <img src={val.img} alt="" />
-                                </div>
+                                </motion.div>
                               )
                            })}
                           </div>
@@ -70,9 +82,15 @@ export default function Media() {
                            <div className="media-content-1-img">
                            {col3.map((val)=>{
                               return(
-                                <div className="div" style={val.blank?{width:"100%",height:"13%",visibility:"hidden"}:{width:"100%",height:"fit-content",overflow:"hidden"}}>
+                                <motion.div 
+                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
+                                whileInView={{y:"0",opacity:'1'}}
+                                transition={{
+                                  duration:1,
+                                  type:'ease'
+                                }} className="div" style={val.blank?{width:"100%",height:"13%",visibility:"hidden"}:{width:"100%",height:"fit-content",overflow:"hidden"}}>
                                 <img src={val.img} alt="" />
-                                </div>
+                                </motion.div>
                               )
                            })}
                           </div>

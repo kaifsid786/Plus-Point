@@ -39,7 +39,7 @@
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
-    text-shadow: 0 0 6px orangered, 0 0 5px orangered;
+    text-shadow: 0 0 6px #693201, 0 0 4px #4C341F;
     color: white;
     transition: all 0.5s ease;
 }
@@ -144,11 +144,11 @@
     width: calc(30rem * 8);
     animation: slideImg 10s linear infinite;
  }
- .media-content-2-slide-track:hover{
+ /* .media-content-2-slide-track:hover{
     animation-play-state: paused;
- }
+ } */
  .med-slide{
-    height: 30rem;
+    height: 28rem;
     width: 30rem;
     display: flex;
     align-items: center;
@@ -156,8 +156,8 @@
     overflow: hidden;
  }
  .med-slide img{
-    width: 100%;
-    height: 85%;
+    width: 88%;
+    height: 100%;
     border-radius: 20px;
     transition: 1s ease;
  }
@@ -195,7 +195,10 @@
 }
 /* Earth Agency ------------> */
 .med-hOn{
+    position: fixed;
+    top: 0;
     opacity: 0;
+    transition: all 1s ease;
 }
 .med-hOf{
     opacity: 1;
@@ -279,7 +282,7 @@
     .main-media{
         top:6rem;
     }
-  .Media-content-1-btn{
+  /* .Media-content-1-btn{
     bottom: 7vw;
   }
   .media-content-2{
@@ -299,9 +302,9 @@
   }
   .media-content-3-award p span{
     font-size: 1.2rem;
-  }
+  } */
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:768px){
     .Media-content-1-btn{
         width: 7rem;
         height: 2.5rem;
@@ -317,7 +320,7 @@
       }
       .med-slide{
         width: 20rem !important;
-        height: 20rem !important;
+        height: 24rem !important;
     }
       .media-content-2-title h1{
         font-size: 1.5rem !important;
@@ -345,19 +348,26 @@
         font-size: 0.8rem;
       }
 }
-@media screen and (max-width:550px){
+@media screen and (max-width:480px){
     .Media-content-1-btn{
         bottom: 10vw;
       }
     .media-content-1{
         height: 275vw;
     }
+    .media-content-2{
+        gap: 30px;
+    }
     .media-content-2-slide-track{
         animation: slideImg3 10s infinite linear;
     }
     .med-slide{
         width: 13rem !important;
-        height: 13rem !important;
+        height: 15rem !important;
+    }
+    .med-slide img{
+        width: 95%;
+        border-radius: 10px;
     }
     .med-col3{
         display: none;
@@ -379,11 +389,12 @@
         animation: slideImg2 10s linear infinite;
     }
     .media-content-2-wrapper img{
-        width: 12rem;
-        height: 14rem;
+        width: 13rem;
+        height: 14.8rem;
     }
     .media-content-3{
         flex-direction: column;
+        gap: 50px;
     }
     .media-content-3-award{
         width: 20rem;

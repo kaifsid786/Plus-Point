@@ -4,11 +4,11 @@
 }
 .faqAccord-show{
     width: 100%;
-    min-height: 5rem;
+    min-height: 4rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
+    align-items: flex-end;
+    padding: 0 2rem ;
 }
 .faqAccord-title{
     color: black;
@@ -27,7 +27,7 @@
 .faqAccord-hide {
     width: 100%;
     max-height:0;
-    padding: 2rem 0;
+    padding:0 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -45,23 +45,21 @@
 }
 
 /* Responsiveness --------------------------> */
-@media screen and (max-width:1400px){
+/* @media screen and (max-width:1400px){
     .faqAccord-title{
         font-size: 1.3rem;
     }
     .faqAccord-hide p{
         font-size: 1rem;
     }
-}
-@media screen and (max-width:550px){
+} */
+@media screen and (max-width:480px){
     .faqAccord-show{
-        height: 2rem;
+        min-height: 3rem !important;
+        padding: 0 2rem;
     }
     .faqAccord-title{
-        font-size: 0.9rem;
-    }
-    .faqAccord-hide{
-        padding: 0.5rem 2rem !important;
+        font-size: 0.75rem;
     }
     .faqAccord-hide p{
         font-size: 0.75rem;

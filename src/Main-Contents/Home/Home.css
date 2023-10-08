@@ -23,6 +23,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow-x: hidden;
 }
 .home-banner h1{
     color: #E8CD9C;
@@ -49,6 +50,7 @@
      flex-direction: column;
      justify-content: space-between;
      align-items: center;
+     overflow: hidden;
 }
 .home-content-1{
     width: 100%;
@@ -87,33 +89,21 @@
     padding: 5rem 10rem;
     background: rgba(255, 252, 200, 0.50);
 }
+/* Responsivenesss -------------------> */
 
-
-@media screen and (max-width:1400px) {
-    .main-home{
-        top: 6rem;
-    }
-    .home-banner{
-        background-size: cover;
-    }
-    .home-banner h1,.home-content-1 h1{
-        font-size: 3rem;
-    }
-    .home-banner h2 , .home-banner h3, .home-banner h4{
-        font-size: 2rem;
-    }
-    .home-content-1{
+@media screen and (max-width:1024px) {
+    .home-content-1,.home-content-2,.home-content-3,.home-content-4{
         padding: 8rem 8rem;
     }
-    .home-content-2,.home-content-4,.home-content-5,.home-content-6{
-        padding: 3rem 8rem;
-    }
-    .home-content-3{
-        padding: 5rem 8rem;
+    .home-content-6,.home-content-5{
+        padding: 2rem 8rem;
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:768px) {
+    .main-home{
+        top: 6rem;
+    }
     .home-top-banner{
         height: 35rem !important;
     }
@@ -150,12 +140,13 @@
     }
 }
 
-@media screen and (max-width:550px){
+@media screen and (max-width:480px){
     .home-top-banner{
         height: 40rem !important;
     }
     .home-banner{
-        height: 80rem !important;
+        height: 60rem !important;
+        background-size: cover;
     }
     .home-banner h1 span{
         font-size: 1.125rem;
@@ -164,7 +155,7 @@
         font-size: 1rem;
     }
     .home-content-1,.home-content-2{
-        padding: 2rem;
+        padding: 3rem;
     }
     .home-content-1-wp h1{
         display: none;
@@ -173,13 +164,16 @@
         display: flex;
         margin-left: 0 !important;
     }
-    .home-content-3,.home-content-6{
-        padding: 2rem !important;
+    .home-content-3{
+        padding: 3rem !important;
     }
     .home-content-4{
-        padding-left: 2rem;
+        padding: 3rem;
     }
     .home-content-5{
+        padding: 3rem !important;
+    }
+    .home-content-6{
         padding: 2rem !important;
     }
 }

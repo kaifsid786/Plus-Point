@@ -7,6 +7,13 @@
     justify-content: center;
     align-items: center;
 }
+.foot-img{
+    width: 10.5rem;
+    height: 6.875rem;
+}
+.pre-left-para{
+    font-size: 1rem;
+}
 .main-footer h3{ color: white;}
 .main-footer a{
     color: #fff;
@@ -20,7 +27,7 @@
 }
 .foot-row-1{
     width: 100%;
-    min-height: 40rem;
+    height: 40rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -28,7 +35,7 @@
     flex-wrap: wrap;
 }
 .foot-col-1{
-    width: calc(32% - 2rem);
+    width: calc(42% - 2rem);
     min-width: 200px;
     height: 35rem;
     display: flex;
@@ -56,8 +63,9 @@ margin:2rem 0;
     font-size: 2rem;
 }
 .foot-col{
+    margin-top: 4rem;
     min-width: 150px;
-    width: calc(23% - 2rem);
+    width: calc(20% - 2rem);
     height: 35rem;
   display: flex;
   flex-direction: column;
@@ -99,77 +107,40 @@ line-height: 150%;
 }
 
 /* Responsiveness ---------------------------> */
-@media screen and (max-width:1100px) {
-    .foot-col{
-        height: 42rem;
-        margin-top: 3rem;
-    }
-    .main-footer a {
-        line-height: 1.5rem ;
-        font-size: 1rem ;
-    }
-    .foot-para{
-        font-size: 1.2rem;
-    }
-    .foot-row-3{
-        font-size: 1.2rem;
-    }
-    .social-icons{
-        width: 100%;
-        font-size: 1rem;
-       }
-}
-/* Tablets */
 @media screen and (max-width:768px) {
-       .foot-col-1{
-        width: calc(50% - 20px);
-       }
-       .foot-col{
-        width: calc(50% - 20px);
+    .foot-col{
+        width: calc(40% - 20px);
+    }
+    .foot-col-1{
+        width: calc(60% - 20px);
+    }
+    .foot-row-1{
+        min-height: 80rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .foot-col{
+        width: calc(100% - 20px);
         height: 30rem;
-        margin-top: 2rem;
-       }
-       .foot-img{
-        width: 7rem;
-        margin-top: 3rem;
-       }
-       
-}
-
-/* medium screen phones */
-@media screen and (max-width:550px) {
-    .main-footer a {
-        line-height: 1.5rem ;
-        font-size: 0.8rem ;
+        /* margin-top: -10rem; */
+        padding: 0 3rem;
+        gap: 1.4rem;
     }
-    .foot-para{
-        font-size: 0.8rem;
+    .foot-col-4{
+        gap:40px;
     }
-    .foot-row-3{
-        font-size: 1rem;
+    .target{
+        /* margin-top: -16rem; */
+        height: 20rem;
     }
-    .foot-img{
-        width: 5rem;
+    .foot-col-1{
+        width: calc(100% - 20px);
+        margin-bottom: -5rem;
     }
-    .main-footer h3{
-        font-size: 0.8 rem;
+    .foot-row-1{
+        height: 150rem;
     }
-}
-
-/* very small phones */
-@media screen and (max-width:420px) {
-    .foot-col-1,.foot-col{
-        width: calc(100% - 50px);
-        height: 28rem;
-    }
-    .foot-col-2{
-        justify-content: center;
-    }
-    .main-footer a{
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-    .foot-para{
-        font-size: 1rem;
+    .main-footer{
+        height: 150rem;
     }
 }

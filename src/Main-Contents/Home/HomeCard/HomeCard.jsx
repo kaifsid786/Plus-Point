@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './HomeCard.css'
-import trust from '../../../images/home-1.png'
-import progression from '../../../images/progression.png'
-import quality from '../../../images/quality.png'
+import trust from '../../../images/homeWh-1.png'
+import progression from '../../../images/homeWh-2.png'
+import quality from '../../../images/homeWh-3.png'
 
 export default function HomeCard(props) {
+  const [white,setWhite]=useState(false);
+  const changeImg = ()=>{
+      setWhite(true);
+  }
+  const reset = ()=>{
+      setWhite(false);
+  }
+
   return (
     <>
-      <div className="main-homeCard">
-         <img src={props.img} alt="" className="homeCard-img" />
+      <div className="main-homeCard" onMouseOver={changeImg} onMouseLeave={reset}>
+         <img src={white?props.id==1?trust:props.id==2?progression:quality:props.img} alt="" className="homeCard-img" />
          <h1 className="homeCard-title">{props.title}</h1>
          <p className="homeCard-info">{props.info}</p>
       </div>

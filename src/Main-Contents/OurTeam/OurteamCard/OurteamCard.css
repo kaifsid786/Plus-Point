@@ -1,6 +1,7 @@
 .our-team-card{
-    width: calc(50% - 50px);
-    min-height: 50rem;
+    width: calc(50% - 60px);
+    /* width: 43rem; */
+    min-height: 60rem;
     border-radius: 10px;
     padding: 10px;
     font-family: Poppins;
@@ -10,7 +11,7 @@
 }
 .our-team-card-img{
     width: 100%;
-    height: 30rem;
+    height: 39rem;
     border-radius: 10px;
 }
 .our-team-card-Tpost{
@@ -59,15 +60,15 @@
     .our-team-card-post{
         font-size: 1rem;
     }
-    @media screen and (max-width:900px) {
-        .our-team-card{
-            width: 100%;
-        }
+}
+@media screen and (max-width:768px) {
+    .our-team-card{
+        width: 100%;
     }
 }
-@media screen and (max-width:550px) {
+@media screen and (max-width:480px) {
     .our-team-card-img{
-        height: 15rem ;
+        height: 20rem ;
     }
     .our-team-card{
         min-height: 30rem !important;

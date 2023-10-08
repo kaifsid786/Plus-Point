@@ -72,7 +72,7 @@
 }
 
 /* Responsiveness ------------------------------> */
-@media screen and (max-width:1400px) {
+/* @media screen and (max-width:1400px) {
     .main-homeTest{
         padding: 3rem 6rem;
     }
@@ -82,9 +82,9 @@
     .main-homeTest p{
         font-size: 1rem;
     }
-}
+} */
 
-@media screen and (max-width:900px){
+@media screen and (max-width:768px){
     .main-homeTest{
         padding: 1rem 2rem !important;
         min-height: 28rem;
@@ -106,15 +106,15 @@
         right: -7rem;
     }
 }
-@media screen and (max-width:550px){
+@media screen and (max-width:480px){
     .main-homeTest{
         min-height: 18rem;
     }
     .main-homeTest h1{
-        font-size: 1.25rem !important;
+        font-size: 1.5rem !important;
     }
     .main-homeTest p{
-        font-size: 0.65rem !important;
+        font-size: 0.7rem !important;
     }
     .homeTest-content{
         min-height: 6rem;

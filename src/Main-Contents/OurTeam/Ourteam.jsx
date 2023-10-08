@@ -9,8 +9,6 @@ import PreFooter from '../PreFooter/PreFooter';
 import Footer from '../Footer/Footer';
 export default function Ourteam(){
 
-    console.log(data);
-
     return(
         <>
            <Header />
