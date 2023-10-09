@@ -1,4 +1,7 @@
 import React from "react";
+import Header from '../Header/Header';
+import PreFooter from '../PreFooter/PreFooter';
+import Footer from '../Footer/Footer';
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
@@ -53,6 +56,8 @@ const BlogInside = () => {
     },
   ];
   return (
+    <>
+    <Header />
     <div className="blog-inside">
       <div
         style={{
@@ -396,6 +401,9 @@ const BlogInside = () => {
         </div>
       </div>
     </div>
+    <PreFooter />
+    <Footer />
+    </>
   );
 };
 

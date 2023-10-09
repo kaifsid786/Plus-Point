@@ -22,12 +22,10 @@ function App() {
               <Route path='/ourVision' element={<Vision />} />
               <Route path='/media' element={<Media />} />
               <Route path='/faqs' element={<FAQs />} />
-              {/* <Header /> */}
               <Route path='/blogs' element={<Blogs />} />
               <Route path='/experties' element={<Experties />} />
               <Route path='/blogInsides' element={<BlogInside />} />
-              <Route path='/welcome' element={<Welcome />} />
-              {/* <PreFooter /> */}
+              <Route path='/about' element={<Welcome />} />
       {/* <Footer />  */}
            </Routes>
         </BrowserRouter>

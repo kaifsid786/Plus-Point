@@ -19,6 +19,7 @@ export default function Media() {
 
   const [height,setHeight] = useState(false);
   const [breadth,setBreadth] = useState(false);
+  const [anim,setAnim] = useState(true);
   useEffect(()=>{},window.addEventListener("scroll",()=>{
     if( window.innerWidth >= 1000 && window.pageYOffset > 400 ){
         setHeight(true);
@@ -28,10 +29,17 @@ export default function Media() {
         setBreadth(true);
     }
     else{
-      // setWrap(false);
+      setAnim(false);
       setHeight(false);
     } 
   }));
+
+  useEffect(()=>{},window.addEventListener("wheel",(e)=>{
+    if(e.deltaY < 0)
+    setAnim(true);
+    else 
+    setAnim(false);
+  }))
 
   
   return (
@@ -48,7 +56,7 @@ export default function Media() {
                            {col1.map((val)=>{
                               return(
                                 <motion.div 
-                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
+                                initial={anim?breadth?{y:"5rem"}:{y:"15rem"}:{y:"0"}}
                                 whileInView={{y:"0"}}
                                 transition={{
                                   duration:1,
@@ -66,7 +74,7 @@ export default function Media() {
                           {col2.map((val)=>{
                               return(
                                 <motion.div 
-                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
+                                initial={anim?breadth?{y:"5rem"}:{y:"15rem"}:{y:"0"}}
                                 whileInView={{y:"0"}}
                                 transition={{
                                   duration:1,
@@ -83,7 +91,7 @@ export default function Media() {
                            {col3.map((val)=>{
                               return(
                                 <motion.div 
-                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
+                                initial={anim?breadth?{y:"5rem"}:{y:"15rem"}:{y:"0"}}
                                 whileInView={{y:"0",opacity:'1'}}
                                 transition={{
                                   duration:1,

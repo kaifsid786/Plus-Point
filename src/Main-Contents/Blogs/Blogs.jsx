@@ -10,6 +10,9 @@ import DirectionsIcon from "@mui/icons-material/Directions";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import {truncate} from 'lodash';
+import Header from '../Header/Header';
+import PreFooter from '../PreFooter/PreFooter';
+import Footer from '../Footer/Footer';
 
 import "./Blogs.css";
 
@@ -53,6 +56,8 @@ const Blogs = () => {
     },
   ];
   return (
+    <>
+    <Header />
     <div className="blogs">
       <div className="top-sec">
         <div
@@ -172,6 +177,9 @@ const Blogs = () => {
         </div>
       </div>
     </div>
+    <PreFooter />
+    <Footer />
+    </>
   );
 };
 

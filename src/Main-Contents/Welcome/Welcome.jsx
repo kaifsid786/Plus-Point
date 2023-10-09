@@ -139,6 +139,9 @@ import React, { useEffect, useState } from "react";
 import Exp1 from "../../images/Experties.png";
 import "./Welcome.css";
 import { useRef } from "react";
+import Header from '../Header/Header';
+import PreFooter from '../PreFooter/PreFooter';
+import Footer from '../Footer/Footer';
 
 import Gallery from "../Gallery/index";
 import Slider from "../Slider/Slider";
@@ -148,6 +151,8 @@ const Welcome = () => {
     setSeeContent((prev)=>!prev);
   }
   return (
+    <>
+    <Header />
     <div className="welcome">
       <div className="top-sec">
         <div className="top-image welcome-image">
@@ -232,6 +237,9 @@ const Welcome = () => {
         <Slider />
       </div>
     </div>
+    <PreFooter />
+    <Footer />
+    </>
   );
 };
 

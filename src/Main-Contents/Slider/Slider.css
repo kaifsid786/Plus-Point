@@ -5,7 +5,7 @@ html {
   overflow-scrolling: touch;
 }
 body {
-  overflow-y: visible;
+  overflow-y: hidden;
   position: relative;
   overflow-x: hidden;
 }

@@ -43,14 +43,14 @@ export default function Header(){
             <div className={!showMenu ? "right" : "disp"}>
                 <ul>
                     <li> <a href="/">Home</a></li>  
-                    <li> <a href="ourTeam">Who we are <span> <AiOutlineDown/> </span></a>
+                    <li> <a href="/ourTeam">Who we are <span> <AiOutlineDown/> </span></a>
                       <ul className="drop-down">
                           <li> <a href="">About-1</a></li>
                           <li> <a href="">About-2</a></li>
                           <li> <a href="">About-3</a></li>
                       </ul>
                     </li>
-                    <li> <a href="">What we do</a></li>
+                    <li> <a href="/experties">What we do</a></li>
                     <li> <a href="/media">Media <span> <AiOutlineDown/></span></a>
                     <ul className="drop-down">
                           <li> <a href="">Media-1</a></li>
@@ -66,7 +66,7 @@ export default function Header(){
                           <li> <a href="">Products-3</a></li>
                       </ul>
                     </li>
-                    <li> <a href="">Blog</a></li>
+                    <li> <a href="/blogs">Blog</a></li>
                     <li className="head-contact"> <a href="" style={{color:"#fff"}}>Contact</a></li>
                 </ul>
             </div>
@@ -87,7 +87,7 @@ export default function Header(){
                             <li><a href="">About-3</a></li>
                         </ul>
                     </li>
-                    <li><span><a href="">What we do</a></span></li>
+                    <li><span><a href="/experties">What we do</a></span></li>
                     <li><span><a href="/media">Media</a> <AiOutlineDown onClick={showMedia}/></span>
                         <ul style={showHamMedia?{height:"15rem",marginTop:"20px"}:{height:"0"}}>
                             <li><a href="">Media-1</a></li>
@@ -103,7 +103,7 @@ export default function Header(){
                             <li><a href="">Product-3</a></li>
                         </ul>
                     </li>
-                    <li><span><a href="">Blogs</a></span></li>
+                    <li><span><a href="/blogs">Blogs</a></span></li>
                     <li><span><a href="">Contacts</a></span></li>
                  </ul>
              </div>
