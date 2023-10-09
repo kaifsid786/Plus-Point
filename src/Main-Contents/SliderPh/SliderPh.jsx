@@ -1,7 +1,6 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
-import "./Slider.css";
+import React from 'react'
+import './SliderPh.css'
+import TimelineV from '../Timeline/TimelineV';
 import s1 from '../../images/1942 (1).png';
 import s2 from '../../images/1983.png';
 import s3 from '../../images/1996.png';
@@ -12,13 +11,7 @@ import s7 from '../../images/2016.png';
 import s8 from '../../images/2023.png';
 
 
-gsap.registerPlugin(ScrollTrigger);
-
-export default function Slider() {
-  const component = useRef();
-  const slider = useRef();
-
-  const sliderData=[
+const sliderData=[
     {
       heading: (
         <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
@@ -133,36 +126,19 @@ export default function Slider() {
     
   ]
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray(".panel");
-      gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          start: "top top",
-          trigger: slider.current,
-          pin: true,
-          scrub: 0.1,
-          snap: 1 / (panels.length - 1),
-          end: () => "+=" + slider.current.offsetWidth,
-          markers: true,
-        },
-      });
-    }, component);
-    return () => ctx.revert();
-  }, []);
+const SliderPh = () => {
 
   return (
-    <div className="Slider" ref={component}>
-     
-      <div ref={slider} className="container-slide">
-
-        {sliderData.map((data,index)=>{
+    
+    <div className='sliderPh container'>
+        <div className="t-cont">
+            <TimelineV />
+      <div className="sliderPh-container">
+      {sliderData.map((data,index)=>{
           return(
-            <div className="slide1 panel" key={index}>
-            <div className="s-left">
-              <h1 className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+            <div className="slide1-ph panel-ph" key={index}>
+            <div className="s-left-ph">
+              <h1 className="s-y" style={{  color: "#4C341F", fontSize: "3rem",lineHeight:'3.5rem' }}>
                 {data.heading}
               </h1>
               <span>
@@ -170,7 +146,7 @@ export default function Slider() {
                  {data.info}
               </span>
             </div>
-            <div className="s-right">
+            <div className="s-right-ph">
               <div className="s-img">
                 <img
                   width="100%"
@@ -182,12 +158,11 @@ export default function Slider() {
           </div>
           )
         })}
-        
-      
-        {/* <div className="panel red">ONE</div>
-        <div className="panel orange">TWO</div>
-        <div className="panel purple">THREE</div> */}
+      </div>
+
       </div>
     </div>
-  );
+  )
 }
+
+export default SliderPh

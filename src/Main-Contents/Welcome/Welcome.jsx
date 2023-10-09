@@ -142,12 +142,19 @@ import { useRef } from "react";
 
 import Gallery from "../Gallery/index";
 import Slider from "../Slider/Slider";
+import Header from "../Header/Header";
+import PreFooter from "../PreFooter/PreFooter";
+import Footer from "../Footer/Footer";
+import SliderPh from "../SliderPh/SliderPh";
 const Welcome = () => {
   const [seeContent,setSeeContent]=useState(true);
   const handleSeeMore=()=>{
     setSeeContent((prev)=>!prev);
   }
   return (
+    <>
+    <Header/>
+   
     <div className="welcome">
       <div className="top-sec">
         <div className="top-image welcome-image">
@@ -215,23 +222,19 @@ const Welcome = () => {
             </div>
             :""}
           </div>
-        </div>
+        </div> 
+        
+        
+          <Slider />
+        <SliderPh/>
+           
+       
 
-        {/* slider page */}
-        {/* <div  className="main-container"
-          id="main-container"
-          data-scroll-container
-          ref={ref}> 
-         
-         <Gallery />
-         </div> */}
-        {/* <div className="w-s">
-        <SliderPage />
-        </div> */}
-
-        <Slider />
       </div>
     </div>
+    <PreFooter/>
+    <Footer />
+    </>
   );
 };
 

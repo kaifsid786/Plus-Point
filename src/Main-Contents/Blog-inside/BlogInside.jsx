@@ -23,6 +23,9 @@ import {
   Twitter,
   WhatsApp,
 } from "@mui/icons-material";
+import Header from "../Header/Header";
+import PreFooter from "../PreFooter/PreFooter";
+import Footer from "../Footer/Footer";
 
 const BlogInside = () => {
 
@@ -53,7 +56,10 @@ const BlogInside = () => {
     },
   ];
   return (
+    <>
+    <Header/>
     <div className="blog-inside">
+      
       <div
         style={{
           display: "flex",
@@ -396,7 +402,11 @@ const BlogInside = () => {
         </div>
       </div>
     </div>
+    <PreFooter />
+    <Footer />
+    </>
   );
+  
 };
 
 export default BlogInside;

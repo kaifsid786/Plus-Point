@@ -72,6 +72,7 @@
 .wel-h{
     font-size: 3rem;
 }
+
 /* .hide-btn>button{
     padding: 6px 15px;
     border-radius: 10px;
@@ -84,6 +85,12 @@
 .hide-btn{
     display: none
 }
+.container-welcome>:nth-child(2){
+    display: contents;
+  }
+  .container-welcome>:nth-child(3){
+    display: none;
+  }
     @media screen and (max-width:768px){
       .w-pp{
         flex-direction: column;
@@ -91,11 +98,20 @@
       }
       .left-pp{
         align-items: flex-start;
+        padding: 0;
       }
       .wel-h{
         font-size: 2rem;
       }
-
+      .container-welcome>:nth-child(2){
+        display: none;
+      }
+      .container-welcome>:nth-child(3){
+        display:flex;
+      }
+      .welcome-image{
+        height: 50vh;
+      }
     }
 
 

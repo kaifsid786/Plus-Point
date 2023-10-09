@@ -276,7 +276,7 @@
 }
 .h-c-b>img{
     height: 15rem;
-    width: 20rem;
+    /* width: 20rem; */
 }
 .homeNews-content p{
     color: #000;
