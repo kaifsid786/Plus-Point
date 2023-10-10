@@ -39,7 +39,7 @@
   .circleWrapper {
     /* position: relative; */
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     
   }
   
@@ -54,7 +54,7 @@
     margin-top: 10px; /* Add some space between the circle and message */
   }
   
-  #timeline1{
+  /* #timeline1{
     height: 100px;
   }
   #timeline2{
@@ -77,4 +77,361 @@
   }
   #timeline8{
     height: 400px;
+  } */
+
+
+  @media screen and (max-width:770px) {
+    #timeline1{
+      height: 100px;
+    }
+    #timeline2{
+      height: 275px;
+    }
+    #timeline3{
+      height: 375px;
+    }
+    #timeline4{
+      height: 315px;
+    }
+    #timeline5{
+      height: 292px;
+    }
+    #timeline6{
+      height: 355px;
+    }
+    #timeline7{
+      height: 345px;
+    }
+    #timeline8{
+      height: 290px;
+    }
+  .stub2 {
+    height: 14rem;
+}
+  }
+
+  @media screen and (max-width:650px){
+    #timeline1{
+      height: 100px;
+    }
+    #timeline2{
+      height: 275px;
+    }
+    #timeline3{
+      height: 275px;
+    }
+    #timeline4{
+      height: 325px;
+    }
+    #timeline5{
+      height: 270px;
+    }
+    #timeline6{
+      height: 295px;
+    }
+    #timeline7{
+      height: 285px;
+    }
+    #timeline8{
+      height: 280px;
+    }
+  .stub2 {
+    height: 14rem;
+}
+  }
+  @media screen and (max-width:600px){
+    .stub2{ 
+      height: 14rem;
+    }
+    #timeline1{
+      height: 100px;
+    }
+    #timeline2{
+      height: 275px;
+    }
+    #timeline3{
+      height: 320px;
+    }
+    #timeline4{
+      height: 330px;
+    }
+    #timeline5{
+      height: 265px;
+    }
+    #timeline6{
+      height: 295px;
+    }
+    #timeline7{
+      height: 313px;
+    }
+    #timeline8{
+      height: 260px;
+    }
+  }
+  @media screen and (max-width:550px){
+    .stub2{ 
+      height: 14rem;
+    }
+    #timeline1{
+      height: 100px;
+    }
+    #timeline2{
+      height: 230px;
+    }
+    #timeline3{
+      height: 300px;
+    }
+    #timeline4{
+      height: 260px;
+    }
+    #timeline5{
+      height: 245px;
+    }
+    #timeline6{
+      height: 265px;
+    }
+    #timeline7{
+      height: 243px;
+    }
+    #timeline8{
+      height: 260px;
+    }
+  }
+  @media screen and (max-width:500px){
+    #timeline8{
+      height: 290px;
+    }
+  }
+  @media screen and (max-width:480px){
+    .stub2{ 
+      height: 14rem; 
+    }
+    #timeline1{
+      height: 65px;
+    }
+    #timeline2{
+      height: 320px;
+    }
+    #timeline3{
+      height: 330px;
+    }
+    #timeline4{
+      height: 320px;
+    }
+    #timeline5{
+      height: 286px;
+    }
+    #timeline6{
+      height: 310px;
+    }
+    #timeline7{
+      height: 300px;
+    }
+    #timeline8{
+      height: 315px;
+    }
+  }
+  @media screen and (max-width:450px){
+    .stub2{ 
+      height: 14rem; 
+    }
+    #timeline1{
+      height: 65px;
+    }
+    #timeline2{
+      height: 320px;
+    }
+    #timeline3{
+      height: 330px;
+    }
+    #timeline4{
+      height: 320px;
+    }
+    #timeline5{
+      height: 300px;
+    }
+    #timeline6{
+      height: 330px;
+    }
+    #timeline7{
+      height: 330px;
+    }
+    #timeline8{
+      height: 335px;
+    }
+  }
+  @media screen and (max-width:420px){
+    .stub2{ 
+      height: 14rem; 
+    }
+    #timeline1{
+      height: 65px;
+    }
+    #timeline2{
+      height: 320px;
+    }
+    #timeline3{
+      height: 330px;
+    }
+    #timeline4{
+      height: 340px;
+    }
+    #timeline5{
+      height: 350px;
+    }
+    #timeline6{
+      height: 350px;
+    }
+    #timeline7{
+      height: 300px;
+    }
+    #timeline8{
+      height: 285px;
+    }
+  }
+  @media screen and (max-width:400px){
+    .stub2{ 
+      height: 14rem; 
+    }
+    #timeline1{
+      height: 65px;
+    }
+    #timeline2{
+      height: 340px;
+    }
+    #timeline3{
+      height: 370px;
+    }
+    #timeline4{
+      height: 350px;
+    }
+    #timeline5{
+      height: 346px;
+    }
+    #timeline6{
+      height: 300px;
+    }
+    #timeline7{
+      height: 300px;
+    }
+    #timeline8{
+      height: 325px;
+    }
+  }
+  @media screen and (max-width:376px){
+    .stub2{ 
+      height: 19rem; 
+    }
+    #timeline1{
+      height: 65px;
+    }
+    #timeline2{
+      height: 310px;
+    }
+    #timeline3{
+      height: 380px;
+    }
+    #timeline4{
+      height: 295px;
+    }
+    #timeline5{
+      height: 340px;
+    }
+    #timeline6{
+      height: 350px;
+    }
+    #timeline7{
+      height: 340px;
+    }
+    #timeline8{
+      height: 270px;
+    }
+  
+  }
+  @media screen and (max-width:370px){
+    .stub2{ 
+      height: 19rem; 
+    }
+    #timeline1{
+      height: 65px;
+    }
+    #timeline2{
+      height: 340px;
+    }
+    #timeline3{
+      height: 370px;
+    }
+    #timeline4{
+      height: 350px;
+    }
+    #timeline5{
+      height: 346px;
+    }
+    #timeline6{
+      height: 330px;
+    }
+    #timeline7{
+      height: 360px;
+    }
+    #timeline8{
+      height: 345px;
+    }
+  }
+  @media screen and (max-width:365px){
+    .stub2{ 
+      height: 18rem; 
+    }
+    #timeline1{
+      height: 65px;
+    }
+    #timeline2{
+      height: 320px;
+    }
+    #timeline3{
+      height: 350px;
+    }
+    #timeline4{
+      height: 300px;
+    }
+    #timeline5{
+      height: 330px;
+    }
+    #timeline6{
+      height: 300px;
+    }
+    #timeline7{
+      height: 320px;
+    }
+    #timeline8{
+      height: 310px;
+    }
+  }
+  @media screen and (max-width:300px){
+    .stub2{ 
+      height: 18rem; 
+    }
+    #timeline1{
+      height: 65px;
+    }
+    #timeline2{
+      height: 340px;
+    }
+    #timeline3{
+      height: 350px;
+    }
+    #timeline4{
+      height: 320px;
+    }
+    #timeline5{
+      height: 360px;
+    }
+    #timeline6{
+      height: 395px;
+    }
+    #timeline7{
+      height: 360px;
+    }
+    #timeline8{
+      height: 340px;
+    }
   }

@@ -4,6 +4,7 @@ import Exp1 from "../../images/Experties.png";
 import process from "../../images/process.png";
 import { truncate } from "lodash";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const data = [
   {
@@ -33,7 +34,10 @@ const data = [
 ];
 const Experties = () => {
 
-  
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Trigger the animation only once
+    threshold: 0.2, // Adjust the threshold as needed
+  });
 
   return (
     <div className="experties">
@@ -59,8 +63,10 @@ const Experties = () => {
           </div>
           <div className="card-container">
             <motion.div
+             ref={ref}
               initial={{ y: "2rem", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ opacity: 0, y: "2rem" }}
               transition={{
                 duration: 0.3,
                 type: "ease-in",
@@ -73,8 +79,10 @@ const Experties = () => {
               </div>
             </motion.div>
             <motion.div
+             ref={ref}
               initial={{ y: "2rem", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ opacity: 0, y: "2rem" }}
               transition={{
                 duration: 1,
                 type: "ease-in",
@@ -88,8 +96,10 @@ const Experties = () => {
               </div>
             </motion.div>
             <motion.div
+             ref={ref}
               initial={{ y: "2rem", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ opacity: 0, y: "2rem" }}
               transition={{
                 duration: 0.5,
                 type: "ease-in",
@@ -103,60 +113,7 @@ const Experties = () => {
               </div>
             </motion.div>
           </div>
-          {/* <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              padding: "0 2rem",
-            }}
-            className="card"
-          >
-            <div className="card1 exp-card">
-              <div
-                style={{
-                  fontSize: "2rem",
-                  fontWeight: "bold",
-                  color: "#4C341F",
-                }}
-              >
-                Precision & Design{" "}
-              </div>
-              <div className="info">
-                Products design per international standerd.
-              </div>
-            </div>
-            <div className="card2 exp-card">
-              <div
-                style={{
-                  fontSize: "2rem",
-                  fontWeight: "bold",
-                  color: "#4C341F",
-                }}
-              >
-                Surface Finishing:{" "}
-              </div>
-              <div className="info">
-                A robust outer layer guarding through buffing, polishing,
-                plating, and more
-                <br />– a crucial step for the desired texture.
-              </div>
-            </div>
-            <div className="card3 exp-card">
-              <div
-                style={{
-                  fontSize: "2rem",
-                  fontWeight: "bold",
-                  color: "#4C341F",
-                }}
-              >
-                Quality Control:{" "}
-              </div>
-              <div className="info">
-                Meticulous scrutiny, seamless cohesion - embracing a 3-stage
-                quality inspection for optimal finish & enduring durability.
-              </div>
-            </div>
-          </div> */}
+        
         </div>
       </div>
 
@@ -173,8 +130,10 @@ const Experties = () => {
           {data.map((item, i) => {
             return (
               <motion.div
+              ref={ref}
                 initial={{ opacity: 0, y: "5rem" }}
-                whileInView={{ y: 0, opacity: 1 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ opacity: 0, y: "2rem" }}
                 transition={{
                   duration: 1,
                   type: "ease-in",
@@ -199,8 +158,10 @@ const Experties = () => {
 
         {/* bottom */}
         <motion.div
+         ref={ref}
           initial={{ opacity: 0, y: "3rem" }}
-          whileInView={{ y: 0, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ opacity: 0, y: "3rem" }}
           transition={{
             duration: 1,
             type: "ease-in",
@@ -225,8 +186,10 @@ const Experties = () => {
 
         {/* images */}
         <motion.div
+         ref={ref}
         initial={{ opacity: 0, y: "3rem" }}
-        whileInView={{ y: 0, opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ opacity: 0, y: "3rem" }}
         transition={{
           duration: 1,
           type: "ease-in",
@@ -242,8 +205,10 @@ const Experties = () => {
         </motion.div>
         <div className="process-bottom-images">
           <motion.div 
+           ref={ref}
           initial={{ opacity: 0, y: "3rem" }}
-          whileInView={{ y: 0, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ opacity: 0, y: "3rem" }}
           transition={{
             duration: 1,
             type: "ease-in",
@@ -254,8 +219,10 @@ const Experties = () => {
             />
           </motion.div>
           <motion.div
+           ref={ref}
           initial={{ opacity: 0, y: "3rem" }}
-          whileInView={{ y: 0, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ opacity: 0, y: "3rem" }}
           transition={{
             duration: 0.6,
             type: "ease-in",
@@ -268,8 +235,10 @@ const Experties = () => {
           </motion.div>
 
           <motion.div
+           ref={ref}
           initial={{ opacity: 0, y: "3rem" }}
-          whileInView={{ y: 0, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ opacity: 0, y: "3rem" }}
           transition={{
             duration: 1,
             type: "ease-in",
@@ -281,8 +250,10 @@ const Experties = () => {
             />
           </motion.div>
           <motion.div 
+           ref={ref}
           initial={{ opacity: 0, y: "3rem" }}
-          whileInView={{ y: 0, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ opacity: 0, y: "3rem" }}
           transition={{
             duration: 0.2,
             type: "ease-in",
