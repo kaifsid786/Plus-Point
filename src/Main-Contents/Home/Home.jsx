@@ -20,7 +20,7 @@ export default function Home() {
     <>
          <div className="main-home">
             <Header />
-            <div className="home-top-banner" onClick={()=>alert(window.innerWidth)}>
+            <div className="home-top-banner">
                     <img src={homeMain} alt="" />
             </div>
             <div className="home-banner">

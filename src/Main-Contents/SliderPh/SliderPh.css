@@ -1,0 +1,27 @@
+.sliderPh-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    height: 100vh;
+}
+.slide1-ph{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: left;
+}
+.t-cont{
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (max-width:480px) {
+    .right-pp{
+        gap: 2rem !important;
+    }
+    #timeline4,#timeline6,#timeline7,#timeline8{
+        height: 320px !important;
+    }
+    #timeline5{
+        height: 328px !important;
+    }
+}

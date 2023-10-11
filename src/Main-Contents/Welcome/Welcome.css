@@ -32,7 +32,10 @@
 
 
 
-
+.welcome{
+  position: relative;
+  top: 8rem;
+}
 
 .welcome-image{
     height: 80vh;
@@ -72,6 +75,7 @@
 .wel-h{
     font-size: 3rem;
 }
+
 /* .hide-btn>button{
     padding: 6px 15px;
     border-radius: 10px;
@@ -84,20 +88,45 @@
 .hide-btn{
     display: none
 }
+.container-welcome>:nth-child(2){
+    display: contents;
+  }
+  .container-welcome>:nth-child(3){
+    display: none;
+  }
     @media screen and (max-width:768px){
+      .welcome{
+        top: 6rem;
+      }
       .w-pp{
         flex-direction: column;
         padding: 10px 25px;
       }
       .left-pp{
         align-items: flex-start;
+        padding: 0;
       }
       .wel-h{
         font-size: 2rem;
       }
-
+      .container-welcome>:nth-child(2){
+        display: none;
+      }
+      .container-welcome>:nth-child(3){
+        display:flex;
+      }
+      .welcome-image{
+        height: 50vh;
+      }
     }
-
+    @media screen and (max-width:480px){
+      .w-pp{
+        padding: 35px 20px !important;
+      }
+      .s-y{
+        font-size: 1.7rem !important;
+      }
+    }
 
 
 

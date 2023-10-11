@@ -57,8 +57,9 @@ const BlogInside = () => {
   ];
   return (
     <>
-    <Header />
+    <Header/>
     <div className="blog-inside">
+      
       <div
         style={{
           display: "flex",
@@ -405,6 +406,7 @@ const BlogInside = () => {
     <Footer />
     </>
   );
+  
 };
 
 export default BlogInside;

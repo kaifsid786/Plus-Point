@@ -34,13 +34,6 @@ export default function Media() {
     } 
   }));
 
-  useEffect(()=>{},window.addEventListener("wheel",(e)=>{
-    if(e.deltaY < 0)
-    setAnim(true);
-    else 
-    setAnim(false);
-  }))
-
   
   return (
     <>
@@ -56,7 +49,7 @@ export default function Media() {
                            {col1.map((val)=>{
                               return(
                                 <motion.div 
-                                initial={anim?breadth?{y:"5rem"}:{y:"15rem"}:{y:"0"}}
+                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
                                 whileInView={{y:"0"}}
                                 transition={{
                                   duration:1,
@@ -74,7 +67,7 @@ export default function Media() {
                           {col2.map((val)=>{
                               return(
                                 <motion.div 
-                                initial={anim?breadth?{y:"5rem"}:{y:"15rem"}:{y:"0"}}
+                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
                                 whileInView={{y:"0"}}
                                 transition={{
                                   duration:1,
@@ -91,7 +84,7 @@ export default function Media() {
                            {col3.map((val)=>{
                               return(
                                 <motion.div 
-                                initial={anim?breadth?{y:"5rem"}:{y:"15rem"}:{y:"0"}}
+                                initial={breadth?{y:"5rem"}:{y:"15rem"}}
                                 whileInView={{y:"0",opacity:'1'}}
                                 transition={{
                                   duration:1,

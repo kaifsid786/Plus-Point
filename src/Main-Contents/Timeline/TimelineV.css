@@ -1,0 +1,80 @@
+.timeline {
+    height: 300px;
+    width: 5px;
+    background-color: #e5e5e5;
+  }
+  .t-m{
+    font-family: sans-serif;
+  text-align: center;
+  height: 100%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stub1 {
+    line-height: 300px;
+    font-size: 24px;
+    background-color: #eae4e4;
+  }
+  
+  .stub2 {
+    height: 10rem;
+  }
+  
+  .circle {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+  }
+  
+  .circleWrapper {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+
+
+
+
+  
+  .message {
+    text-align: center; /* Center align the message text */
+    font-weight: bold;
+    margin-top: 10px; /* Add some space between the circle and message */
+  }
+  
+  #timeline1{
+    height: 100px;
+  }
+  #timeline2{
+    height: 350px;
+  }
+  #timeline3{
+    height: 400px;
+  }
+  #timeline4{
+    height: 400px;
+  }
+  #timeline5{
+    height: 400px;
+  }
+  #timeline6{
+    height: 400px;
+  }
+  #timeline7{
+    height: 400px;
+  }
+  #timeline8{
+    height: 400px;
+  }

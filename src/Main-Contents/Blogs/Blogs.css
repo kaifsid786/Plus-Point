@@ -1,3 +1,13 @@
+.blogs{
+    position: relative;
+    top: 8rem;
+}
+.container{
+    gap: 6rem !important;
+}
+.process{
+    gap: 3rem !important;
+}
 .top-container{
     display: flex;
     justify-content: space-between;
@@ -47,6 +57,15 @@
 }
 
  @media (max-width: 768px) {
+    .blogs{
+        top: 6rem;
+    }
+  .container{
+    gap: 4rem !important;
+  }
+    .process-info{
+        gap: 6px;
+    }
     .top-container{
         gap: 1rem;
         margin-bottom: 2rem;
@@ -86,7 +105,13 @@
 
     }
     .top-container-right-tag{
-        margin-right: 0;
-       
+        margin-right: 0;   
     }
+    
+    .css-10w330c-MuiButtonBase-root-MuiPaginationItem-root{
+    min-width: 28px !important;
+}
+.css-1sazv7p-MuiStack-root{
+    width: 100%;
+}
  } 

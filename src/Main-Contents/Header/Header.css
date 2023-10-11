@@ -32,9 +32,17 @@
     align-items: center;
 }
 .right ul li a{
-    color: rgb(177, 174, 174);;
+    color: #4C341F;
     text-decoration: none;
     font-style: normal;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2px;
+}
+.right ul li a span{
+    margin-top: 0.25vw;
 }
 .right ul{
     width: 100%;
@@ -47,14 +55,14 @@
     list-style: none;
     font-size: 0.85vw;
     color: rgb(177, 174, 174);
-    font-weight: bolder;
     transition: 0.5s ease;
     font-family: Poppins;
 }
 .right ul li a:hover{
-    color: black;
+    color: #4C341F;
     cursor: pointer;
     font-weight: bold;
+    opacity: 1;
 }
 
 .head-contact{
@@ -65,6 +73,10 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+}
+.head-contact a{
+    color: white !important;
+    opacity: 1 !important; 
 }
 
 .right ul li  .drop-down{
@@ -93,7 +105,7 @@
     align-items: center;
 }
 .right .drop-down li:hover{
-    background-color: rgb(121, 117, 117);
+    background-color: #4C341F;
 }
 .right .drop-down li:hover a{
     color: white;
@@ -132,7 +144,7 @@
     visibility: hidden !important;
 }
 .disp-ham{
-    left: -100%;
+    left: -50%;
     animation: slideBack 0.5s;
 }
 .right-ham-content ul{
@@ -162,9 +174,10 @@
 }
 .right-ham-content ul li span a{
     text-decoration: none;
-    color: rgb(134, 133, 133);
+    color: #4C341F;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
+    opacity: 0.5;
 }
 .right-ham-content ul li ul{
    width: 100%;
@@ -199,10 +212,10 @@
 }
 @keyframes slideBack{
     0%{
-        left:50%;
+        left:0;
     }
     100%{
-        left: 150%;
+        left: -50%;
     }
 }
 @keyframes slide2{
@@ -218,6 +231,10 @@
     }
 }
 /* Responsiveness ---------------> */
+@media screen and (min-width:1600px) {
+    .main-header{}
+    
+}
 @media screen and (max-width:1600px) {
     .head-img{
         width: 100px;

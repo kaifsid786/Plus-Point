@@ -3,7 +3,7 @@
 }
 .vision-banner{
     width: 100%;
-    height: 73rem;
+    max-height: fit-content;
 }
 .vision-banner img{
     width: 100%;

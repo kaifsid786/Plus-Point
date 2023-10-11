@@ -178,6 +178,10 @@ width: 75rem;
         padding: 20px 20px;
     }
 } */
+.experties{
+    position: relative;
+    top: 8rem;
+}
 
 .top-image{
     height: 70vh;
@@ -287,6 +291,7 @@ width: 75rem;
     overflow: hidden;
     gap: 1rem;
     justify-content: space-between;
+    align-items: center;
 
 }
 .p-b-i{
@@ -294,8 +299,7 @@ width: 75rem;
     flex: 1 1;
     height: 20rem;
     width: 25rem;
-
-
+    cursor: pointer;
 }
 
 .container{
@@ -340,6 +344,9 @@ width: 75rem;
     display: flex;
     flex-direction: column;
   }
+  .material{
+    margin-top: 3rem;
+}
 
 .material-protray{
     font-size: 3rem;
@@ -350,6 +357,9 @@ width: 75rem;
 }
 
 @media screen and (max-width: 767px) {
+    .experties{
+        top: 6rem;
+    }
     .card-container{
         padding: 0 1rem;
 
@@ -397,8 +407,5 @@ width: 75rem;
     }
     .process{
         gap: 50px;
-    }
-    .material{
-        margin-top: 2rem;
     }
 }
