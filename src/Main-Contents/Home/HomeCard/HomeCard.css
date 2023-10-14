@@ -1,5 +1,5 @@
 .main-homeCard{
-    width: calc(33% - 20px);
+    width: calc(32% - 20px);
     min-height: 24rem;
     display: flex;
     flex-direction: column;

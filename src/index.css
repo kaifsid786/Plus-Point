@@ -13,7 +13,7 @@ font-family: 'Montserrat', sans-serif;
   /* margin: 0 20px; */
 }
 html{
-  font-size: 22px;
+  font-size: 18px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -24,7 +24,13 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
-
+@media screen and (min-width:1920px) {
+  #root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media screen and (max-width:1920px) {
   html{
     font-size: 18px;
