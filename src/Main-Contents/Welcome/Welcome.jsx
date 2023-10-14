@@ -139,13 +139,14 @@ import React, { useEffect, useState } from "react";
 import Exp1 from "../../images/Experties.png";
 import "./Welcome.css";
 import { useRef } from "react";
-import Header from '../Header/Header';
-import PreFooter from '../PreFooter/PreFooter';
-import Footer from '../Footer/Footer';
 
 import Gallery from "../Gallery/index";
 import Slider from "../Slider/Slider";
+import Header from "../Header/Header";
+import PreFooter from "../PreFooter/PreFooter";
+import Footer from "../Footer/Footer";
 import SliderPh from "../SliderPh/SliderPh";
+import TimelineV from '../Timeline/TimelineV';
 const Welcome = () => {
   const [seeContent,setSeeContent]=useState(true);
   const handleSeeMore=()=>{
@@ -154,7 +155,7 @@ const Welcome = () => {
   return (
     <>
     <Header/>
-  
+   
     <div className="welcome">
       <div className="top-sec">
         <div className="top-image welcome-image">
@@ -227,6 +228,7 @@ const Welcome = () => {
         
           <Slider />
         <SliderPh/>
+        
            
        
 
@@ -239,5 +241,3 @@ const Welcome = () => {
 };
 
 export default Welcome;
-
-

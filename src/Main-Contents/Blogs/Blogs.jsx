@@ -10,11 +10,11 @@ import DirectionsIcon from "@mui/icons-material/Directions";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import {truncate} from 'lodash';
-import Header from '../Header/Header';
-import PreFooter from '../PreFooter/PreFooter';
-import Footer from '../Footer/Footer';
 
 import "./Blogs.css";
+import Header from "../Header/Header";
+import PreFooter from "../PreFooter/PreFooter";
+import Footer from "../Footer/Footer";
 
 const Blogs = () => {
   const data = [
@@ -28,6 +28,7 @@ const Blogs = () => {
       comment: "1 comment",
     },
     {
+
       img: "https://s3-alpha-sig.figma.com/img/d0a9/82c6/3dec605b805b03b7f4470690dfc7e56a?Expires=1697414400&Signature=En1VQvor9vaXNM-~LTMIck0V9pjZeo~dRX2If0hvOTqKebi74cRKqe5G-yXD81pQ7nC9jJLeRuXMHRoCXGVwad2Kqz-yaej8NsdmGw8U8Ia95hRUhrSmrITM9Itt5CMyaEtur06c3PGIHghljxj9jUiirRT1cobK~aFr~vQCPt~xAh83yiVBcvByjnc4YSu8xKfmKCZAbC-eQj-lQnidAeqxATxxJhrEES2Lt2chVAxlPCCLliJNqiTBGLJL0syDoD1fhdu1dk8Dp~8ZClinQWOonFUoUNwej3~18A7v2dIL~1fCRY8MeMz1R8AdKSAU0E0fucTvuT7HKIQ-jEBEzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       heading:
         "How to select the best material for your door hardware? Here’s a guide.",
@@ -57,7 +58,8 @@ const Blogs = () => {
   ];
   return (
     <>
-    <Header />
+    <Header/>
+   
     <div className="blogs">
       <div className="top-sec">
         <div
@@ -120,9 +122,9 @@ const Blogs = () => {
                   <div className=" bolgs-imgs">
                     <img width="100%" src={item.img} alt="" />
                   </div>
-                  <div className="process-info">
-                    <div className="process-info-upper">{item.heading}</div>
-                    <div className="process-info-bottom">{truncate(item.info,{length:400})}</div>
+                  <div className="process-info-blog">
+                    <div className=" blog-info-upper">{item.heading}</div>
+                    <div className=" blog-info-bottom">{truncate(item.info,{length:400})}</div>
 
                     <div
                       style={{
@@ -177,8 +179,8 @@ const Blogs = () => {
         </div>
       </div>
     </div>
-    <PreFooter />
-    <Footer />
+            <PreFooter/>
+            <Footer/>
     </>
   );
 };

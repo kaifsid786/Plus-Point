@@ -24,12 +24,23 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
-@media screen and (min-width:1920px) {
+.container{
+  padding: 2rem 7rem;
+}
+@media screen and (min-width:1930px) {
   #root{
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .blog-info-upper {   
+    font-size: 30px;
+  }
+  .process-info-upper {
+   
+    font-size: 22px;
+}
+
 }
 @media screen and (max-width:1920px) {
   html{
@@ -54,5 +65,8 @@ code {
 @media screen and (max-width:768px) {
   html{
     font-size: 12px;
+  }
+  .container{
+    padding: 2rem 2rem;
   }
 }

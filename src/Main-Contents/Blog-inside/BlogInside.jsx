@@ -1,7 +1,4 @@
 import React from "react";
-import Header from '../Header/Header';
-import PreFooter from '../PreFooter/PreFooter';
-import Footer from '../Footer/Footer';
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
@@ -15,6 +12,9 @@ import Stack from "@mui/material/Stack";
 import { truncate } from "lodash";
 import "./BlogInside.css";
 import Process from "../../images/process.png";
+import Home1 from "../../images/homeNews-1.png";
+import Home2 from "../../images/homeNews-2.png";
+import Home3 from "../../images/homeNews-3.png";
 import {
   ArrowBack,
   ArrowDownward,
@@ -26,6 +26,9 @@ import {
   Twitter,
   WhatsApp,
 } from "@mui/icons-material";
+import Header from "../Header/Header";
+import PreFooter from "../PreFooter/PreFooter";
+import Footer from "../Footer/Footer";
 
 const BlogInside = () => {
 
@@ -85,7 +88,7 @@ const BlogInside = () => {
                 key={i}
               >
                 <div className=" blog-inside-image">
-                  <img width="100%" src={item.img} alt="" />
+                  <img width="100%" height="100%" src={item.img} alt="" />
                 </div>
                 <div className="process-info">
                   <div
@@ -117,7 +120,8 @@ const BlogInside = () => {
                 <div className=" later-images">
                   <div className="later-image-1">
                     <img
-                      width="100%"
+                     style={{width: "100%", height: "auto"}}
+                  
                       src="https://s3-alpha-sig.figma.com/img/615e/a5bd/ec5893d99c2272803c53e9b0a4608ed2?Expires=1697414400&Signature=bVjGdy9fHq6UZwbDPBImYRLMbgFfVGlcoyLgVAHb6szIxg03EKcEiz0OZdRNRF3l1Mtv8p5Bvr7A0d7RiB9XStP5vnUEtsqDk-OcEygyb13ypFtFyAyZmI6FrWfxbIxKa35co9ksKzkHVdxnqGjxPXA8ntqbt3UCBVRdjaoeIWYFcNdccg3l9XFeSZ-~~L1Lup6NS0w718yiRP58wmyfUeTMF-iYmCy89fvKvinQWn8cL6S07NhpcyNybHzXDJcgPxDqIrkNLqnuAntJI8vwjOBMnVdlIRlv-55xOVnoZnM9vn74ymjNaVDsMTFAgpcPy7KHQ167gwsm~0U6772xvA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                       alt=""
                     />
@@ -125,7 +129,7 @@ const BlogInside = () => {
 
                   <div className="later-image-2">
                     <img
-                      width="100%"
+                      style={{width: "100%", height: "auto"}}
                       src="https://s3-alpha-sig.figma.com/img/3b4c/0b84/f1158302ab46879d1e6a2026a424a30b?Expires=1697414400&Signature=FBtnbiEk-wO6m9LRXry7kNVHFyjNqEFJxfQBNUHdP3LYvG1FIpkug0DyhNCpyf1rz56lqnuq61sAADWvB6~tY8ATM2HBfXEiRJ9y8Lzvyut2755oL9wzhJGPZdoqA2CfYDLK-y~tEHtCtqkm5vbWoDj3dDPF~keYOcRqAx85VjWbsH8Wfzq6uFszT0kbYbN1hULYp1rZMITpJrcvqnie-LcOsX5vPMlz4cFwCjoomEUQL4rXrf-JtG2WE4XSjh5Qwv7uiy9Y~Lw7SjNCFu3GSxAbK2cw8XGwrPlO2wOlG8l1~2jdBEiyUIFFzdn7wt1Z9ALk6C7w3WFGytD70vqycw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                       alt=""
                     />
@@ -305,7 +309,7 @@ const BlogInside = () => {
                   // border: "1px solid #8C8F92",
                   borderRadius: "5px",
                 }}
-                style={{ background: "rgba(239, 239, 239, 1)" }}
+                style={{ background: "rgba(239, 239, 239, 1)"}}
               >
                 <InputBase
                   sx={{ ml: 1, flex: 1, borderRadius: 0, paddingLeft: 1 }}
@@ -373,7 +377,7 @@ const BlogInside = () => {
               className="homeNews-contents "
             >
               <div className="homeNews-content h-c-b">
-                <img src={Process} alt="" />
+                <img src={Home1} alt="" />
                 <div className="b-info">
                   <div style={{fontWeight:"bold",textAlign:'left',color:'#1F1F1F',fontSize:'1.3rem'}}>Lorem Ipsum is simply dummy text of the printing</div>
                   <br />
@@ -382,7 +386,7 @@ const BlogInside = () => {
                 
               </div>
               <div className="homeNews-content h-c-b">
-                <img src={Process} alt="" />
+                <img src={Home2} alt="" />
                 <div className="b-info">
                   <div style={{fontWeight:"bold",textAlign:'left',color:'#1F1F1F',fontSize:'1.3rem'}}>Lorem Ipsum is simply dummy text of the printing</div>
                   <br />
@@ -390,7 +394,7 @@ const BlogInside = () => {
                 </div>
               </div>
               <div className="homeNews-content h-c-b">
-                <img src={Process} alt="" />
+                <img src={Home3} alt="" />
                 <div className="b-info">
                   <div style={{fontWeight:"bold",textAlign:'left',color:'#1F1F1F',fontSize:'1.3rem'}}>Lorem Ipsum is simply dummy text of the printing</div>
                   <br />

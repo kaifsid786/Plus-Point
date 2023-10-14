@@ -46,7 +46,7 @@ body {
 }
 .s-img>img{
   border-radius: 15px;
-  height: 22rem;
+  
 }
 .s-left,.s-right{
   display: flex;
@@ -74,9 +74,9 @@ body {
     width: 90vw;
     flex: none;
   }
-  .s-img{
+  /* .s-img{
     height: 23vh;
-  }
+  } */
   .s-img>img{
     height: 100%;
   }

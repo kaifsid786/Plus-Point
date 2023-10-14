@@ -7,11 +7,11 @@ import FAQs from './Main-Contents/FAQs/FAQs';
 import Media from './Main-Contents/Media/Media';
 import Blogs from './Main-Contents/Blogs/Blogs';
 import Experties from './Main-Contents/Experties/Experties';
-import Welcome from './Main-Contents/Welcome/Welcome';
 import BlogInside from './Main-Contents/Blog-inside/BlogInside';
 import Header from './Main-Contents/Header/Header';
 import PreFooter from './Main-Contents/PreFooter/PreFooter';
 import Footer from './Main-Contents/Footer/Footer';
+import Welcome from './Main-Contents/Welcome/Welcome';
 function App() {
   return (
     <div className="App">
