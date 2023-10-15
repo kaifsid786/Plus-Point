@@ -70,11 +70,11 @@ const Blogs = () => {
             color: "#FFFBDB",
             alignItems: "center",
           }}
-          className="top-image"
+          className="top-image-blog"
         >
           <h1>Blogs</h1>
         </div>
-        <div className="container">
+        <div className="container" style={{justifyContent:'center',alignItems:'center'}}>
           <div style={{ marginBottom: "2rem" }} className="top-container">
             <div className="top-container-left">
               <Paper
@@ -149,15 +149,8 @@ const Blogs = () => {
                       />
                       <span>{item.comment}</span>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                        color: "rgba(76, 52, 31, 1), rgba(181, 134, 94, 1)",
-                        fontSize:'1.5rem',
-                        fontWeight: "600",
-                      }}
+                    <div className="read-more"
+                      
                     >
                       <span>Read more</span>
                       <span className="arrow">
@@ -170,7 +163,7 @@ const Blogs = () => {
             })}
           </div>
           {/* items end */}
-            <div style={{justifyContent:'center',display:'flex',alignItems:'center'}}  className="pagination">
+            <div style={{justifyContent:'center',display:'flex',alignItems:'center', width:"100vw"}}  className="pagination">
             <Stack style={{justifyContent:'center',display:'flex'}} spacing={2}>
             <Pagination count={15} shape="rounded" />
           </Stack>

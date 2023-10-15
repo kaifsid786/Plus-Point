@@ -70,10 +70,11 @@ word-wrap: break-word
 }
 .process{
     
-    gap: 1.5rem;
+    gap: 2.5rem;
     display: flex;
     flex-direction: column;
     color: #1F1F1F;
+    margin-bottom: 2rem;
 }
 .process-card{
     display: flex;
@@ -131,10 +132,15 @@ width: 75rem;
 .p-b-i{
     display: flex;
     flex: 1 1;
+    cursor: pointer;
     /* height: 20rem;
     width: 25rem; */
     
    
+}
+.timeline-exp{
+    display: flex;
+    position: relative;
 }
 
 /* .container{
@@ -186,6 +192,7 @@ width: 75rem;
     font-weight: 500;
     line-height: 3rem;
     color: #4C341F;
+    margin: 1rem 0;
 }
 .highlights{
 
@@ -264,6 +271,9 @@ width: 75rem;
     .process-bottom-images{
        align-items: center;
        flex-direction: column;
+    }
+    .blt{
+        margin-left: 1rem;
     }
 }
 

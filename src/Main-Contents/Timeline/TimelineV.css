@@ -1,7 +1,8 @@
 .timeline {
   height: 300px;
-  width: 5px;
-  background-color: #e5e5e5;
+  width: 1px;
+  
+  
 }
 .t-m{
   font-family: sans-serif;
@@ -25,14 +26,14 @@ height: 100%;
 }
 
 .circle {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: white;
   border-radius: 50%;
-  background-color: #e5e5e5;
+  background: #B5865E;
 }
 
  .circleWrapper {
@@ -102,7 +103,7 @@ height: 100%;
     height: 40rem;
   }
   #timeline8{
-    height: 40rem;
+    height: 60rem;
   }
 .stub2 {
   height: 14rem;
@@ -400,7 +401,7 @@ height: 100%;
     height: 30rem;
   }
   #timeline8{
-    height: 30rem;
+    height: 46rem;
   }
 .stub2 {
   height: 14rem;

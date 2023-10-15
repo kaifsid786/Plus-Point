@@ -90,7 +90,7 @@ const Timeline = ({ setObserver, callback }) => {
     <div className="wrapper">
       <div id="timeline1" ref={timeline1} className="timeline" />
       <div className="circleWrapper">
-        <div id="circle1" ref={circle1} className="circle">
+        <div id="circle1" ref={circle1} className="circle" style={{background: "#B5865E"}}>
           .
         </div>
         
@@ -98,49 +98,49 @@ const Timeline = ({ setObserver, callback }) => {
       </div>
       <div id="timeline2" ref={timeline2} className="timeline" />
       <div className="circleWrapper">
-        <div id="circle2" ref={circle2} className="circle">
+        <div id="circle2" ref={circle2} className="circle" style={{background: "#B5865E"}}>
           .
         </div>
         <div className="message">{message2}</div>
       </div>
       <div id="timeline3" ref={timeline3} className="timeline" />
       <div className="circleWrapper">
-        <div id="circle3" ref={circle3} className="circle">
+        <div id="circle3" ref={circle3} className="circle" style={{background: "#B5865E"}}>
           .
         </div>
         <div className="message">{message3}</div>
       </div>
       <div id="timeline4" ref={timeline4} className="timeline" />
       <div className="circleWrapper">
-        <div id="circle4" ref={circle4} className="circle">
+        <div id="circle4" ref={circle4} className="circle" style={{background: "#B5865E"}}>
           .
         </div>
         <div className="message">{message4}</div>
       </div>
       <div id="timeline5" ref={timeline5} className="timeline" />
       <div className="circleWrapper">
-        <div id="circle5" ref={circle5} className="circle">
+        <div id="circle5" ref={circle5} className="circle" style={{background: "#B5865E"}}>
           .
         </div>
         <div className="message">{message5}</div>
       </div>
       <div id="timeline6" ref={timeline6} className="timeline" />
       <div className="circleWrapper">
-        <div id="circle6" ref={circle6} className="circle">
+        <div id="circle6" ref={circle6} className="circle" style={{background: "#B5865E"}}>
           .
         </div>
         <div className="message">{message6}</div>
       </div>
       <div id="timeline7" ref={timeline7} className="timeline" />
       <div className="circleWrapper">
-        <div id="circle7" ref={circle7} className="circle">
+        <div id="circle7" ref={circle7} className="circle" style={{background: "#B5865E"}}>
           .
         </div>
         <div className="message">{message7}</div>
       </div>
       <div id="timeline8" ref={timeline8} className="timeline" />
       <div className="circleWrapper">
-        <div id="circle8" ref={circle8} className="circle">
+        <div id="circle8" ref={circle8} className="circle" style={{background: "#B5865E"}}>
           .
         </div>
         <div className="message">{message8}</div>
@@ -162,7 +162,7 @@ export default function Time() {
      <div className="stub1">{message}</div>
       <TimelineObserver
         initialColor="#e5e5e5"
-        fillColor="red"
+        fillColor="#4C341F"
         handleObserve={(setObserver) => (
           <Timeline
             callback={onCallback}

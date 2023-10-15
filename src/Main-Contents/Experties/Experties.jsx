@@ -3,6 +3,7 @@ import "./Experties.css";
 import Exp1 from "../../images/Experties.png";
 import process from "../../images/process.png";
 import { truncate } from "lodash";
+import TmExp from '../TmExp/TmExp'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Header from "../Header/Header";
@@ -127,8 +128,10 @@ const Experties=()=>{
               Process
             </span>
           </div>
-
-          {data.map((item, i) => {
+          <div className="timeline-exp">
+            <TmExp />
+            <div style={{display:'flex',gap:'3rem',flexDirection:'column'}}>
+            {data.map((item, i) => {
             return (
               <motion.div
               ref={ref}
@@ -146,8 +149,8 @@ const Experties=()=>{
                   <img width="100%" height="100%" src={item.img} alt="" />
                 </div>
                 <div className="process-info">
-                  <div className="process-info-upper">{item.heading}</div>
-                  <div className="process-info-bottom">
+                  <div className="process-info-upper blt">{item.heading}</div>
+                  <div className="process-info-bottom blt">
                     {truncate(item.info, { length: 250 })} 
                     
                   </div>
@@ -155,6 +158,9 @@ const Experties=()=>{
               </motion.div>
             );
           })}
+          </div>
+          </div>
+         
         </div>
 
         {/* bottom */}
