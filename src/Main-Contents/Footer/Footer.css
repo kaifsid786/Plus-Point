@@ -143,4 +143,8 @@ line-height: 150%;
     .main-footer{
         height: 150rem;
     }
+    .foot-row-3{
+        height: 20rem;
+        margin-top: -4rem;
+    }
 }

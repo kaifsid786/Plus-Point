@@ -20,11 +20,15 @@ export default function Media() {
   const [height,setHeight] = useState(false);
   const [breadth,setBreadth] = useState(false);
   const [anim,setAnim] = useState(true);
-  useEffect(()=>{},window.addEventListener("scroll",()=>{
+
+  useEffect(()=>{
+    if(window.innerWidth < 1000)
+    setBreadth(true);
+  },window.addEventListener("scroll",()=>{
     if( window.innerWidth >= 1000 && window.pageYOffset > 400 ){
         setHeight(true);
     }
-    else if(window.innerWidth <= 1000 & window.pageYOffset > 50){
+    else if(window.innerWidth < 1000 & window.pageYOffset > 50){
         setHeight(true);
         setBreadth(true);
     }

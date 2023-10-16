@@ -100,14 +100,15 @@
     flex-direction: column;
     border-radius: 0.9375rem;
     background: #F6EFE5;
-    padding: 5rem 5rem;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 5rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
 }
 .vision-content-info h3{
     color: #4C341F;
     font-family: Proxima Nova;
-    font-size: 3.75rem;
+    font-size: 3.33rem;
     font-style: normal;
     font-weight: 700;
     line-height: 3.85163rem; /* 102.709% */
@@ -115,7 +116,7 @@
 .vision-content-info p{
     color: #4C341F;
     font-family: Poppins;
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
     line-height: 2.125rem; /* 154.545% */
@@ -139,7 +140,7 @@
     padding: 0;
 }
 .vision-add{
-    padding: 3rem;
+    padding: 2.2rem;
 }
 .vision-add2{
     justify-content: flex-start;
@@ -247,14 +248,14 @@
         min-height: 2rem;
     }
     .vision-content-3 p{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         line-height: 1.5rem;
     }
     .vision-content-info h3{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
     .vision-content-info p{
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 1.5rem;
     }
     .vision-content-1, .vision-content-2{

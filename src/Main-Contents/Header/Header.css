@@ -35,7 +35,7 @@
     color: #4C341F;
     text-decoration: none;
     font-style: normal;
-    opacity: 0.4;
+    opacity: 0.5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,9 +231,12 @@
     }
 }
 /* Responsiveness ---------------> */
-@media screen and (min-width:1920px){
+@media screen and (min-width:1921px){
   .main-header{
     max-width: 1920px;
+  }
+  .right ul li{
+    font-size: 20px;
   }
 }
 @media screen and (max-width:1600px) {

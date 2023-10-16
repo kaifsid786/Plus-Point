@@ -156,13 +156,14 @@
     .main-homeMedia{
         gap: 20px;
         align-items: flex-start;
+        position: relative;
     }
     .main-homeMedia h1{
         font-size: 1.5rem;
     }
     .main-homeMedia p{
         width: 100%;
-        font-size: 0.85rem;
+        font-size: 1rem;
         text-align: left;
     }
     .homeMedia-btn{
@@ -170,6 +171,10 @@
         height: 2rem;
         font-size: 0.75rem;
         margin-bottom: 20px;
+        position: absolute;
+        bottom: -69px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .homeMedia-content{
         width: 90vw;

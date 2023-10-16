@@ -101,11 +101,12 @@
 }
 @media screen and (max-width:550px){
     .main-homeNews{
-        align-items: flex-start;
+        align-items: flex-start !important;
         gap: 30px;
     }
     .homeNews-title{
-        font-size: 1.125rem;
+        margin-left: 20px;
+        font-size: 1.5rem !important;
     }
     .homeNews-para{
         display: none;
@@ -114,9 +115,9 @@
         padding: 0;
     }
     .homeNews-content h3{
-        font-size: 1.125rem;
+        font-size: 1.125rem !important;
     }
     .homeNews-content p{
-        font-size: 0.75rem;
+        font-size: 1rem !important;
     }
 }

@@ -22,7 +22,7 @@
     text-transform: uppercase;
 }
 .main-homeTest p{
-    width: 48rem;
+    width: 61rem;
     color: #646464;
     text-align: center;
     font-family: Poppins;
@@ -117,8 +117,8 @@
         font-size: 1.5rem !important;
     }
     .main-homeTest p{
-        width: 24rem;
-        font-size: 0.7rem !important;
+        width: 28rem;
+        font-size: 10px !important;
     }
     .homeTest-content{
         min-height: 6rem;
@@ -128,10 +128,10 @@
         height: 3rem !important;
     }
     .homeTest-content h3{
-        font-size: 0.75rem !important;
+        font-size: 11px !important;
     }
     .homeTest-content h5{
-           font-size: 0.5rem !important;
+           font-size: 7.8px !important;
     }
     .homeTest-arrow{
         top: 15rem;
