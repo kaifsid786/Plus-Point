@@ -162,8 +162,10 @@ const Welcome = () => {
           <img width="100%" height="100%" src={Exp1} />
         </div>
       </div>
-      <div className="container-welcome">
+      <div className="container-welcome ">
+        
         <div className="w-pp">
+       
           <div className="left-pp">
             <h1 className="wel-h" style={{ color: "rgba(0, 0, 0, 0.51)"}}>
               Welcome to the <br /> World of
@@ -223,8 +225,9 @@ const Welcome = () => {
             </div>
             :""}
           </div>
+          
         </div> 
-        
+       
         
           <Slider />
         <SliderPh/>

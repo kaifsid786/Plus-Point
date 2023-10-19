@@ -22,7 +22,7 @@
     text-transform: uppercase;
 }
 .main-homeTest p{
-    width: 48rem;
+    width: 61rem;
     color: #646464;
     text-align: center;
     font-family: Poppins;
@@ -48,7 +48,7 @@
 .homeTest-content h3{
     color: #4C341F;
     text-align: center;
-    font-family: Space Grotesk;
+    font-family: 'Poppins';
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
@@ -72,7 +72,13 @@
     right: 0;
     cursor: pointer;
 }
-
+.homeTest-arrow-left{
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) rotateY(180deg);
+    left: 0;
+    cursor: pointer;
+}
 /* Responsiveness ------------------------------> */
 /* @media screen and (max-width:1400px) {
     .main-homeTest{
@@ -117,8 +123,8 @@
         font-size: 1.5rem !important;
     }
     .main-homeTest p{
-        width: 24rem;
-        font-size: 0.7rem !important;
+        width: 28rem;
+        font-size: 10px !important;
     }
     .homeTest-content{
         min-height: 6rem;
@@ -128,16 +134,21 @@
         height: 3rem !important;
     }
     .homeTest-content h3{
-        font-size: 0.75rem !important;
+        font-size: 11px !important;
     }
     .homeTest-content h5{
-           font-size: 0.5rem !important;
+        font-size: 7.8px !important;
     }
     .homeTest-arrow{
         top: 15rem;
         right: -20px;
     }
-    .homeTest-arrow img{
+    
+    .homeTest-arrow-left{
+        top: 15rem;
+        left: 0;
+    }
+    .homeTest-arrow img , .homeTest-arrow-left img{
         width: 1.5rem;
     }
 }

@@ -18,7 +18,7 @@
 .pre-left{
       flex: 1 0 200px;
       padding: 2rem 0;
-      gap: 30px;
+     
       padding-left: 8rem;
       display: flex;
       flex-direction: column;
@@ -67,12 +67,14 @@
     cursor: pointer;
     transition: all 0.5s ease;
 }
-.pre-contact:hover{
-    background-color: green;
-    color: #FFF;
-}
+
 
 /* Responsivenes --------------------> */
+@media screen and (min-width:1921px){
+    .main-prefoot-content{
+        max-width: 1550px;
+    }
+}
 @media screen and (max-width:1200px) {
     .pre-left{
         padding-left: 6rem;

@@ -24,10 +24,13 @@ body {
 
 
 .s-y {
-  background: linear-gradient(rgba(76, 52, 31, 1), rgba(150, 105, 66, 1), rgba(76, 52, 31, 1));
+
+  line-height: 1.2;
   color: #4C341F;
-  -webkit-background-clip: text; 
+  -webkit-background-clip: text;
   background-clip: text;
+  /* color: linear-gradient(268.04deg, #4C341F 76.31%, #966942 84.66%, #4C341F 94.54%); */
+
 }
 
 .panel {
@@ -50,6 +53,7 @@ body {
 }
 .s-left,.s-right{
   display: flex;
+  gap: 2rem;
   flex: 1;
   flex-direction: column;
 }

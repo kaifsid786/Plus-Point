@@ -16,7 +16,7 @@ export default function HomeMedia() {
 
   return (
     <>
-       <div className="main-homeMedia">
+        <div className="main-homeMedia xyz">
              <h1>We set a benchmark</h1>
              <p>Here, we lay the foundation of something special. The precision & quality of our diversified range 
                 of products is down to our brilliant manufacturing Partners.</p>

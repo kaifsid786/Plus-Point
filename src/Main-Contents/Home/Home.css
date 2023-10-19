@@ -4,6 +4,7 @@
     position: relative;
     top: 8rem;
     scroll-behavior: smooth;
+    margin-bottom: 70px;
 }
 /* ::-webkit-scrollbar{
     display: none;
@@ -106,7 +107,13 @@
     background: rgba(255, 252, 200, 0.50);
 }
 /* Responsivenesss -------------------> */
-
+@media screen and (min-width:1921px) {
+    .home-content-1,.home-content-2,.home-content-3,.home-content-4,.home-content-5,.home-content-6{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 @media screen and (max-width:1024px) {
     .home-content-1,.home-content-2,.home-content-3,.home-content-4{
         padding: 8rem 6rem;

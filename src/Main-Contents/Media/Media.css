@@ -148,7 +148,7 @@
     animation-play-state: paused;
  } */
  .med-slide{
-    height: 28rem;
+    height: 26rem;
     width: 30rem;
     display: flex;
     align-items: center;
@@ -156,7 +156,7 @@
     overflow: hidden;
  }
  .med-slide img{
-    width: 88%;
+    width: 94%;
     height: 100%;
     border-radius: 20px;
     transition: 1s ease;
@@ -196,7 +196,7 @@
 }
 /* Earth Agency ------------> */
 .med-hOn{
-    position: fixed;
+    position: absolute;
     top: 0;
     opacity: 0;
     transition: all 1s ease;
@@ -279,31 +279,36 @@
 
 /* --------------------------------------------------> */
 /* RESPONSIVEMESS -------------------------------------> */
+@media screen and (min-width:1920px){
+    .main-media{
+        max-width: 1920px;
+       }
+    .media-content-1{
+     height: 195rem;
+    }
+    .media-content-1-title1{
+     top: -6rem;
+     font-size: 25rem;
+    }
+    .media-content-1 video{
+      height: 25rem;
+     top: -5rem;
+    }
+    .media-content-1-title2{
+     top: 9rem;
+     font-size: 35rem;
+    }
+    .media-content-1-wrapper{
+     top: calc(35rem - 20px);
+    }
+    .Media-content-1-btn{
+     bottom: 8rem;
+    }
+}
 @media screen and (max-width:1400px) {
     .main-media{
         top:6rem;
     }
-  /* .Media-content-1-btn{
-    bottom: 7vw;
-  }
-  .media-content-2{
-    min-height: 25rem;
-  }
-  .media-content-2-wrapper img{
-    height: 20rem;
-  }
-  .media-content-2{
-    padding-top: 2rem;
-  }
-  .media-content-3-award{
-     width: calc(40% - 10px);
-  }
-  .media-content-3-award p{
-    font-size: 1.5rem;
-  }
-  .media-content-3-award p span{
-    font-size: 1.2rem;
-  } */
 }
 @media screen and (max-width:768px){
     .Media-content-1-btn{
@@ -363,11 +368,11 @@
         animation: slideImg3 10s infinite linear;
     }
     .med-slide{
-        width: 13rem !important;
+        width: 15rem !important;
         height: 15rem !important;
     }
     .med-slide img{
-        width: 95%;
+        width: 100%;
         border-radius: 10px;
     }
     .med-col3{

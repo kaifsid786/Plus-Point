@@ -40,7 +40,10 @@ word-wrap: break-word
     box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.08) inset;
     border-radius: 15px;
     backdrop-filter: blur(90px);
-    background: #fafac2d9;
+    background: #FFFCC8;
+    background: radial-gradient(93.45% 93.45% at 95.38% 3.41%, #FFFFFF 31.25%, #FFFCC8 100%);
+
+    backdrop-filter: blur(90px);
     color: #4C341F;
     padding: 3rem 1rem;
     justify-content: center;
@@ -67,6 +70,7 @@ word-wrap: break-word
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
+    align-items: center;
 }
 .process{
     
@@ -114,7 +118,7 @@ width: 75rem;
    display: flex;
    gap: 1rem;
    padding: 1rem;
-
+   width: 100%;
 
 }
 .f-we{
@@ -133,10 +137,16 @@ width: 75rem;
     display: flex;
     flex: 1 1;
     cursor: pointer;
-    /* height: 20rem;
-    width: 25rem; */
+    background-size: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
     
    
+}
+.p-b-i:hover{
+   transform: scale(1.07);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 .timeline-exp{
     display: flex;
@@ -203,6 +213,8 @@ width: 75rem;
     display: flex;
     flex-direction: column;
     padding: 30px 30px 4rem;
+   
+    width: 100%;
 }
 
 .The-Process{

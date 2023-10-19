@@ -13,7 +13,7 @@ export default function HomeTest() {
      const [id,setId] =useState(0);               
   return (
      <>
-        <div className="main-homeTest">
+        <div className="main-homeTest xyz">
               <h1>A Testament to the Quality of Our Music Studio</h1>
               <p>
                  {desc[id]}
@@ -24,6 +24,14 @@ export default function HomeTest() {
                   <h5>{post[id]}</h5>
               </div>
               <div className="homeTest-arrow">
+                   <img src={homeTestArrow} alt="" onClick={()=>{
+                       if(id < img.length-1)
+                       setId(id+1);
+                       else
+                       setId(0);
+                   }}/>
+              </div>
+              <div className="homeTest-arrow-left">
                    <img src={homeTestArrow} alt="" onClick={()=>{
                        if(id < img.length-1)
                        setId(id+1);

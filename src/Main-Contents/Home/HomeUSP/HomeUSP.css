@@ -123,7 +123,7 @@
         font-size: 1.8rem !important;
     }
     .homeUSP-left p{
-        font-size: 0.8rem !important;
+        font-size: 1rem !important;
     }
     .homeUSP-left-content{
         min-height: 20rem;
@@ -134,9 +134,9 @@
         height: 12rem;
     }
     .homeUSP-right-content h1{
-        font-size: 1.12rem !important;
+        font-size: 1.4rem !important;
     }
     .homeUSP-right-content p{
-        font-size: 0.75rem !important;
+        font-size: 1rem !important;
     }
 }

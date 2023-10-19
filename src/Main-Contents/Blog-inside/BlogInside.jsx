@@ -15,6 +15,9 @@ import Process from "../../images/process.png";
 import Home1 from "../../images/homeNews-1.png";
 import Home2 from "../../images/homeNews-2.png";
 import Home3 from "../../images/homeNews-3.png";
+import im1 from "../../images/beautiful-door-house-with-beautiful-handle-it-s-nice-open-close-door.png"
+import l1 from "../../images/closeup-half-opened-door-wooden-door 1.png";
+import l2 from "../../images/style-door-handle-natural-wooden-door-door-handle-element (1) 1.png"
 import {
   ArrowBack,
   ArrowDownward,
@@ -50,7 +53,7 @@ const BlogInside = () => {
   ];
   const data = [
     {
-      img: "https://s3-alpha-sig.figma.com/img/d0a9/82c6/3dec605b805b03b7f4470690dfc7e56a?Expires=1697414400&Signature=En1VQvor9vaXNM-~LTMIck0V9pjZeo~dRX2If0hvOTqKebi74cRKqe5G-yXD81pQ7nC9jJLeRuXMHRoCXGVwad2Kqz-yaej8NsdmGw8U8Ia95hRUhrSmrITM9Itt5CMyaEtur06c3PGIHghljxj9jUiirRT1cobK~aFr~vQCPt~xAh83yiVBcvByjnc4YSu8xKfmKCZAbC-eQj-lQnidAeqxATxxJhrEES2Lt2chVAxlPCCLliJNqiTBGLJL0syDoD1fhdu1dk8Dp~8ZClinQWOonFUoUNwej3~18A7v2dIL~1fCRY8MeMz1R8AdKSAU0E0fucTvuT7HKIQ-jEBEzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      img: im1,
       heading: "select the best material for your door hardware",
       info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       date: "08-Jan-2023",
@@ -79,7 +82,7 @@ const BlogInside = () => {
         </h1>
       </div>
       <div className="container">
-      <div className="process">
+      <div className="process m-w-c">
           {data.map((item, i) => {
             return (
               <div
@@ -122,7 +125,7 @@ const BlogInside = () => {
                     <img
                      style={{width: "100%", height: "auto"}}
                   
-                      src="https://s3-alpha-sig.figma.com/img/615e/a5bd/ec5893d99c2272803c53e9b0a4608ed2?Expires=1697414400&Signature=bVjGdy9fHq6UZwbDPBImYRLMbgFfVGlcoyLgVAHb6szIxg03EKcEiz0OZdRNRF3l1Mtv8p5Bvr7A0d7RiB9XStP5vnUEtsqDk-OcEygyb13ypFtFyAyZmI6FrWfxbIxKa35co9ksKzkHVdxnqGjxPXA8ntqbt3UCBVRdjaoeIWYFcNdccg3l9XFeSZ-~~L1Lup6NS0w718yiRP58wmyfUeTMF-iYmCy89fvKvinQWn8cL6S07NhpcyNybHzXDJcgPxDqIrkNLqnuAntJI8vwjOBMnVdlIRlv-55xOVnoZnM9vn74ymjNaVDsMTFAgpcPy7KHQ167gwsm~0U6772xvA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      src={l1}
                       alt=""
                     />
                   </div>
@@ -130,7 +133,7 @@ const BlogInside = () => {
                   <div className="later-image-2">
                     <img
                       style={{width: "100%", height: "auto"}}
-                      src="https://s3-alpha-sig.figma.com/img/3b4c/0b84/f1158302ab46879d1e6a2026a424a30b?Expires=1697414400&Signature=FBtnbiEk-wO6m9LRXry7kNVHFyjNqEFJxfQBNUHdP3LYvG1FIpkug0DyhNCpyf1rz56lqnuq61sAADWvB6~tY8ATM2HBfXEiRJ9y8Lzvyut2755oL9wzhJGPZdoqA2CfYDLK-y~tEHtCtqkm5vbWoDj3dDPF~keYOcRqAx85VjWbsH8Wfzq6uFszT0kbYbN1hULYp1rZMITpJrcvqnie-LcOsX5vPMlz4cFwCjoomEUQL4rXrf-JtG2WE4XSjh5Qwv7uiy9Y~Lw7SjNCFu3GSxAbK2cw8XGwrPlO2wOlG8l1~2jdBEiyUIFFzdn7wt1Z9ALk6C7w3WFGytD70vqycw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                      src={l2}
                       alt=""
                     />
                   </div>
@@ -160,13 +163,13 @@ const BlogInside = () => {
                     leap into electronic typesetting,
                   </div>
                 </div>
-                <button className="s-m-btn">See More</button>
+                {/* <button className="s-m-btn">See More</button> */}
               </div>
             );
           })}
         </div>
         <Divider></Divider>
-        <div className="top-container">
+        <div className="top-container m-w-c">
           <div className="top-container-right">
             <span className="top-container-right-tag">Tags:</span>
             <li>
@@ -199,7 +202,7 @@ const BlogInside = () => {
         </div>
         <Divider />
 
-        <div className="prev-next">
+        <div className="prev-next m-w-c">
           <span>
             <ArrowBack /> Prev
           </span>
@@ -209,7 +212,7 @@ const BlogInside = () => {
         </div>
 
         {/* comments */}
-        <div className="blog-comments">
+        <div className="blog-comments m-w-c">
           <div className="comment-heading">
             <span style={{ fontWeight: "600" }}>Comments</span>
             <span
@@ -336,7 +339,7 @@ const BlogInside = () => {
         </div>
 
         {/* Related Blogs */}
-        <div style={{ marginTop: "1rem" }} className="rel-blog">
+        <div style={{ marginTop: "1rem" }} className="rel-blog m-w-c">
           <div
             style={{
               display: "flex",

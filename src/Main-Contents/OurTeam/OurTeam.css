@@ -2,9 +2,10 @@
     width: 100%;
     position: relative;
     top: 8rem;
+    margin-bottom: 8rem;
 }
 .our-team-banner{
-    width: 100%;
+    width: 100vw;
     max-height: fit-content;
     position: relative;
 }
@@ -36,6 +37,8 @@
 .our-team-content{
     width: 100%;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
 }
 .our-team-content-1{
     width: 100%;
@@ -98,6 +101,29 @@
 }
 
 /* Responsiveness -------------> */
+@media screen and (min-width:1921px) {
+    .our-team-main{      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .our-team-banner-title{
+        width: 50rem;
+    }
+ .our-team-content{
+    max-width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .our-team-content-2{
+    padding: 0;
+ }
+ .our-team-content-3-para{
+    max-width: 1920px;
+ }
+}
 @media screen and (max-width:1400px) {
     .our-team-main{
         top: 6rem;

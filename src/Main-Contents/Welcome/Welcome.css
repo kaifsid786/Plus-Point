@@ -89,12 +89,15 @@
 .hide-btn{
   display: none
 }
+
 .container-welcome>:nth-child(2){
   display: contents;
 }
 .container-welcome>:nth-child(3){
   display: none;
 }
+
+
   @media screen and (max-width:768px){
     .w-pp{
       flex-direction: column;

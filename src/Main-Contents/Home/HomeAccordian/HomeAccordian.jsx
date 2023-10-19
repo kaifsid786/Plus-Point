@@ -14,7 +14,7 @@ export default function HomeAccordian() {
 
   return (
       <>
-        <div className="main-homeAccordian">
+        <div className="main-homeAccordian xyz">
               <div className="homeAccordian-left">
                   <img src={doorPull} alt="" />
               </div>

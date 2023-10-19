@@ -41,9 +41,10 @@ export default function Ourteam(){
                           greatness, in unison.
                        </p>
                    </div>
-                   <PreFooter />
-                   <Footer />
+                   
            </div>
+           <PreFooter />
+                   <Footer />
         </>
     )
 }

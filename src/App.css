@@ -38,8 +38,28 @@
   }
 }
 
+@media screen and (min-width:2000px) {
+  .xyz{
+    max-width: 1800px;
+  }
+}
+
 @media screen and (min-width:1920px) {
-  .App{
+  .m-w-c{
     max-width: 1920px;
   }
+  .highlights{
+    align-items: center;
+  }
+  .top-container-left>:nth-child(1){
+    width: 60%;
+  }
+  .top-container-right>li>ul{
+    font-size: 20px;
+  }
+  .top-image {
+    height: 40vh;
+ }
+ 
+ 
 }

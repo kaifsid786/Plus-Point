@@ -6,7 +6,7 @@ import homeNews3 from '../../../images/homeNews-3.png';
 export default function HomeNews() {
   return (
     <>
-      <div className="main-homeNews">
+         <div className="main-homeNews xyz">
           <div className="homeNews-title">
            Our Latest News
           </div>

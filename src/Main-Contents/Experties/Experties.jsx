@@ -9,6 +9,9 @@ import { useInView } from "react-intersection-observer";
 import Header from "../Header/Header";
 import PreFooter from "../PreFooter/PreFooter";
 import Footer from "../Footer/Footer";
+import cop from "../../images/copper-pipes.png";
+import alum from "../../images/aluminium.png";
+import steel from "../../images/steel-pipes.png";
 
 
 
@@ -58,12 +61,12 @@ const Experties=()=>{
         </div>
         <div
           
-          className="highlights"
+          className="highlights "
         >
           <div style={{ textTransform: "uppercase", fontSize: "1.3rem" }}>
             Manufacturing Highlights
           </div>
-          <div className="card-container">
+          <div className="card-container m-w-c">
             <motion.div
              ref={ref}
               initial={{ y: "2rem", opacity: 0 }}
@@ -121,7 +124,7 @@ const Experties=()=>{
 
       {/* process */}
       <div className="container">
-        <div className="process">
+        <div className="process m-w-c">
           <div className="The-Process" >
             The{" "}
             <span style={{ fontWeight: "bold", color: "#4C341F" }}>
@@ -178,8 +181,9 @@ const Experties=()=>{
             gap: "1rem",
             flexDirection: "column",
             marginBottom: "2rem",
+            width:"100%"
           }}
-          className="material"
+          className="material m-w-c"
         >
           <div className="material-protray">
             Materials That Portray <br /> Quality & Style{" "}
@@ -201,16 +205,18 @@ const Experties=()=>{
           duration: 1,
           type: "ease-in",
         }}
+        className="m-w-c"
           style={{
             textTransform: "uppercase",
             textAlign: "left",
             color: "#1F1F1F",
             fontWeight: "400",
+            width:'100%'
           }}
         >
           what we use:
         </motion.div>
-        <div className="process-bottom-images">
+        <div className="process-bottom-images m-w-c">
 
           <div className="f-we">
           <motion.div
@@ -224,7 +230,7 @@ const Experties=()=>{
           }}
           className="p-b-i">
             <img
-              src="https://s3-alpha-sig.figma.com/img/e557/431e/9c037e7f00aede4d12cde7c771d18b05?Expires=1697414400&Signature=NST5FhkB3lIxcUDUv~yAFbiKdTM~Ulok~Z541t9KzE5IQCn4qDz3SbtEpmmmqvOeu1pMPz54IHK2QPv81G822OGS08h~AmjyIq8IFoycZZGOW1edFCtuTcyz2wVcpABJh-yy-rwhCm-jKnPI4jFAky6Ya4GT7CtHGsOsGaa6HCzzD0lFZRImOqZmjWHkETQ2dAZFKj6C0rAmcDp6zrXzTd11DsAHThzVYdzqxm8yLMLzD5smH8stf0D2zfRgvvEALTFevgO3R1yHxP4p8NecQYTTfcIlYlGGqIlB2Vi2FNA3mMbeQCor30jAtGdUClUMECxTeie2AF04~xhd71Q8sw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src={cop}
               alt=""
               
             />
@@ -245,7 +251,7 @@ const Experties=()=>{
           }}
           className="p-b-i">
             <img
-              src="https://s3-alpha-sig.figma.com/img/09c6/6037/c6edf1634872ae6b48bc69c32a92ff67?Expires=1697414400&Signature=Tt5b9Jgx~ujeLRUh~lTaHsd5xM161HPtccGmwvVg0pQN1R8OBS2HUOvialOr8eMt4Kr9v6gZxW6Bimkl3jqi6~ZpoFJCRs6q1I9K8u530~SPqwP791PbvNb3LaEj6gFT-ITT9kRhPdcw5AMpe7-QfyBJUV7mLyNzqTSFywCMwyXs8kV7PLyq4PnQVRSMDT7RPG-XaMot13fnpqz6wx36kTehHVeivtHE6xGG~RhBeO5-t7PDUZp8kNwif71jI5No7rU6M5NgcMVKFFYdZaVW1G8Qc6G~yl34rQP3jHpQ-k5dLCLs1aXIr~06glREDC0YV3RHmvOHyoMDdaeNnakHgw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src={steel}
               alt=""
             />
              <div class="overlay-text">
@@ -268,7 +274,7 @@ const Experties=()=>{
           }}
           className="p-b-i">
             <img
-              src="https://s3-alpha-sig.figma.com/img/99c7/3ec4/87f66f0aa854360233c139688514b7c0?Expires=1697414400&Signature=hHTbkxASwuIukLRRgCLMAZ2AqSJv0F5d1Px4r2qas0tzxYifA9CVlR36RMF~VvvF6Iw5REwnXux1YI48yDDG2tKS2LdNxbuk270-9FA-nsUW0i9Jnj2gM09-AA-h8FjIfyuSgypNc6tfc7VlebZ3nKpcPY8ax3Xs4l36DgeyX46fhPWfzS8BqO31peKQ4Qgy03YwLO~yZi6yDwVCYSHYsX9~fCeKo-3bui0vtF2NRJanIy6F9OA1iuGa4z7qEb~Z9dHs6GKpwRKenu~MS5EwFjbw3adIwWJ7HOJkYgqFGAR5LTJQF~PLolwxTLhfKHCYVlnvpttjZ8yI8fO7bjM6pg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src={alum}
               alt=""
             />
             <div class="overlay-text">
@@ -289,7 +295,7 @@ const Experties=()=>{
           }}
           className="p-b-i">
             <img
-              src="https://s3-alpha-sig.figma.com/img/99c7/3ec4/87f66f0aa854360233c139688514b7c0?Expires=1697414400&Signature=hHTbkxASwuIukLRRgCLMAZ2AqSJv0F5d1Px4r2qas0tzxYifA9CVlR36RMF~VvvF6Iw5REwnXux1YI48yDDG2tKS2LdNxbuk270-9FA-nsUW0i9Jnj2gM09-AA-h8FjIfyuSgypNc6tfc7VlebZ3nKpcPY8ax3Xs4l36DgeyX46fhPWfzS8BqO31peKQ4Qgy03YwLO~yZi6yDwVCYSHYsX9~fCeKo-3bui0vtF2NRJanIy6F9OA1iuGa4z7qEb~Z9dHs6GKpwRKenu~MS5EwFjbw3adIwWJ7HOJkYgqFGAR5LTJQF~PLolwxTLhfKHCYVlnvpttjZ8yI8fO7bjM6pg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+              src={alum}
               alt=""
             />
              <div class="overlay-text">
