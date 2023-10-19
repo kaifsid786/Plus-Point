@@ -3,7 +3,7 @@ import './HomeUSP.css'
 export default function HomeUSP() {
   return (
     <>
-      <div className="main-homeUSP">
+      <div className="main-homeUSP xyz">
           <div className="homeUSP-left">
              <div className="homeUSP-left-content">
                  <h1>USP’s</h1>

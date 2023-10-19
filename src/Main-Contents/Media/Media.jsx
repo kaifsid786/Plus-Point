@@ -41,8 +41,9 @@ export default function Media() {
   
   return (
     <>
-        <div className="main-media">
-               <Header />
+       <Header />
+       <div className="m-main-media" style={{width:"100vw",display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <div className="main-media">     
                <div className="media-content-1">
                   <div className={height?"media-content-1-title1 med-hOn":"media-content-1-title1 med-hOf"}>Plus</div>
                   <video src={media1} autoPlay loop muted className={height?"med-hOn":""} style={height?{display:"none"}:{}} ></video>
@@ -158,9 +159,10 @@ export default function Media() {
                          <img src={vector2} alt="" />
                     </div>
                </div>
-               <PreFooter />
-               <Footer />
         </div>
+        </div>
+        <PreFooter />
+        <Footer />
     </>
   )
 }

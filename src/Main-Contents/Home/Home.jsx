@@ -18,15 +18,15 @@ import quality from '../../images/quality.png'
 export default function Home() {
   return (
     <>
+         <Header />
          <div className="main-home">
-            <Header />
             <div className="home-top-banner">
                     <img src={homeMain} alt="" />
             </div>
             <div className="home-banner">
                  <motion.h1
-                  initial={{x:"-20rem",opacity:"0"}}
-                  whileInView={{x:"0",opacity:"1"}}
+                  initial={{y:"15rem",opacity:"0"}}
+                  whileInView={{y:"0",opacity:"1"}}
                   transition={{
                     duration:1,
                   }}
@@ -34,8 +34,8 @@ export default function Home() {
                  <span>Your One Stop Hardware Solution.</span> </motion.h1>
 
                  <motion.h2
-                  initial={{x:"20rem",opacity:"0"}}
-                  whileInView={{x:"0",opacity:"1"}}
+                  initial={{y:"15rem",opacity:"0"}}
+                  whileInView={{y:"0",opacity:"1"}}
                   transition={{
                     duration:1,
                   }}
@@ -43,16 +43,16 @@ export default function Home() {
                     we have inherited the art, quality & sheer craftsmanship of hardware creation.</motion.h2>
 
                  <motion.h3
-                  initial={{x:"-20rem",opacity:"0"}}
-                  whileInView={{x:"0",opacity:"1"}}
+                  initial={{y:"15rem",opacity:"0"}}
+                  whileInView={{y:"0",opacity:"1"}}
                   transition={{
                     duration:1,
                   }}
                  >We mix our special touch with new ideas to get the best of old and new.</motion.h3>
 
                  <motion.h4
-                  initial={{x:"20rem",opacity:"0"}}
-                  whileInView={{x:"0",opacity:"1"}}
+                  initial={{y:"15rem",opacity:"0"}}
+                  whileInView={{y:"0",opacity:"1"}}
                   transition={{
                     duration:1,
                   }}
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
             <div className="home-content">
                     <div className="home-content-1">
-                        <div className="home-content-1-wp">
+                        <div className="home-content-1-wp xyz">
                             <h1>Values that define us</h1>
                          <div className="home-content-1-wrapper">
                              <HomeCard img={trust} title={"Trust:"} info={"Trust is priceless. Our efforts and precision behind each of our products makes you stay rest assured and at peace."} id={1} />
@@ -87,9 +87,9 @@ export default function Home() {
                         <HomeTest />
                     </div>
             </div>
-            <PreFooter />
-            <Footer />
          </div>
+         <PreFooter />
+          <Footer />
     </>
   )
 }

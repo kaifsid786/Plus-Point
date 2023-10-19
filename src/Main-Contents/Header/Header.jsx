@@ -36,6 +36,7 @@ export default function Header(){
     }
     return(
         <>
+        <div className="m-header" style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
         <div className="main-header" id="1" style={showHead?{}:{display:"none"}}>
             <div className="left-logo">
                 <img src={img} alt="" className="head-img" />
@@ -43,16 +44,16 @@ export default function Header(){
             <div className={!showMenu ? "right" : "disp"}>
                 <ul>
                     <li> <a href="/">Home</a></li>  
-                    <li> <a href="/ourTeam">Who we are <span> <AiOutlineDown/> </span></a>
+                    <li> <a href="#">Who we are <span> <AiOutlineDown/> </span></a>
                       <ul className="drop-down">
-                          <li> <a href="">About-1</a></li>
-                          <li> <a href="">About-2</a></li>
-                          <li> <a href="">About-3</a></li>
+                          <li> <a href="/about">About Us</a></li>
+                          <li> <a href="/ourTeam">Our Team</a></li>
+                          <li> <a href="/ourVision">Mission Vision</a></li>
                       </ul>
                     </li>
                     <li> <a href="/experties">What we do</a></li>
                     <li> <a href="/media">Media <span> <AiOutlineDown/></span></a>
-                    <ul className="drop-down">
+                    <ul className="drop-down" style={{display:"none"}}>
                           <li> <a href="">Media-1</a></li>
                           <li> <a href="">Media-2</a></li>
                           <li> <a href="">Media-3</a></li>
@@ -60,7 +61,7 @@ export default function Header(){
                       </ul>
                     </li>
                     <li> <a href="">Products <span> <AiOutlineDown/> </span></a>
-                    <ul className="drop-down">
+                    <ul className="drop-down" style={{display:"none"}}>
                           <li> <a href="">Products-1</a></li>
                           <li> <a href="">Products-2</a></li>
                           <li> <a href="">Products-3</a></li>
@@ -80,11 +81,11 @@ export default function Header(){
          <div className={showHamMenu ? "right-ham-content":"right-ham-content disp-ham"} style={(showHead && showUl)?{}:{height:"0"}}>
                  <ul style={(showUl && showHead)?{}:{display:"none"}}>
                     <li><span><a href="/">Home</a></span></li>
-                    <li><span><a href="/ourTeam">Who we are</a> <AiOutlineDown onClick={showAbout}/></span>
+                    <li><span><a href="#">Who we are</a> <AiOutlineDown onClick={showAbout}/></span>
                         <ul style={showHamAbout?{height:"10rem",marginTop:"20px"}:{height:"0"}}>
-                            <li><a href="">About-1</a></li>
-                            <li><a href="">About-2</a></li>
-                            <li><a href="">About-3</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/ourTeam">Our Team</a></li>
+                            <li><a href="/ourVision">Mission Vision</a></li>
                         </ul>
                     </li>
                     <li><span><a href="/experties">What we do</a></span></li>
@@ -106,6 +107,7 @@ export default function Header(){
                     <li><span><a href="/blogs">Blogs</a></span></li>
                     <li><span><a href="">Contacts</a></span></li>
                  </ul>
+             </div>
              </div>
         </>
     )

@@ -163,6 +163,17 @@
 }
 
 /* Responsiveness ----------------------------> */
+@media screen and (min-width:1920px) {
+    .main-vision{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+.vision-text-slide,.vision-content{
+    max-width: 1920px;
+}
+}
 @media screen and (max-width:1400px) {
     .main-vision{
         position: relative;

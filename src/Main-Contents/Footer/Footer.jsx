@@ -1,16 +1,17 @@
 import React from "react";
 import img from '../../images/PlusPointWhite.png' ;
-import {CiFacebook} from 'react-icons/ci';
-import {TiSocialTwitterCircular} from 'react-icons/ti';
-import  {GrInstagram} from "react-icons/gr";
-import  {ImPinterest2} from "react-icons/im";
-import  {FaSquareYoutube} from "react-icons/fa6";
-import  {TiSocialLinkedinCircular} from "react-icons/ti";
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './Footer.css';
 
 export default function Footer(){
     return(
         <>
+        <div className="main-main-footer" style={{width:"100vw",background:"#4c341f",display:"flex",justifyContent:"center",alignItems:"center"}}>
           <div className="main-footer">
                <div className="foot-row-1">
                    <div className="foot-col-1">
@@ -20,12 +21,12 @@ export default function Footer(){
                           at the most affordable prices! Don’t believe us? Have a look for yourself!
                        </p>
                        <div className="social-icons">
-                        <CiFacebook />
-                        <TiSocialTwitterCircular />
-                        <GrInstagram />
-                        <ImPinterest2 />
-                        <FaSquareYoutube />
-                         <TiSocialLinkedinCircular />
+                          <div className="si-div"><FacebookOutlinedIcon /></div>
+                          <div className="si-div"><TwitterIcon /></div>
+                          <div className="si-div"><InstagramIcon/></div>
+                          <div className="si-div"><PinterestIcon /></div>
+                          <div className="si-div"><YouTubeIcon /></div>
+                          <div className="si-div"><LinkedInIcon /></div>
                        </div>
                    </div>
                    <div className="foot-col-2 foot-col target">
@@ -69,6 +70,7 @@ export default function Footer(){
                <div className="foot-row-3">
                   ©Plus Point all rights reserved
                </div>
+          </div>
           </div>
         </>
     )

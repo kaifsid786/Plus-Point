@@ -2,6 +2,7 @@
     width: 100%;
     position: relative;
     top: 8rem;
+    margin-bottom: 70px;
 }
 .FAQ-content{
     width: 100%;
@@ -64,6 +65,11 @@
 }
 
 /* Responsiveness --------------------------> */
+@media screen and (min-width:1920px) {
+ .main-FAQs{
+    max-width: 1920px;
+ }
+}
 @media screen and (max-width:1400px) {
     .main-FAQs{
         top: 6rem;
@@ -105,6 +111,12 @@
     }
 }
 @media screen and (max-width:480px){
+    .m-main-FAQS{
+        margin-bottom: 70px;
+    }
+    .main-FAQs{
+        margin-bottom: 20px;
+    }
     .FAQ-content{
         padding: 1rem;
         gap: 10px;

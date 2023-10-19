@@ -22,8 +22,9 @@ export default function FAQs() {
 
   return (
     <>
+       <Header />
+       <div className="m-main-FAQS" style={{width:"100vw",display:"flex",justifyContent:"center",alignItems:"center"}}>
       <div className="main-FAQs">
-          <Header />
           <div className="FAQ-content">
                  <div className="FAQ-content-left">
                     <div className="faq-content-left-title">Frequently Asked Questions</div>
@@ -45,9 +46,10 @@ export default function FAQs() {
                    })}
                  </div>
           </div>
-          <PreFooter />
-          <Footer />
       </div>
+      </div>
+      <PreFooter />
+       <Footer />
     </>
   )
 }

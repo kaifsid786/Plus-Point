@@ -38,8 +38,8 @@
   }
 }
 
-@media screen and (min-width:1920px) {
-  .App{
-    max-width: 1920px;
+@media screen and (min-width:2000px) {
+  .xyz{
+    max-width: 1800px;
   }
 }
