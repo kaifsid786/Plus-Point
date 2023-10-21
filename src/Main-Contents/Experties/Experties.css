@@ -145,7 +145,7 @@ width: 75rem;
    
 }
 .p-b-i:hover{
-   transform: scale(1.07);
+    transform: scale(1.08);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 .timeline-exp{

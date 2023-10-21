@@ -139,6 +139,7 @@ import React, { useEffect, useState } from "react";
 import Exp1 from "../../images/Experties.png";
 import "./Welcome.css";
 import { useRef } from "react";
+import {motion} from "framer-motion"
 
 import Gallery from "../Gallery/index";
 import Slider from "../Slider/Slider";
@@ -164,7 +165,17 @@ const Welcome = () => {
       </div>
       <div className="container-welcome ">
         
-        <div className="w-pp">
+        <div className="w-pp-center">
+        <motion.div
+        initial={{ y: "5rem" }}
+        whileInView={{ y: 0,  }}
+        exit={{ opacity: 0, y: "2rem" }}
+        transition={{
+          duration: 1,
+          type: "ease-in",
+        }}
+        viewport={{once:true}}
+        className="w-pp m-w-c">
        
           <div className="left-pp">
             <h1 className="wel-h" style={{ color: "rgba(0, 0, 0, 0.51)"}}>
@@ -201,7 +212,7 @@ const Welcome = () => {
               <button onClick={handleSeeMore} className="s-m-btn">{seeContent?"See Less":"See More"}</button>
             </div>
             {seeContent?
-            <div style={{ color: "1F1F1F" }} className="w-h-1">
+            <div style={{ color: "1F1F1F" }} className="w-h-1 w-h-11">
               <span>
                 Having jewelled up lacs of homes during this course, we now
                 stand on a mission to be your{" "}
@@ -226,8 +237,8 @@ const Welcome = () => {
             :""}
           </div>
           
-        </div> 
-       
+        </motion.div> 
+       </div>
         
           <Slider />
         <SliderPh/>

@@ -41,6 +41,12 @@
 
 .welcome-image{
   height: 80vh;
+  
+}
+.w-pp-center{
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .w-pp{
   display: flex;
@@ -97,6 +103,12 @@
   display: none;
 }
 
+
+@media screen and (min-width:769px) {
+  .w-h-11{
+    margin-top: -3rem;
+  }
+}
 
   @media screen and (max-width:768px){
     .w-pp{

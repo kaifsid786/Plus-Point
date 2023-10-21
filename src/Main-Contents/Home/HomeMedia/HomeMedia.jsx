@@ -17,10 +17,39 @@ export default function HomeMedia() {
   return (
     <>
         <div className="main-homeMedia xyz">
-             <h1>We set a benchmark</h1>
-             <p>Here, we lay the foundation of something special. The precision & quality of our diversified range 
-                of products is down to our brilliant manufacturing Partners.</p>
-             <div className="homeMedia-btn">See More</div>
+             <motion.h1
+             
+             initial={{ y: "5rem" }}
+             whileInView={{ y: 0,  }}
+             exit={{ opacity: 0, y: "2rem" }}
+             transition={{
+               duration: 1,
+               type: "ease-in",
+             }}
+             viewport={{once:true}}
+             >We set a benchmark</motion.h1>
+             <motion.p  
+              initial={{ y: "5rem" }}
+              whileInView={{ y: 0,  }}
+              exit={{ opacity: 0, y: "2rem" }}
+              transition={{
+                duration: 1,
+                type: "ease-in",
+              }}
+              viewport={{once:true}}
+             >Here, we lay the foundation of something special. The precision & quality of our diversified range 
+                of products is down to our brilliant manufacturing Partners.</motion.p>
+             <motion.div
+              initial={{ y: "5rem" }}
+              whileInView={{ y: 0,  }}
+              exit={{ opacity: 0, y: "2rem" }}
+              transition={{
+                duration: 1,
+                type: "ease-in",
+              }}
+              viewport={{once:true}}
+             
+             className="homeMedia-btn">See More</motion.div>
              <div className="homeMedia-content">
                  <motion.img
                  initial={{x:"-10rem",opacity:'0'}}

@@ -1,9 +1,19 @@
 import React from "react";
 import './PreFooter.css';
+import {motion} from 'framer-motion'
 export default function PreFooter(){
     return(
         <>
-           <div className="main-prefooter">
+           <motion.div
+            initial={{ y: "5rem" }}
+            whileInView={{ y: 0,  }}
+            exit={{ opacity: 0, y: "2rem" }}
+            transition={{
+              duration: 1,
+              type: "ease-in",
+            }}
+            viewport={{once:true}}
+           className="main-prefooter">
              <div className="main-prefoot-content">
                  <div className="pre-left">
                        <h3 className="pre-left-title">
@@ -18,7 +28,7 @@ export default function PreFooter(){
                        <button className="pre-contact">Contact us</button>
                  </div>
              </div>
-           </div>
+           </motion.div>
         </>
     )
 }

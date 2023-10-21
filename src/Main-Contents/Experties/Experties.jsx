@@ -69,13 +69,13 @@ const Experties=()=>{
           <div className="card-container m-w-c">
             <motion.div
              ref={ref}
-              initial={{ y: "2rem", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ opacity: 0, y: "2rem" }}
-              transition={{
-                duration: 0.3,
-                type: "ease-in",
-              }}
+             initial={{ y: "2rem", opacity: 0 }}
+             whileInView={{ y: 0, opacity: 1 }}
+             exit={{ opacity: 0, y: "2rem" }}
+             transition={{
+               duration: 0.5,
+               type: "ease-in",
+             }}
               className="card card1 exp-card"
             >
               <div className="title">Precision & Design</div>
@@ -85,13 +85,13 @@ const Experties=()=>{
             </motion.div>
             <motion.div
              ref={ref}
-              initial={{ y: "2rem", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ opacity: 0, y: "2rem" }}
-              transition={{
-                duration: 1,
-                type: "ease-in",
-              }}
+             initial={{ y: "2rem", opacity: 0 }}
+             whileInView={{ y: 0, opacity: 1 }}
+             exit={{ opacity: 0, y: "2rem" }}
+             transition={{
+               duration: 0.5,
+               type: "ease-in",
+             }}
               className="card card2 exp-card"
             >
               <div className="title">Surface Finishing:</div>
@@ -103,7 +103,7 @@ const Experties=()=>{
             <motion.div
              ref={ref}
               initial={{ y: "2rem", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              whileInView={{ y: 0, opacity: 1 }}
               exit={{ opacity: 0, y: "2rem" }}
               transition={{
                 duration: 0.5,
@@ -138,13 +138,15 @@ const Experties=()=>{
             return (
               <motion.div
               ref={ref}
-                initial={{ opacity: 0, y: "5rem" }}
-                animate={{ y: 0, opacity: 1 }}
+                initial={{ y: "5rem" }}
+                whileInView={{ y: 0,  }}
                 exit={{ opacity: 0, y: "2rem" }}
                 transition={{
                   duration: 1,
                   type: "ease-in",
                 }}
+                viewport={{once:true}}
+                
                 className="process-card"
                 key={i}
               >
@@ -169,13 +171,14 @@ const Experties=()=>{
         {/* bottom */}
         <motion.div
          ref={ref}
-          initial={{ opacity: 0, y: "3rem" }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ opacity: 0, y: "3rem" }}
-          transition={{
-            duration: 1,
-            type: "ease-in",
-          }}
+         initial={{ y: "5rem" }}
+         whileInView={{ y: 0,  }}
+         exit={{ opacity: 0, y: "2rem" }}
+         transition={{
+           duration: 2,
+           type: "ease-in",
+         }}
+         viewport={{once:true}}
           style={{
             display: "flex",
             gap: "1rem",
@@ -197,14 +200,14 @@ const Experties=()=>{
 
         {/* images */}
         <motion.div
-         ref={ref}
-        initial={{ opacity: 0, y: "3rem" }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ opacity: 0, y: "3rem" }}
-        transition={{
-          duration: 1,
-          type: "ease-in",
-        }}
+            initial={{ y: "5rem" }}
+            whileInView={{ y: 0,  }}
+            exit={{ opacity: 0, y: "2rem" }}
+            transition={{
+              duration: 2,
+              type: "ease-in",
+            }}
+            viewport={{once:true}}
         className="m-w-c"
           style={{
             textTransform: "uppercase",
@@ -221,13 +224,14 @@ const Experties=()=>{
           <div className="f-we">
           <motion.div
            ref={ref}
-          initial={{ opacity: 0, y: "3rem" }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ opacity: 0, y: "3rem" }}
-          transition={{
-            duration: 0.6,
-            type: "ease-in",
-          }}
+           initial={{ y: "5rem",opacity:0 }}
+           whileInView={{ y: 0,  opacity:1}}
+           exit={{ opacity: 0, y: "2rem" }}
+           transition={{
+             duration: 0.3,
+             type: "ease-in",
+           }}
+           viewport={{once:true}}
           className="p-b-i">
             <img
               src={cop}
@@ -235,28 +239,29 @@ const Experties=()=>{
               
             />
             <div class="overlay-text">
-              <h3>Copper</h3>
-              <p style={{fontSize:'12px'}}>If safety is your numero<br/>uno priority</p>
+              <h3>Brass</h3>
+              <p style={{fontSize:'12px'}}>Off ers durability that lasts <br/>a lifetime</p>
               
             </div>
           </motion.div>
           <motion.div
           
-          initial={{ opacity: 0, y: "3rem" }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ opacity: 0, y: "3rem" }}
-          transition={{
-            duration: 1,
-            type: "ease-in",
-          }}
+          initial={{ y: "5rem",opacity:0 }}
+           whileInView={{ y: 0,  opacity:1}}
+           exit={{ opacity: 0, y: "2rem" }}
+           transition={{
+             duration: 0.6,
+             type: "ease-in",
+           }}
+           viewport={{once:true}}
           className="p-b-i">
             <img
               src={steel}
               alt=""
             />
              <div class="overlay-text">
-              <h3>Steel</h3>
-              <p style={{fontSize:'12px'}}>If safety is your numero<br/>uno priority</p>
+              <h3>Stainless Steel</h3>
+              <p style={{fontSize:'12px'}}>Handles moisture better than <br/>anything else.</p>
               
             </div>
           </motion.div>
@@ -265,13 +270,14 @@ const Experties=()=>{
           <div className="s-we">
           <motion.div
            ref={ref}
-          initial={{ opacity: 0, y: "3rem" }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ opacity: 0, y: "3rem" }}
-          transition={{
-            duration: 1,
-            type: "ease-in",
-          }}
+           initial={{ y: "5rem",opacity:0 }}
+           whileInView={{ y: 0,  opacity:1}}
+           exit={{ opacity: 0, y: "2rem" }}
+           transition={{
+             duration: 0.9,
+             type: "ease-in",
+           }}
+           viewport={{once:true}}
           className="p-b-i">
             <img
               src={alum}
@@ -286,13 +292,14 @@ const Experties=()=>{
 
           <motion.div 
            ref={ref}
-          initial={{ opacity: 0, y: "3rem" }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ opacity: 0, y: "3rem" }}
-          transition={{
-            duration: 0.2,
-            type: "ease-in",
-          }}
+           initial={{ y: "5rem",opacity:0 }}
+           whileInView={{ y: 0,  opacity:1}}
+           exit={{ opacity: 0, y: "2rem" }}
+           transition={{
+             duration: 1.2,
+             type: "ease-in",
+           }}
+           viewport={{once:true}}
           className="p-b-i">
             <img
               src={alum}
@@ -300,7 +307,7 @@ const Experties=()=>{
             />
              <div class="overlay-text">
               <h3>Aluminium</h3>
-              <p style={{fontSize:'12px'}}>If safety is your numero<br/>uno priority</p>
+              <p style={{fontSize:'12px'}}>Who doesn’t need a premium<br/> feel, right?</p>
               
             </div>
           </motion.div>

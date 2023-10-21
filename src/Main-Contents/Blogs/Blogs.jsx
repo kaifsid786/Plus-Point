@@ -10,10 +10,11 @@ import DirectionsIcon from "@mui/icons-material/Directions";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import {truncate} from 'lodash';
+import { motion } from "framer-motion";
 
 import "./Blogs.css";
 import Header from "../Header/Header";
-import PreFooter from "../PreFooter/PreFooter";
+import PreFooter from "../PreFooter/PreFooter";  
 import Footer from "../Footer/Footer";
 import m1 from "../../images/beautiful-door-house-with-beautiful-handle-it-s-nice-open-close-door.png"
 import m2 from "../../images/image 39.png";
@@ -132,7 +133,17 @@ const Blogs = () => {
           <div className="process m-w-c">
             {data.map((item, i) => {
               return (
-                <div className="process-card" key={i}>
+                <motion.div
+                initial={{ y: "5rem" }}
+                whileInView={{ y: 0,  }}
+                exit={{ opacity: 0, y: "2rem" }}
+                transition={{
+                  duration: 1,
+                  type: "ease-in",
+                }}
+                viewport={{once:true}}
+                
+                className="process-card" key={i}>
                   <div className=" bolgs-imgs">
                     <img width="100%" src={item.img} alt="" />
                   </div>
@@ -172,7 +183,7 @@ const Blogs = () => {
                       </span>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

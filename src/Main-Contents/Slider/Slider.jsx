@@ -227,7 +227,7 @@ export default function Slider() {
           scrub: 0.1,
           snap: 1 / (panels.length - 1),
           end: () => "+=" + slider.current.offsetWidth,
-          markers: true,
+          markers: false,
         },
       });
     }, component);
@@ -238,7 +238,8 @@ export default function Slider() {
     console.log("awesome");
   };
   return (
-    <div className="Slider" ref={component}>
+    
+    <div className="Slider m-w-c" ref={component}>
       <div ref={slider} className="container-slide">
         {sliderData.map((data, index) => {
           return (
@@ -262,6 +263,7 @@ export default function Slider() {
         })}
       </div>
     </div>
+    
   );
 }
 
