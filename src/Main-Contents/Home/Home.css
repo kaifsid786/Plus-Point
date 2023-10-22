@@ -123,9 +123,21 @@
     }
 }
 
+.main-home>:nth-child(1){
+    display: none;
+}
+.main-home>:nth-child(2){
+    display: contents;
+}
 @media screen and (max-width:768px) {
     .main-home{
         top: 6rem;
+    }
+    .main-home>:nth-child(1){
+        display: contents;
+    }
+    .main-home>:nth-child(2){
+        display: none;
     }
     .home-top-banner{
         height: 30rem !important;

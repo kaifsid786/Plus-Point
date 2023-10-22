@@ -18,7 +18,7 @@ export default function Ourteam(){
                     <img src={img} alt="" className="our-team-banner-img"/>
                     <div className="our-team-banner-grade"></div>
                          <motion.p 
-                          initial={{ x: "80rem" }}
+                          initial={{ x: "8rem" }}
                           whileInView={{ x: 0,  }}
                           exit={{ opacity: 0, x: "2rem" }}
                           transition={{
@@ -54,7 +54,7 @@ export default function Ourteam(){
                <div className="our-team-content-3">
                        <img src={img2} alt="" className="out-team-content-3-img"/>
                        <motion.p 
-                        initial={{ x: "-50rem" }}
+                        initial={{ x: "-10rem" }}
                         whileInView={{ x: 0,  }}
                         exit={{ opacity: 0, y: "2rem" }}
                         transition={{

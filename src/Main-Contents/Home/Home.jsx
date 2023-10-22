@@ -11,10 +11,11 @@ import HomeMedia from './HomeMedia/HomeMedia';
 import HomeTest from './HomeTest/HomeTest';
 import HomeNews from './HomeNews/HomeNews';
 import './Home.css';
-import homeMain from '../../images/home-main.png';
 import trust from '../../images/home-1.png'
 import progression from '../../images/progression.png'
 import quality from '../../images/quality.png'
+import HomeBanner from './HomeBanner/HomeBanner';
+import homeMain from '../../images/home-main.png';
 export default function Home() {
   return (
     <>
@@ -24,6 +25,7 @@ export default function Home() {
             <div className="home-top-banner">
                     <img src={homeMain} alt="" />
             </div>
+            <HomeBanner />
             <div className="home-banner">
                  <motion.h1
                  initial={{y:"15rem",opacity:"0"}}
@@ -54,7 +56,7 @@ export default function Home() {
                  <motion.h4
                    initial={{y:"15rem",opacity:"0"}}
                    whileInView={{y:"0",opacity:"1"}}
-                  transition={{
+                  transition={{ 
                     duration:1,
                   }}
                  >This journey of revolutionising hardware began from Aligarh, 
