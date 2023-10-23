@@ -9,6 +9,7 @@ import Blogs from './Main-Contents/Blogs/Blogs';
 import Experties from './Main-Contents/Experties/Experties';
 import Welcome from './Main-Contents/Welcome/Welcome';
 import BlogInside from './Main-Contents/Blog-inside/BlogInside';
+import ContactUS from './Main-Contents/Contact/ContactUS'
 import Header from './Main-Contents/Header/Header';
 import PreFooter from './Main-Contents/PreFooter/PreFooter';
 import Footer from './Main-Contents/Footer/Footer';
@@ -26,6 +27,7 @@ function App() {
               <Route path='/experties' element={<Experties />} />
               <Route path='/blogInsides' element={<BlogInside />} />
               <Route path='/about' element={<Welcome />} />
+              <Route path='/contact' element={<ContactUS />} />
       {/* <Footer />  */}
            </Routes>
         </BrowserRouter>

@@ -146,7 +146,7 @@ export default function Slider() {
           scrub: 0.1,
           snap: 1 / (panels.length - 1),
           end: () => "+=" + slider.current.offsetWidth,
-          markers: true,
+          markers: false,
         },
       });
     }, component);

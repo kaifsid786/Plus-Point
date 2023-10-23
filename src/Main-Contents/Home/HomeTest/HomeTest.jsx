@@ -3,7 +3,8 @@ import './HomeTest.css'
 import homeTest1 from '../../../images/homeTest-1.png'
 import homeTest2 from '../../../images/homeTest-2.jpg'
 import homeTestArrow from '../../../images/homeTest-arrow.png'
-export default function HomeTest() {
+import {motion} from "framer-motion"
+export default function HomeTest(props) {
 
      const img = [homeTest1,homeTest2];
      const desc = ["“offers a range of services including recording, mixing, and mastering music. They may also offer songwriting and music production services, as well as voiceover recording, sound design, podcast recording, live sessions, and instrument rentals.”",
@@ -14,7 +15,13 @@ export default function HomeTest() {
   return (
      <>
         <div className="main-homeTest xyz">
-              <h1>A Testament to the Quality of Our Music Studio</h1>
+              <motion.h1
+               initial={props.anim?{y:"5rem",opacity:0}:{}}
+               whileInView={{y:"0",opacity:1}}
+               transition={{
+                 duration:1,
+               }}
+              >A Testament to the Quality of Our Music Studio</motion.h1>
               <p>
                  {desc[id]}
              </p>

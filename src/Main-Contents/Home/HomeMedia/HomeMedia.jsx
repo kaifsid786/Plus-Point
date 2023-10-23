@@ -6,7 +6,7 @@ import homeMedia3 from '../../../images/homeMedia-3.png'
 import homeMedia4 from '../../../images/homeMedia-4.png'
 import homeMedia5 from '../../../images/homeMedia-5.png'
 import {motion} from 'framer-motion'
-export default function HomeMedia() {
+export default function HomeMedia(props) {
 
   const transition = {
     type: "spring",
@@ -17,9 +17,21 @@ export default function HomeMedia() {
   return (
     <>
        <div className="main-homeMedia xyz">
-             <h1>We set a benchmark</h1>
-             <p>Here, we lay the foundation of something special. The precision & quality of our diversified range 
-                of products is down to our brilliant manufacturing Partners.</p>
+             <motion.h1
+              initial={props.anim?{y:"5rem",opacity:0}:{}}
+              whileInView={{y:"0",opacity:1}}
+              transition={{
+                duration:1,
+              }}
+             >We set a benchmark</motion.h1>
+             <motion.p
+             initial={props.anim?{y:"5rem",opacity:0}:{}}
+             whileInView={{y:"0",opacity:1}}
+             transition={{
+               duration:1,
+             }}
+             >Here, we lay the foundation of something smotion.pecial. The precision & quality of our diversified range 
+                of products is down to our brilliant manufacturing Partners.</motion.p>
              <div className="homeMedia-btn">See More</div>
              <div className="homeMedia-content">
                  <motion.img

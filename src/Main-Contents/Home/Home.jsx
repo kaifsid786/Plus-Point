@@ -11,22 +11,25 @@ import HomeMedia from './HomeMedia/HomeMedia';
 import HomeTest from './HomeTest/HomeTest';
 import HomeNews from './HomeNews/HomeNews';
 import './Home.css';
-import homeMain from '../../images/home-main.png';
 import trust from '../../images/home-1.png'
 import progression from '../../images/progression.png'
 import quality from '../../images/quality.png'
+import HomeBanner from './HomeBanner/HomeBanner';
+import homeMain from '../../images/home-main.png';
 export default function Home() {
   return (
     <>
-         <Header />
+    <Header />
          <div className="main-home">
+            
             <div className="home-top-banner">
                     <img src={homeMain} alt="" />
             </div>
+            <HomeBanner />
             <div className="home-banner">
                  <motion.h1
-                  initial={{y:"15rem",opacity:"0"}}
-                  whileInView={{y:"0",opacity:"1"}}
+                 initial={{y:"15rem",opacity:"0"}}
+                 whileInView={{y:"0",opacity:"1"}}
                   transition={{
                     duration:1,
                   }}
@@ -43,17 +46,17 @@ export default function Home() {
                     we have inherited the art, quality & sheer craftsmanship of hardware creation.</motion.h2>
 
                  <motion.h3
-                  initial={{y:"15rem",opacity:"0"}}
-                  whileInView={{y:"0",opacity:"1"}}
+                 initial={{y:"15rem",opacity:"0"}}
+                 whileInView={{y:"0",opacity:"1"}}
                   transition={{
                     duration:1,
                   }}
                  >We mix our special touch with new ideas to get the best of old and new.</motion.h3>
 
                  <motion.h4
-                  initial={{y:"15rem",opacity:"0"}}
-                  whileInView={{y:"0",opacity:"1"}}
-                  transition={{
+                   initial={{y:"15rem",opacity:"0"}}
+                   whileInView={{y:"0",opacity:"1"}}
+                  transition={{ 
                     duration:1,
                   }}
                  >This journey of revolutionising hardware began from Aligarh, 
@@ -61,13 +64,22 @@ export default function Home() {
             </div>
             <div className="home-content">
                     <div className="home-content-1">
-                        <div className="home-content-1-wp xyz">
+                    <div className="home-content-1-wp xyz">
                             <h1>Values that define us</h1>
-                         <div className="home-content-1-wrapper">
+                         <motion.div
+                          initial={{ y: "5rem" }}
+                          whileInView={{ y: 0,  }}
+                          exit={{ opacity: 0, y: "2rem" }}
+                          transition={{
+                            duration: 1,
+                            type: "ease-in",
+                          }}
+                          viewport={{once:true}}
+                         className="home-content-1-wrapper">
                              <HomeCard img={trust} title={"Trust:"} info={"Trust is priceless. Our efforts and precision behind each of our products makes you stay rest assured and at peace."} id={1} />
                              <HomeCard img={progression} title={"Progression:"} info={"We have a constant hunger of always being better at what we do, to always strive for more."} id={2}/>
                              <HomeCard img={quality} title={"Quality:"} info={"Products that showcase immense durability, exceptional reliability, are our hallmark."} id={3}/>
-                         </div>
+                         </motion.div>
                         </div>  
                     </div>
                     <div className="home-content-2">
@@ -80,13 +92,32 @@ export default function Home() {
                     <div className="home-content-4">
                         <HomeMedia />
                     </div>
-                    <div className="home-content-5">
+                    <motion.div 
+                     initial={{ y: "5rem" }}
+                     whileInView={{ y: 0,  }}
+                     exit={{ opacity: 0, y: "2rem" }}
+                     transition={{
+                       duration: 1,
+                       type: "ease-in",
+                     }}
+                     viewport={{once:true}}
+                    className="home-content-5">
                         <HomeNews />
-                    </div>
-                    <div className="home-content-6">
+                    </motion.div>
+                    <motion.div 
+                     initial={{ y: "5rem" }}
+                     whileInView={{ y: 0,  }}
+                     exit={{ opacity: 0, y: "2rem" }}
+                     transition={{
+                       duration: 1,
+                       type: "ease-in",
+                     }}
+                     viewport={{once:true}}
+                    className="home-content-6">
                         <HomeTest />
-                    </div>
+                    </motion.div>
             </div>
+         
          </div>
          <PreFooter />
           <Footer />

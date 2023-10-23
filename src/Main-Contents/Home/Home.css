@@ -4,6 +4,7 @@
     position: relative;
     top: 8rem;
     scroll-behavior: smooth;
+    margin-bottom: 70px;
 }
 /* ::-webkit-scrollbar{
     display: none;
@@ -64,7 +65,6 @@
      justify-content: space-between;
      align-items: center;
      overflow: hidden;
-     margin-bottom: 70px;
 }
 .home-content-1{
     width: 100%;
@@ -108,12 +108,12 @@
 }
 /* Responsivenesss -------------------> */
 @media screen and (min-width:1921px) {
-  .home-content-1,.home-content-2,.home-content-3,.home-content-4,.home-content-5,.home-content-6{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .home-content-1,.home-content-2,.home-content-3,.home-content-4,.home-content-5,.home-content-6{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
-}
 @media screen and (max-width:1024px) {
     .home-content-1,.home-content-2,.home-content-3,.home-content-4{
         padding: 8rem 6rem;
@@ -123,9 +123,21 @@
     }
 }
 
+.main-home>:nth-child(1){
+    display: none;
+}
+.main-home>:nth-child(2){
+    display: contents;
+}
 @media screen and (max-width:768px) {
     .main-home{
         top: 6rem;
+    }
+    .main-home>:nth-child(1){
+        display: contents;
+    }
+    .main-home>:nth-child(2){
+        display: none;
     }
     .home-top-banner{
         height: 30rem !important;
@@ -133,6 +145,7 @@
     .home-banner{
         padding: 5rem !important;
         height: 70rem !important;
+        overflow-y: hidden;
     }
     .home-banner h1{
         font-size: 2rem !important;

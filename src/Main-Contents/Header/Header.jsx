@@ -6,7 +6,7 @@ import  './Header.css';
 export default function Header(){
 
     useEffect(()=>{},window.addEventListener("scroll",()=>{
-         if( window.innerWidth > 1000 && window.pageYOffset > 10 && window.pageYOffset < 1000)
+         if( window.innerWidth > 1000 && window.pageYOffset > 10 && window.pageYOffset < 2000)
            setShowHead(false);
          else if( window.innerWidth <= 1000 && window.pageYOffset > 10 && window.pageYOffset < 600)
          setShowHead(false);
