@@ -2,7 +2,6 @@ import React from 'react';
 import './ContactUS.css';
 import Header from '../Header/Header';
 import Form from './Form/Form';
-import PreFooter from '../PreFooter/PreFooter';
 import Footer from '../Footer/Footer';
 import {BsTelephone} from 'react-icons/bs';
 import {TfiEmail} from "react-icons/tfi";
@@ -40,7 +39,6 @@ export default function ContactUS() {
                <Form />
            </div>
        </div>
-       <PreFooter />
        <Footer />
      </>
   )
