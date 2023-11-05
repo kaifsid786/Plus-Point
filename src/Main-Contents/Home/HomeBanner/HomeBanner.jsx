@@ -10,12 +10,13 @@ gsap.registerPlugin(ScrollTrigger);
 const HomeBanner = () => {
   
   const [scrol,setScrol] = useState(0);
+  const height = window.innerHeight;
 
   useEffect(()=>{},window.addEventListener('scroll',()=>{
-    if(window.pageYOffset < 2000)
+    if(window.pageYOffset < 1500)
       setScrol(window.pageYOffset);
     else
-    setScrol(1800);
+    setScrol((90*height)/80);
   }))
 
   // const topBannerRef = useRef(null);
@@ -72,7 +73,7 @@ const HomeBanner = () => {
   return (
     <div id="home-banner-main">
       <div className="banner" > {/* ref={banRef} ref={topBannerRef}*/}
-        <div className="home-toppest-banner" style={{transform:`rotateY(${scrol/20}deg) perspective(1000px)`}} >
+        <div className="home-toppest-banner" style={{transform:`rotateY(${(scrol/height)*80}deg) perspective(1000px)`}} >
           <img className="h-b" src={homeMainLeft} alt="" />
         </div>
         <div id="home-center-banner">  {/*ref={centerBannerRef} */}
@@ -80,7 +81,7 @@ const HomeBanner = () => {
             <h1>Plus Point</h1>
           </div> */}
         </div>
-        <div className="home-bottom-banner" style={{transform:`rotateY(${-scrol/20}deg) perspective(1000px)`}}> {/*  ref={bottomBannerRef}*/}
+        <div className="home-bottom-banner" style={{transform:`rotateY(${-(scrol/height)*80}deg) perspective(1000px)`}}> {/*  ref={bottomBannerRef}*/}
           <img className="h-b" src={homeMainRight} alt="" />
         </div>
       </div>

@@ -68,7 +68,7 @@ export default function Header(){
                       </ul>
                     </li>
                     <li> <a href="/blogs">Blog</a></li>
-                    <li className="head-contact"> <a href="" style={{color:"#fff"}}>Contact</a></li>
+                    <li className="head-contact"> <a href="/contact" style={{color:"#fff"}}>Contact</a></li>
                 </ul>
             </div>
 

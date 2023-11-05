@@ -7,12 +7,25 @@
     border-radius: 0.625rem;
     border: 1px solid #FFF;
     padding: 0 1rem ;
+    cursor: pointer;
 }
+
+.main-contactBox:hover{
+    background: #FFFCC8;
+    .contactBox-wrapper h1{
+        color: #4C341F;
+    }
+    .contactBox-wrapper img{
+        filter: invert(16%) sepia(22%) saturate(1361%) hue-rotate(347deg) brightness(97%) contrast(84%);
+    }
+}
+
 .contactBox-wrapper{
-    width: calc(60% - 10px);
+    width: calc(90% - 10px);
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 10px;
     align-items: center;
     font-size: 2.5rem;
     color: white;
@@ -32,4 +45,16 @@
     flex-shrink: 0;
     border: 1px solid #634831;
     border-radius: 50%;
+}
+
+@media screen and (max-width:1500px) {
+    .main-contactBox{
+        height: 4rem;
+    }
+    .contactBox-wrapper h1{
+        font-size: 1.2rem;
+    }
+    .contactBox-wrapper img{
+        width: 2rem;
+    }
 }

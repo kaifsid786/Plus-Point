@@ -1,3 +1,9 @@
+.m-main-contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main-contact{
     width: 100%;
     position: relative;
@@ -37,7 +43,8 @@
     padding: 2rem 0;
 }
 .contact-link-wrapper{
-    width: calc(20% - 20px);
+    /* width: calc(20% - 20px); */
+    width: 22rem;
     height: 15rem;
     border-radius: 1.125rem;
     border: 1.2px solid #0e0d0d;
@@ -58,7 +65,19 @@
 }
 .contact-content{
     width: 100%;
-    height: 100vh;
-    padding: 2rem 10rem;
+    /* height: 100vh; */
+    padding: 2rem 5rem;
     margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Responsiveness --------------> */
+@media screen and (min-width:1920px) {
+    .main-contact{
+        max-width: 1920px;
+    }
 }
