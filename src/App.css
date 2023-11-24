@@ -38,6 +38,11 @@
   }
 }
 
+@media screen and (min-width:1920px) {
+  .xyz{
+    max-width: 1600px;
+  }
+}
 @media screen and (min-width:2000px) {
   .xyz{
     max-width: 1800px;

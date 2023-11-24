@@ -7,16 +7,24 @@ import "./HomeBanner.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HomeBanner = () => {
+const HomeBanner = (props) => {
   
   const [scrol,setScrol] = useState(0);
   const height = window.innerHeight;
 
-  useEffect(()=>{},window.addEventListener('scroll',()=>{
+  useEffect(()=>{
     if(window.pageYOffset < 1500)
-      setScrol(window.pageYOffset);
+    props.setNewHead(false);
     else
-    setScrol((90*height)/80);
+    props.setNewHead(true);
+  },window.addEventListener('scroll',()=>{
+    if(window.pageYOffset < 1500){
+      setScrol(window.pageYOffset);
+    }
+    else{
+       setScrol((90*height)/80);
+    }
+
   }))
 
   // const topBannerRef = useRef(null);

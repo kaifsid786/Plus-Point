@@ -15,7 +15,7 @@ export default function HomeNews(props) {
             duration:1,
           }}
            className="homeNews-title">
-           Our Latest News
+           Blogs
           </motion.div>
           <motion.div
             initial={props.anim?{y:"5rem",opacity:0}:{}}

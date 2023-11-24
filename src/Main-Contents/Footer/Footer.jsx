@@ -42,14 +42,14 @@ export default function Footer(){
                    <div className="foot-col-3 foot-col">
                        <h3>Products</h3>
                        <a href="">Mortise Lock Set</a>
-                       <a href="">Door Pull Handles</a>
-                       <a href="">Aldrop Door Kits</a>
-                       <a href="">Main Door Locks</a>
-                       <a href="">Cabinet Locks</a>
-                       <a href="">Cabinet Handles</a>
-                       <a href="">Door Decorative Accessories</a>
-                        <a href="">Door Hinges</a>
-                        <a href="">Door Closers</a>
+                       <a href=""> Aldrop Door Set</a>
+                       <a href=""> Pull Handles</a>
+                       <a href="">Main Door Lock Set</a>
+                       <a href="">Door Locks & Latches</a>
+                       <a href="">Door Hinges & Control System</a>
+                       <a href=""> Furniture Locks & Accessories</a>
+                        <a href=""> Decoratives</a>
+                        <a href="">Door Accessories</a>
                    </div>
                    <div className="foot-col-4 foot-col">
                         <div className="foot-services">

@@ -10,8 +10,7 @@ export default function PreFooter(){
                        Know more about us and our products!
                        </h3>
                        <p className="pre-left-para">
-                          Fill out your contact details by tapping the 
-                          ‘click here’ to dive deeper into the world of Plus Point!
+                        Fill out your contact details by tapping the ‘Contact Us’ button to dive deeper into the world of Plus Point!
                        </p>
                  </div>
                  <div className="pre-right">

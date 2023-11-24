@@ -14,11 +14,13 @@ import homeMedia4 from '../../images/homeMedia-4.png'
 import homeMedia5 from '../../images/homeMedia-5.png'
 import vector1 from '../../images/media-vector1.svg'
 import vector2 from '../../images/media-vector2.svg'
+import Award1 from '../../images/Award1.png'
+import Award2 from '../../images/Award2.png'
 
 export default function Media() {
 
   const [height,setHeight] = useState(false);
-  const [anim,setAnim] = useState(true);
+  const [showAwrds,setShowAwards] = useState(false);
 
   useEffect(()=>{
   },window.addEventListener("scroll",()=>{
@@ -29,7 +31,6 @@ export default function Media() {
         setHeight(true);
     }
     else{
-      setAnim(false);
       setHeight(false);
     } 
   }));
@@ -137,7 +138,12 @@ export default function Media() {
                            </div>
                      </div>
                </div>
-               <div className="media-content-3">
+               <div className="media-content-3"style={showAwrds?{display:"none"}:{}} onClick={()=>setShowAwards(!showAwrds)} >
+                 <div className="media-content-3-title">AWARDS</div>
+                   <div className="media-content-3-info"> 
+                   Indexcellence award 2023 Indexcellence award 2023 award
+                   </div>
+                  <div className="media-content-3-wrapper">
                     <div className="media-content-3-award">
                          <img src={vector1} alt="" />
                          <p>PLUS POINT BUILDSWARE <br />
@@ -154,6 +160,26 @@ export default function Media() {
                          </p>
                          <img src={vector2} alt="" />
                     </div>
+                  </div>
+               </div>
+
+               <div className="media-content-showAwards" style={!showAwrds?{display:"none"}:{}} onClick={()=>setShowAwards(!showAwrds)}>
+               <motion.img
+               initial={{x:"-10rem"}}
+               whileInView={{x:"0",opacity:'1'}}
+               transition={{
+                 duration:1,
+                 type:'ease'
+               }} 
+                src={Award1} alt="" />
+               <motion.img
+               initial={{x:"10rem"}}
+               whileInView={{x:"0",opacity:'1'}}
+               transition={{
+                 duration:1,
+                 type:'ease'
+               }} 
+                src={Award2} alt="" />
                </div>
         </div>
         </div>

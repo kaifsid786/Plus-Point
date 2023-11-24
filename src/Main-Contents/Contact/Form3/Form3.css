@@ -310,6 +310,16 @@ input[type=number] {
     object-fit: cover;
 }
 
+.leaflet-container{
+    width: 60rem;
+    height: 50rem;
+}
+.formMapContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
 /* Responsiveness---------------> */
 @media screen and (max-width:1620px) {
     .main-form3{

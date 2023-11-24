@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import './Form3.css';
 import rightImg from "../../../images/contact-img.png";
 import arrow from '../../../images/contact-arrow.svg';
@@ -7,8 +7,44 @@ import resImg from '../../../images/contRes.png';
 import {BsTelephone} from 'react-icons/bs';
 import {TfiEmail} from "react-icons/tfi";
 import {CiLocationOn} from 'react-icons/ci';
+import {MapContainer, TileLayer,Marker} from 'react-leaflet'
+import {Icon} from 'leaflet'
+import 'leaflet/dist/leaflet.css';
+import locationImg from '../../../images/location.png';
 
 export default function Form3(props) {
+  const setName = (e)=>{
+    props.setUserData(userData => ({
+      ...userData,
+      name:e.target.value
+  }))
+  }
+  const setNum = (e)=>{
+    props.setUserData(userData => ({
+      ...userData,
+      number:e.target.value
+  }))
+  }
+  const setEmail = (e)=>{
+    props.setUserData(userData => ({
+      ...userData,
+      email:e.target.value
+  }))
+  }
+  const setMsg = (e)=>{
+    props.setUserData(userData => ({
+      ...userData,
+      msg:e.target.value
+  }))
+  }
+
+  const [centre,setCentre] = useState({lat:28.5692,lng:77.2886});
+  const Zoom=12;
+  const customIcon = new Icon({
+    iconUrl:locationImg,
+    iconSize:[38,38]
+  })
+
   return (
     <>
     <div className="form-3" style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
@@ -20,12 +56,17 @@ export default function Form3(props) {
                            <span> <img src={arrow} onClick={()=>{props.setI(1)}} /> </span> Get in Touch
                         </div>
                         <div className="form3-left-info"> Fill out this small form to help us know you better</div>
-                         <input type="text" placeholder='Full Name' required />
-                         <input type="number" placeholder='Phone Number' required />
-                         <input type="email" placeholder='Email' required />
+                         <input type="text" placeholder='Full Name' required onChange={setName} />
+                         <input type="number" placeholder='Phone Number' required onChange={setNum} />
+                         <input type="email" placeholder='Email' required onChange={setEmail}/>
                          <div className="form3-msg">Message*</div>
-                         <textarea name="Message" id="" ></textarea>
-                         <button type='submit' className='form3-left-btn'>Continue</button>
+                         <textarea name="Message" id="" onChange={setMsg} ></textarea>
+                         <button type='submit' className='form3-left-btn' onClick={()=>{
+                          console.log(props.userData);
+                         }}>Continue</button>
+                         <div className="form-filler">
+                            <div className="form-bgColor" style={{width:"90%"}}></div>
+                         </div>
                    </div>
                  </div>
                  <div className="form3-right">
@@ -34,7 +75,7 @@ export default function Form3(props) {
               </div>
            </div>
             
-            <div className="form3-map">
+            <div className="formMapContainer">
               <div className="form3-map-left">
                   <div className="form3-map-title">Dealer Locator</div>
                   <div className="form3-map-search">
@@ -67,7 +108,16 @@ export default function Form3(props) {
                   </div>
               </div>
               <div className="form3-map-right">
-                <img src={mapImg} alt="" />
+                {/* <img src={mapImg} alt="" /> */}
+                <MapContainer
+                 center = {centre}
+                 zoom = {Zoom}
+                >
+                  <TileLayer url='https://tile.openstreetmap.org/{z}/{x}/{y}.png' attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'/>
+                  {
+                    <Marker position={centre} icon={customIcon} />
+                  }
+                </MapContainer>
               </div>
             </div>
       </div>

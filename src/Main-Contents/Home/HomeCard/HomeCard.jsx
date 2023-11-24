@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './HomeCard.css'
-import trust from '../../../images/homeWh-1.png'
+import trust from '../../../images/trustWhite.svg'
 import progression from '../../../images/homeWh-2.png'
 import quality from '../../../images/homeWh-3.png'
 import {motion} from 'framer-motion';
@@ -22,7 +22,7 @@ export default function HomeCard(props) {
       transition={{
         duration:1,
       }}
-      className="main-homeCard" onMouseOver={changeImg} onMouseLeave={reset}>
+      className="main-homeCard xyz" onMouseOver={changeImg} onMouseLeave={reset}>
          <img src={white?props.id==1?trust:props.id==2?progression:quality:props.img} alt="" className="homeCard-img" />
          <h1 className="homeCard-title">{props.title}</h1>
          <p className="homeCard-info">{props.info}</p>

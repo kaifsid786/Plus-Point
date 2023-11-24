@@ -106,10 +106,11 @@
 }
 .right .drop-down li:hover{
     background-color: #4C341F;
-}
-.right .drop-down li:hover a{
+    cursor: pointer;
     color: white;
+    font-weight: 600;
 }
+
 .right ul li:hover > .drop-down{
     visibility: visible;
     opacity: 1;

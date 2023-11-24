@@ -12,13 +12,14 @@ import Form3 from './Form3/Form3';
 
 export default function ContactUS() {
 
-   const [i,setI] = useState(0);
+   const [i,setI] = useState(2);
+   const [userData,setUserData] = useState({})
 
    function handleForm(){
       switch(i){
-         case 0 : return <Form i={i} setI={setI} />
-         case 1: return <Form2 i={i} setI={setI} />
-         case 2: return <Form3 i={i} setI={setI} />
+         case 0 : return <Form i={i} setI={setI} userData={userData} setUserData={setUserData} />
+         case 1: return <Form2 i={i} setI={setI} userData={userData} setUserData={setUserData}/>
+         case 2: return <Form3 i={i} setI={setI} userData={userData} setUserData={setUserData}/>
       }
    }
 

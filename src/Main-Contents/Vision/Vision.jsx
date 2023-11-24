@@ -15,21 +15,22 @@ export default function Vision() {
                 <img src={img} alt="" />
             </div>
             <div className="vision-text-slide">
-                <div className="vision-marque">
+               Mission  Vission
+                {/* <div className="vision-marque">
                   <span>Mission, Mission, Mission,</span>
                 </div>
                 <div className="vision-marque marque-2">
                   <span>Mission, Mission, Mission,</span>
-                </div>
+                </div> */}
             </div>
-            <div className="vision-text-slide">
+            {/* <div className="vision-text-slide">
                   <div className="vision-marque v-2 ">
                     <span>Vision,  Vision,  Vision, Vision,</span>
                   </div>
                   <div className="vision-marque v-2  marque-v2">
                     <span>Vision,  Vision,  Vision, Vision,</span>
                   </div>
-            </div>
+            </div> */}
             <div className="vision-content">
                <div className="vision-content-1">
                   <div className="vision-content-info">

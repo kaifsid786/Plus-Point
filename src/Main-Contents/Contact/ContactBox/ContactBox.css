@@ -15,9 +15,6 @@
     .contactBox-wrapper h1{
         color: #4C341F;
     }
-    .contactBox-wrapper img{
-        filter: invert(16%) sepia(22%) saturate(1361%) hue-rotate(347deg) brightness(97%) contrast(84%);
-    }
 }
 
 .contactBox-wrapper{
@@ -39,12 +36,19 @@
     font-weight: 600;
     line-height: 100%; /* 1.5625rem */
 }
+.contactBox-wrapper img{
+    width: 2rem;
+}
 .contact-circle{
     width: 1.4375rem;
     height: 1.4375rem;
     flex-shrink: 0;
     border: 1px solid #634831;
-    border-radius: 50%;
+    border-radius: 50%;   
+    color: #4C341F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width:1500px) {
