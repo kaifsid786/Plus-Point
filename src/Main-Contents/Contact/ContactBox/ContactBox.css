@@ -51,6 +51,8 @@
     align-items: center;
 }
 
+/* responsiveness ------------------------------- */
+
 @media screen and (max-width:1500px) {
     .main-contactBox{
         height: 4rem;
@@ -61,4 +63,16 @@
     .contactBox-wrapper img{
         width: 2rem;
     }
+}
+@media screen and (max-width:480px) {
+ .main-contactBox{
+    height: 3rem;
+    padding: 0 5px;
+ }
+ .contactBox-wrapper img{
+    width: 1.5rem;
+ }
+ .contactBox-wrapper h1{
+    font-size: 1rem;
+ }
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header';
 import PreFooter from '../PreFooter/PreFooter';
 import Footer from '../Footer/Footer';
-import media1 from '../../video/media-1.mp4';
+import media1 from '../../video/video1.mp4';
 import {motion} from 'framer-motion';
 import './Media.css';
 import col1 from './col1'

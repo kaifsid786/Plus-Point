@@ -363,3 +363,56 @@ input[type=number] {
         font-size: 0.8rem;
     }
 }
+@media screen and (max-width:480px){
+    .main-form3{
+     height: fit-content;
+    }
+    .form3-wrapper{
+     flex-direction: column-reverse;
+    }
+    .form3-left {
+     width: 27rem;
+     height: 40rem;
+    }
+    .form3-right{
+     width: 27rem;
+     height: 27rem;
+    }
+    .form3-left-title{
+     font-size: 1.2rem;
+    }
+    .form3-left-title img{
+     width: 1.2rem;
+    }
+    .form3-left-info{
+     font-size: 1rem;
+    }
+    .form3-left-btn{
+     height: 2rem;
+     font-size: 1rem;
+    }
+    .form3-msg{
+        width: 16rem;
+    }
+    .form3-left-content input{
+        width: 16rem;
+    }
+    .form3-left-content textarea{
+        width: 16rem;
+    }
+    .formMapContainer{
+        width: 27rem;
+        flex-direction: column;
+    }
+    .form3-map-title{
+        font-size: 1.5rem;
+    }
+    .form3-map-search{
+        width: 25rem;
+        height: 3rem;
+    }
+    .leaflet-container{
+        width: 25rem;
+        height: 24rem;
+    }
+ }

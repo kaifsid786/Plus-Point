@@ -123,3 +123,32 @@
         gap: 20px;
     }
 }
+@media screen and (max-width:480px){
+    .main-form2{
+     height: fit-content;
+    }
+    .form2-wrapper{
+     flex-direction: column-reverse;
+    }
+    .form2-left {
+     width: 27rem;
+     height: 60rem;
+    }
+    .form2-right{
+     width: 27rem;
+     height: 27rem;
+    }
+    .form2-left-title{
+     font-size: 1.2rem;
+    }
+    .form2-left-title img{
+     width: 1.2rem;
+    }
+    .form2-left-info{
+     font-size: 1rem;
+    }
+    .form2-left-btn{
+        height: 2rem;
+        font-size: 1rem;
+       }
+ }

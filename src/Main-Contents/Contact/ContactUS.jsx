@@ -12,7 +12,7 @@ import Form3 from './Form3/Form3';
 
 export default function ContactUS() {
 
-   const [i,setI] = useState(2);
+   const [i,setI] = useState(0);
    const [userData,setUserData] = useState({})
 
    function handleForm(){
