@@ -30,3 +30,19 @@
     line-height: 2rem; /* 145.455% */
 }
 
+/* Responsiveness ----------------------------------> */
+@media screen and (max-width:480px) {
+    .main-homeTestMod{
+        padding: 0 2rem;
+    }
+    .homeTestMod-title{
+        font-size: 1.7rem;
+        width: 100%;
+        text-align: left;
+    }
+    .homeTestMod-info{
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: left;
+    }
+}

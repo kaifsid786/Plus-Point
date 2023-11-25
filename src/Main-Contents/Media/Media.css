@@ -463,6 +463,8 @@
     }
     .media-content-3-info{
         font-size: 1rem;
+        width: 70%;
+        line-height: 1.5rem;
     }
     .media-content-3-award{
         width: 20rem;

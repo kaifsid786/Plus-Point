@@ -2,6 +2,15 @@ import React from 'react'
 import { useState } from 'react';
 import './HomePhAccord.css';
 import doorPull from '../../../images/doorPull.png'
+import prod1 from '../../../images/prod-1.jpg';
+import prod2 from '../../../images/prod-2.jpg';
+import prod3 from '../../../images/prod-3.jpg';
+import prod4 from '../../../images/prod-4.png';
+import prod5 from '../../../images/prod-5.jpg';
+import prod6 from '../../../images/prod-6.png';
+import prod7 from '../../../images/prod-7.jpg';
+import prod8 from '../../../images/prod-8.jpg';
+import prod9 from '../../../images/prod-9.jpg';
 
 export default function HomePhAccord() {
 
@@ -25,7 +34,7 @@ export default function HomePhAccord() {
             setState7(false);setState8(false);setState9(false);
           }}>Mortise Lock Set</div>
                <div className="homePhAccord-bottom" style={state1?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod1} alt="" />
                </div>
           </div>
           <div className="homePhAccord-content">
@@ -37,7 +46,7 @@ export default function HomePhAccord() {
                      }
                  }}>Aldrop Lock Set</div>
                <div className="homePhAccord-bottom" style={state2?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod2} alt="" />
                </div>
           </div>
           <div className="homePhAccord-content">
@@ -47,7 +56,7 @@ export default function HomePhAccord() {
                       setState7(false);setState8(false);setState9(false);
                  }}>Door Pull Handles</div>
                <div className="homePhAccord-bottom" style={state3?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod3} alt="" />
                </div>
           </div>
           <div className="homePhAccord-content">
@@ -57,7 +66,7 @@ export default function HomePhAccord() {
                       setState7(false);setState8(false);setState9(false);
                  }}>Main Door Lock Set</div>
                <div className="homePhAccord-bottom" style={state4?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod4} alt="" />
                </div>
           </div>
           <div className="homePhAccord-content">
@@ -67,7 +76,7 @@ export default function HomePhAccord() {
                       setState7(false);setState8(false);setState9(false);
                  }}>Door Locks & Latches</div>
                <div className="homePhAccord-bottom" style={state5?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod5} alt="" />
                </div>
           </div>
           <div className="homePhAccord-content">
@@ -77,7 +86,7 @@ export default function HomePhAccord() {
                       setState7(false);setState8(false);setState9(false);
                  }}> Door Hinges & Control System</div>
                <div className="homePhAccord-bottom" style={state6?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod6} alt="" />
                </div>
           </div>
           <div className="homePhAccord-content">
@@ -87,7 +96,7 @@ export default function HomePhAccord() {
                       setState7(!state7);setState8(false);setState9(false);
                  }}>Furniture Locks & Accessories</div>
                <div className="homePhAccord-bottom" style={state7?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod7} alt="" />
                </div>
           </div>
           <div className="homePhAccord-content">
@@ -97,7 +106,7 @@ export default function HomePhAccord() {
                       setState7(false);setState8(!state8);setState9(false);
                  }}>Decoratives</div>
                <div className="homePhAccord-bottom" style={state8?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod8} alt="" />
                </div>
           </div>
           <div className="homePhAccord-content">
@@ -107,7 +116,7 @@ export default function HomePhAccord() {
                       setState7(false);setState8(false);setState9(!state9);
                  }}>Door Accessories</div>
                <div className="homePhAccord-bottom" style={state9?{}:{display:"none"}}>
-                 <img src={doorPull} alt="" />
+                 <img src={prod9} alt="" />
                </div>
           </div>
           

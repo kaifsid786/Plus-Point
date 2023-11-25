@@ -8,16 +8,25 @@ export default function Header(props){
 
     const navigate = useNavigate('/');
 
-    useEffect(()=>{},window.addEventListener("scroll",()=>{
+    useEffect(()=>{
+        if(window.innerWidth <= 480)
+        setPh(true);
+    },window.addEventListener("scroll",()=>{
          if( window.innerWidth > 1000 && window.pageYOffset > 10 && window.pageYOffset < 2000)
            setShowHead(false);
-         else if( window.innerWidth <= 1000 && window.pageYOffset > 10 && window.pageYOffset < 600)
-         setShowHead(false);
-        else
-        setShowHead(true);
+         else if( window.innerWidth <= 1000 && window.pageYOffset > 10 && window.pageYOffset < 600){
+             setShowHead(false);
+             setPh(false);
+         }
+
+        else{
+            setShowHead(true);
+        }
+ 
     }))
     
     const [showHead,setShowHead]=useState(true);
+    const [ph,setPh] = useState(false);
     const [showUl,setShowUl]=useState(false);
     const [showMenu , setShowMenu] = useState(false);
     const [showHamMenu , setShowHamMenu] = useState(false);
@@ -41,7 +50,7 @@ export default function Header(props){
     return(
         <>
         <div className="m-header" style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
-        <div className="main-header" id="1" style={(props.newHead != undefined)?((showHead && props.newHead)?{}:{display:"none"}):showHead?{}:{display:"none"}}>
+        <div className="main-header" id="1" style={(props.newHead != undefined)?(((showHead && props.newHead)||ph)?{}:{display:"none"}):showHead?{}:{display:"none"}}>
             <div className="left-logo">
                 <img src={img} alt="" className="head-img" />
             </div>
@@ -93,13 +102,14 @@ export default function Header(props){
                         </ul>
                     </li>
                     <li><span><a href="/experties">What we do</a></span></li>
-                    <li><span><a href="/media">Media</a> <AiOutlineDown onClick={showMedia}/></span>
+                    <li><span><a href="/media">Media</a> </span>
+                     {/* <AiOutlineDown onClick={showMedia}/></span>
                         <ul style={showHamMedia?{height:"15rem",marginTop:"20px"}:{height:"0"}}>
                             <li><a href="">Media-1</a></li>
                             <li><a href="">Media-2</a></li>
                             <li><a href="">Media-3</a></li>
                             <li><a href="">Media-4</a></li>
-                        </ul>
+                        </ul> */}
                     </li>
                     <li><span><a href="">Products</a> <AiOutlineDown onClick={showProducts}/></span>
                           <ul style={showHamProducts?{height:"10rem",marginTop:"20px"}:{height:"0"}}>
@@ -109,7 +119,7 @@ export default function Header(props){
                         </ul>
                     </li>
                     <li><span><a href="/blogs">Blogs</a></span></li>
-                    <li><span><a href="">Contacts</a></span></li>
+                    <li><span><a href="/contact">Contacts</a></span></li>
                  </ul>
              </div>
              </div>

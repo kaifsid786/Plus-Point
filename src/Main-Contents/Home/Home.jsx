@@ -8,7 +8,6 @@ import HomeAccordian from './HomeAccordian/HomeAccordian';
 import HomePhAccord from './HomePhAccord/HomePhAccord';
 import HomeUSP from './HomeUSP/HomeUSP';
 import HomeMedia from './HomeMedia/HomeMedia';
-import HomeTest from './HomeTest/HomeTest';
 import HomeTestMod from './HomeTestMod/HomeTestMod';
 import HomeNews from './HomeNews/HomeNews';
 import './Home.css';

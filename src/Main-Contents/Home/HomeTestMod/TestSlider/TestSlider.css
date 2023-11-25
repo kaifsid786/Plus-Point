@@ -96,3 +96,23 @@
     line-height: 150%; /* 1.99875rem */
     letter-spacing: 0.00669rem;
   }
+
+  /* Responsiveness ----------------------------------> */
+@media screen and (max-width:480px) {
+  .swiper{
+    padding: 20px;
+  }
+  .swiper-slide{
+    width: 30rem;
+    height: 20rem;
+  }
+  .testSlider-name{
+    font-size: 1rem;
+  }
+  .testSlider-place{
+    font-size: 0.8rem;
+  }
+  .testSlider-content p{
+    font-size: 1.1rem;
+  }
+}
