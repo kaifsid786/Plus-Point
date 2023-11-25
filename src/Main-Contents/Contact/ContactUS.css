@@ -87,6 +87,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 3rem 0;
     }
     .contact-link-wrapper{
         width: 15rem;
@@ -95,7 +96,27 @@
     .contact-link-wrapper span{
         font-size: 1rem;
     }
+}
+@media screen and (max-width:480px){
+    .contact-link-wrapper{
+        width: 20rem;
+        height: 12rem;
+        gap: 15px;
+        font-size: 2rem;
+    }
+    .contact-link-wrapper span{
+        font-size: 1.2rem;
+    }
+    .contact-title{
+        font-size: 3rem;
+    }
     .contact-info{
         width: 80%;
+    }
+    .contact-info p{
+        font-size: 1rem;
+    }
+    .contact-link{
+        flex-direction: column;
     }
 }
