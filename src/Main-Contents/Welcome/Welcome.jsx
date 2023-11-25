@@ -140,6 +140,8 @@ import Exp1 from "../../images/Experties.png";
 import "./Welcome.css";
 import { useRef } from "react";
 import {motion} from "framer-motion"
+import img1 from "../../images/1.png"
+import img2 from "../../images/2.png"
 
 import Gallery from "../Gallery/index";
 import Slider from "../Slider/Slider";
@@ -244,7 +246,10 @@ const Welcome = () => {
         <SliderPh/>
         
            
-       
+       <div className="iso">
+        <img src={img1} alt="" />
+        <img src={img2} alt="" />
+       </div>
 
       </div>
     </div>

@@ -139,14 +139,23 @@ width: 75rem;
     cursor: pointer;
     background-size: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 1s ease-out, box-shadow 0.3s ease;
     will-change: transform, box-shadow;
     
-   
 }
-.p-b-i:hover{
-    transform: scale(1.08);
+.p-b-i>:hover{
+    
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    
+    /* background: #4C341F; */
+    border: 0.5rem solid whitesmoke;
+    opacity: 1;
+    transform: scale(1.05);
+}
+.p-b-i>img:hover{
+    border: 1rem solid whitesmoke;
+    scale: 1.07;
+    transition: all 1s ease-out;
 }
 .timeline-exp{
     display: flex;
@@ -177,23 +186,35 @@ width: 75rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-     background-color: transparent; 
+     /* background-color: transparent;  */
     padding: 10px;
     color: white; /* Text color */
     opacity: 0; /* Initially hidden */
-    transition: ease-in-out;
+    transition: all 1s ease-out;
+    
+    width: 100%;
+    height: 100%;
+    background: #4C341F; 
+    display: flex;align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   
   .p-b-i:hover .overlay-text {
-    background: #4C341F; 
+    
     opacity: 1; /* Show the text on hover */
     width: 100%;
     height: 100%;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
+    
     display: flex;
     flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    
   }
   
 .material-protray{
@@ -201,7 +222,7 @@ width: 75rem;
     text-align: left;
     font-weight: 500;
     line-height: 3rem;
-    color: #4C341F;
+    /* color: #4C341F; */
     margin: 1rem 0;
 }
 .highlights{
@@ -220,6 +241,7 @@ width: 75rem;
 .The-Process{
     font-size: 2rem;
     text-align: left;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 
@@ -321,6 +343,7 @@ width: 75rem;
         line-height: 2rem;
     
     }
+    
     .process-img>img{
         width: inherit;
     }

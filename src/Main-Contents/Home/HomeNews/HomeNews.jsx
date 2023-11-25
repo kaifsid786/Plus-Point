@@ -8,7 +8,7 @@ export default function HomeNews() {
     <>
          <div className="main-homeNews xyz">
           <div className="homeNews-title">
-           Our Latest News
+          Blogs
           </div>
           <div className="homeNews-para">
           Here, we lay the foundation of something special. The precision & quality of our diversified range of products is down to our brilliant manufacturing unit.

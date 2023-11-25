@@ -13,11 +13,14 @@ import s8 from "../../images/2023.png";
 import TimelineObserver from "react-timeline-animation";
 // import TimelineH from "../TimelineH/TimelineH";
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Slider() {
+  const [width, setWidth] = useState(0);
+  const [shouldIncrement, setShouldIncrement] = useState(true);
+  const intermediaryBalls = 5;
+  const calculatedWidth = (width / (intermediaryBalls + 1)) * 100;
+
   const component = useRef();
   const slider = useRef();
 
@@ -56,14 +59,15 @@ export default function Slider() {
       ),
       info: (
         <div>
-          Driven by a burning desire for change,
+          Driven by a burning desire for change,{" "}
           <span style={{ color: "#1F1F1F", fontWeight: "600" }}>
-            Mr. Rajiv Agarwa
+            Mr. Rajiv Agarwal
           </span>{" "}
           joined the family business. With a visionary spirit, he embarked on a
           courageous journey,
           <span style={{ color: "#1F1F1F", fontWeight: "600" }}>
-            redefining excellence in the locks,
+            {" "}
+            redefining excellence in the locks,{" "}
           </span>
           and hardware industry.
         </div>
@@ -83,10 +87,12 @@ export default function Slider() {
         <div>
           Years of hard work paid off as we unveiled the iconic,{" "}
           <span style={{ color: "#1F1F1F", fontWeight: "600" }}>
-            Aldrop 401
+            Aldrop 401.
           </span>{" "}
-          This product, with its .
-          <span style={{ color: "#1F1F1F", fontWeight: "600" }}>
+          This product, with its
+          <span
+            style={{ color: "#1F1F1F", fontWeight: "600", marginLeft: "3px" }}
+          >
             impeccable design and flawless functionality,
           </span>{" "}
           catapulted Plus Point into the limelight.
@@ -98,7 +104,8 @@ export default function Slider() {
     {
       heading: (
         <div className="s-y" style={{ color: "#4C341F", fontSize: "3rem" }}>
-          2009 - Corporate Milestone:
+          2009
+          <br />- Corporate Milestone:
         </div>
       ),
       info: (
@@ -108,7 +115,9 @@ export default function Slider() {
             a significant milestone in 2009
           </span>{" "}
           by incorporating
-          <span style={{ color: "#1F1F1F", fontWeight: "600" }}>
+          <span
+            style={{ color: "#1F1F1F", fontWeight: "600", marginLeft: "3px" }}
+          >
             as a Pvt. Ltd.
           </span>{" "}
           This transformation solidified our position as a leading player,
@@ -137,8 +146,8 @@ export default function Slider() {
           <span style={{ color: "#1F1F1F", fontWeight: "600" }}>
             recognized Indian brand.
           </span>{" "}
-          With fresh perspectives and unwavering determination, Niket embarked
-          on a mission to redefine elegance in the industry.
+          With fresh perspective and unwavering determination, Niket embarked on
+          a mission to redefine elegance in the industry.
         </div>
       ),
 
@@ -161,7 +170,7 @@ export default function Slider() {
           showcased our commitment{" "}
           <span style={{ color: "#1F1F1F", fontWeight: "600" }}>
             {" "}
-            Crafted in forged brass,
+            crafted in forged brass,
           </span>{" "}
           each product exuded opulence and sophistication, becoming synonymous
           with unparalleled quality and style.
@@ -213,7 +222,7 @@ export default function Slider() {
       img: s8,
     },
   ];
-
+ 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".panel");
@@ -223,77 +232,65 @@ export default function Slider() {
         scrollTrigger: {
           start: "top top",
           trigger: slider.current,
+          end: "bottom",
           pin: true,
           scrub: 0.1,
           snap: 1 / (panels.length - 1),
           end: () => "+=" + slider.current.offsetWidth,
-          markers: false,
+          // markers: true,
         },
       });
     }, component);
-    return () => ctx.revert();
+    return () => ctx.revert();  
   }, []);
 
   const onCallback = () => {
     console.log("awesome");
   };
+
+  
   return (
-    
     <div className="Slider m-w-c" ref={component}>
       <div ref={slider} className="container-slide">
         {sliderData.map((data, index) => {
           return (
-            <div className="slide1 panel" key={index}>
-              <div className="s-left">
-                <h1
-                  className="s-y"
-                  style={{ color: "#4C341F", fontSize: "3rem" }}
-                >
-                  {data.heading}
-                </h1>
-                <span>{data.info}</span>
-              </div>
-              <div className="s-right">
-                <div className="s-img">
-                  <img width="100%" src={data.img} alt="" />
+            <div className="opq">
+              <div className="slide1 panel" key={index}>
+                <div className="ijk">
+                  <div className="s-left">
+                    <h1
+                      className="s-y"
+                      style={{ color: "#4C341F", fontSize: "3rem" }}
+                    >
+                      {data.heading}
+                    </h1>
+                    <span style={{ textAlign: "justify" }}>{data.info}</span>
+                  </div>
+                  <div className="s-right">
+                    <div className="s-img">
+                      <img width="100%" src={data.img} alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div className="timeline2 " >
+                  <div className="timeline_progress"></div>
+                  <ul class="years">
+
+                    <li data-position="2" class="year year--highlight">
+                      <span class="year__value">
+                        
+                        {parseInt(data.heading.props.children[0].trim(), 10)}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           );
         })}
+         
       </div>
+     
     </div>
-    
   );
 }
-
-const Timeline = (year, setObserver, callback) => {
-  const [message1, setMessage1] = useState("");
-
-  const timeline1 = useRef(null);
-
-  const circle1 = useRef(null);
-
-  const someCallback = () => {
-    setMessage1(year);
-    callback();
-  };
-
-  useEffect(() => {
-    setObserver(timeline1.current);
-
-    setObserver(circle1.current, someCallback);
-  }, []);
-
-  return (
-    <div className="wrapper">
-      <div id="timeline1" ref={timeline1} className="timeline" />
-      <div className="circleWrapper">
-        <div id="circle1" ref={circle1} className="circle">
-          1
-        </div>
-        <div className="message">{message1}</div>
-      </div>
-    </div>
-  );
-};

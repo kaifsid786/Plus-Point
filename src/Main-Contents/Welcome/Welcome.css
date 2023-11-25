@@ -82,6 +82,21 @@
 
 .wel-h{
   font-size: 3rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+.iso{
+  display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 3rem;
+}
+.iso>:nth-child(1){
+  width: 15rem;
+}
+.iso>:nth-child(2){
+  width: 15rem;
 }
 /* .hide-btn>button{
   padding: 6px 15px;

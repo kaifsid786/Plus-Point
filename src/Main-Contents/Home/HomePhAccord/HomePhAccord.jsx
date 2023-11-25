@@ -23,7 +23,7 @@ export default function HomePhAccord() {
             setState1(!state1);setState2(false);setState3(false);
             setState4(false);setState5(false);setState6(false);
             setState7(false);setState8(false);setState9(false);
-          }}>Mortise Locks</div>
+          }}>Mortise Lock Set</div>
                <div className="homePhAccord-bottom" style={state1?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>
@@ -35,7 +35,7 @@ export default function HomePhAccord() {
                         setState4(false);setState5(false);setState6(false);
                         setState7(false);setState8(false);setState9(false);
                      }
-                 }}>Door Pull Handles</div>
+                    }}>Aldrop Lock Set</div>
                <div className="homePhAccord-bottom" style={state2?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>
@@ -45,7 +45,7 @@ export default function HomePhAccord() {
                       setState1(false);setState2(false);setState3(!state3);
                       setState4(false);setState5(false);setState6(false);
                       setState7(false);setState8(false);setState9(false);
-                 }}>Aldrop Door Kits</div>
+                    }}>Door Pull Handles</div>
                <div className="homePhAccord-bottom" style={state3?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>
@@ -55,7 +55,7 @@ export default function HomePhAccord() {
                       setState1(false);setState2(false);setState3(false);
                       setState4(!false);setState5(false);setState6(false);
                       setState7(false);setState8(false);setState9(false);
-                 }}>Main Door Locks</div>
+                    }}>Main Door Lock Set</div>
                <div className="homePhAccord-bottom" style={state4?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>
@@ -65,7 +65,7 @@ export default function HomePhAccord() {
                       setState1(false);setState2(false);setState3(false);
                       setState4(false);setState5(!state5);setState6(false);
                       setState7(false);setState8(false);setState9(false);
-                 }}>Cabinet Locks</div>
+                    }}>Door Locks & Latches</div>
                <div className="homePhAccord-bottom" style={state5?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>
@@ -75,7 +75,7 @@ export default function HomePhAccord() {
                       setState1(false);setState2(false);setState3(false);
                       setState4(false);setState5(false);setState6(!state6);
                       setState7(false);setState8(false);setState9(false);
-                 }}>Cabinet Handles</div>
+                    }}> Door Hinges & Control System</div>
                <div className="homePhAccord-bottom" style={state6?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>
@@ -85,7 +85,7 @@ export default function HomePhAccord() {
                       setState1(false);setState2(false);setState3(false);
                       setState4(false);setState5(false);setState6(false);
                       setState7(!state7);setState8(false);setState9(false);
-                 }}>Door Decorative Accessories</div>
+                    }}>Furniture Locks & Accessories</div>
                <div className="homePhAccord-bottom" style={state7?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>
@@ -95,7 +95,7 @@ export default function HomePhAccord() {
                       setState1(false);setState2(false);setState3(false);
                       setState4(false);setState5(false);setState6(false);
                       setState7(false);setState8(!state8);setState9(false);
-                 }}>Door Hinges</div>
+                    }}>Decoratives</div>
                <div className="homePhAccord-bottom" style={state8?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>
@@ -105,7 +105,7 @@ export default function HomePhAccord() {
                       setState1(false);setState2(false);setState3(false);
                       setState4(false);setState5(false);setState6(false);
                       setState7(false);setState8(false);setState9(!state9);
-                 }}>Door Closers</div>
+                    }}>Door Accessories</div>
                <div className="homePhAccord-bottom" style={state9?{}:{display:"none"}}>
                  <img src={doorPull} alt="" />
                </div>

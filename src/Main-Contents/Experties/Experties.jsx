@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect, useLayoutEffect} from "react";
 import "./Experties.css";
 import Exp1 from "../../images/Experties.png";
 import process from "../../images/process.png";
@@ -12,6 +12,11 @@ import Footer from "../Footer/Footer";
 import cop from "../../images/copper-pipes.png";
 import alum from "../../images/aluminium.png";
 import steel from "../../images/steel-pipes.png";
+import zinc from "../../images/zinc.jpg"
+import { gsap } from 'gsap'
+import SplitType from 'split-type'
+
+
 
 
 
@@ -49,6 +54,26 @@ const Experties=()=>{
     threshold: 0.2, // Adjust the threshold as needed
   });
 
+
+  useLayoutEffect(()=>{
+    const ourText = new SplitType('.The-Process, .material-protray, .m-p-1, .hg', { types: 'chars' })
+    const chars = ourText.chars
+
+    gsap.from(chars, {
+      scrollTrigger: {
+        trigger: ".top-sec",
+        start: "top top",
+        end: "bottom top",
+        // markers: true
+      },
+      duration: 1, 
+      opacity: 0,
+      yPercent: 100,
+      ease: 'power4.out',
+      stagger: 0.05
+    });
+  },[])  
+
   return (
     <>
           <Header/>
@@ -63,7 +88,7 @@ const Experties=()=>{
           
           className="highlights "
         >
-          <div style={{ textTransform: "uppercase", fontSize: "1.3rem" }}>
+          <div className="hg" style={{ textTransform: "uppercase", fontSize: "1.3rem" }}>
             Manufacturing Highlights
           </div>
           <div className="card-container m-w-c">
@@ -85,11 +110,11 @@ const Experties=()=>{
             </motion.div>
             <motion.div
              ref={ref}
-             initial={{ y: "2rem", opacity: 0 }}
+             initial={{ y: "5rem", opacity: 0 }}
              whileInView={{ y: 0, opacity: 1 }}
              exit={{ opacity: 0, y: "2rem" }}
              transition={{
-               duration: 0.5,
+               duration: 1,
                type: "ease-in",
              }}
               className="card card2 exp-card"
@@ -102,11 +127,11 @@ const Experties=()=>{
             </motion.div>
             <motion.div
              ref={ref}
-              initial={{ y: "2rem", opacity: 0 }}
+              initial={{ y: "8rem", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               exit={{ opacity: 0, y: "2rem" }}
               transition={{
-                duration: 0.5,
+                duration: 2,
                 type: "ease-in",
               }}
               className="card card3 exp-card"
@@ -180,18 +205,19 @@ const Experties=()=>{
          }}
          viewport={{once:true}}
           style={{
+            width:"100%",
             display: "flex",
             gap: "1rem",
             flexDirection: "column",
             marginBottom: "2rem",
-            width:"100%"
+           
           }}
           className="material m-w-c"
         >
           <div className="material-protray">
             Materials That Portray <br /> Quality & Style{" "}
           </div>
-          <div
+          <div className="m-p-1"
             style={{ textAlign: "left", color: "#1F1F1F", fontWeight: "450" }}
           >
             Materials, That Level Up.
@@ -280,7 +306,7 @@ const Experties=()=>{
            viewport={{once:true}}
           className="p-b-i">
             <img
-              src={alum}
+              src={zinc}
               alt=""
             />
             <div class="overlay-text">

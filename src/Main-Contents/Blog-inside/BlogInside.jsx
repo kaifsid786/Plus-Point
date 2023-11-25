@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
@@ -33,8 +33,31 @@ import {
 import Header from "../Header/Header";
 import PreFooter from "../PreFooter/PreFooter";
 import Footer from "../Footer/Footer";
+import { gsap } from 'gsap'
+import SplitType from 'split-type'
 
 const BlogInside = () => {
+
+  useLayoutEffect(()=>{
+    const ourText = new SplitType('.t-h', { types: 'chars' })
+    const chars = ourText.chars
+
+    gsap.fromTo(
+      chars,
+      { 
+        y: 100,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.05,
+        duration: 2,
+        ease: 'power4.out',
+        viewport:true,
+      }
+    )
+  },[])  
   const profiles = [
     {
       img: "data:image/jpeg;base64,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",
@@ -75,17 +98,13 @@ const BlogInside = () => {
           }}
           className="top-image t-h-c"
         >
-          <motion.h1
-            initial={{ y: "10rem" }}
-            animate={{ y: "0" }}
-            transition={{
-              duration: 1,
-            }}
+          <h1
+            
             className="t-h"
           >
             How to select the best material for your door <br /> hardware?
             Here’s a guide.
-          </motion.h1>
+          </h1>
         </div>
         <div className="container">
           <div className="process m-w-c">

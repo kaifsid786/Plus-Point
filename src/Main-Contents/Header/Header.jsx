@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState }  from "react";
 import img from '../../images/PlusPointLogo.png';
+import {useNavigate} from 'react-router-dom'
 import {AiOutlineDown} from 'react-icons/ai';
 import {GiHamburgerMenu} from "react-icons/gi";
 import  './Header.css';
-export default function Header(){
+export default function Header(props){
+
+    const navigate = useNavigate('/');
 
     useEffect(()=>{},window.addEventListener("scroll",()=>{
          if( window.innerWidth > 1000 && window.pageYOffset > 10 && window.pageYOffset < 1000)
@@ -37,7 +40,8 @@ export default function Header(){
     return(
         <>
         <div className="m-header" style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
-        <div className="main-header" id="1" style={showHead?{}:{display:"none"}}>
+        <div className="main-header" id="1" style={(props.newHead != undefined)?((showHead && props.newHead)?{}:
+        {display:"none"}):showHead?{}:{display:"none"}}>
             <div className="left-logo">
                 <img src={img} alt="" className="head-img" />
             </div>
@@ -46,13 +50,13 @@ export default function Header(){
                     <li> <a href="/">Home</a></li>  
                     <li> <a href="#">Who we are <span> <AiOutlineDown/> </span></a>
                       <ul className="drop-down">
-                      <li> <a href="/about">About Us</a></li>
-                          <li> <a href="/ourTeam">Our Team</a></li>
-                          <li> <a href="/ourVision">Mission Vision</a></li>
+                      <li onClick={()=> navigate('/about')}>About Us</li>
+                          <li onClick={()=> navigate('/ourTeam')}>Our Team</li>
+                          <li onClick={()=> navigate('/ourVision')}>Mission Vission</li>
                       </ul>
                     </li>
                     <li> <a href="/experties">What we do</a></li>
-                    <li> <a href="/media">Media <span> <AiOutlineDown/></span></a>
+                    <li> <a href="/media">Media</a>
                     <ul className="drop-down" style={{display:"none"}}>
                           <li> <a href="">Media-1</a></li>
                           <li> <a href="">Media-2</a></li>
@@ -68,7 +72,7 @@ export default function Header(){
                       </ul>
                     </li>
                     <li> <a href="/blogs">Blog</a></li>
-                    <li className="head-contact"> <a href="" style={{color:"#fff"}}>Contact</a></li>
+                    <li className="head-contact"> <a href="/contact" style={{color:"#fff"}}>Contact</a></li>
                 </ul>
             </div>
 

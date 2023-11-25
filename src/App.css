@@ -39,6 +39,11 @@
   }
 }
 
+@media screen and (min-width:1920px) {
+  .xyz{
+    max-width: 1600px;
+  }
+}
 @media screen and (min-width:2000px) {
   .xyz{
     max-width: 1800px;
@@ -61,10 +66,12 @@
   .top-image {
     height: 40vh;
  }
- 
+
  
 }
-
+.main-prefooter{
+  margin-top: 8rem;
+}
 
 .container-welcome{
   width: 100%;
@@ -73,3 +80,4 @@
 .Slider{
   width: 100%;
 }
+

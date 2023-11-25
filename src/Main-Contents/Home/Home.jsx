@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {motion} from 'framer-motion';
 import Header from '../Header/Header';
 import PreFooter from '../PreFooter/PreFooter';
@@ -9,6 +9,7 @@ import HomePhAccord from './HomePhAccord/HomePhAccord';
 import HomeUSP from './HomeUSP/HomeUSP';
 import HomeMedia from './HomeMedia/HomeMedia';
 import HomeTest from './HomeTest/HomeTest';
+import HomeTestMod from './HomeTestMod/HomeTestMod';
 import HomeNews from './HomeNews/HomeNews';
 import './Home.css';
 import trust from '../../images/home-1.png'
@@ -17,15 +18,17 @@ import quality from '../../images/quality.png'
 import HomeBanner from './HomeBanner/HomeBanner';
 import homeMain from '../../images/home-main.png';
 export default function Home() {
+
+  const [newHead,setNewHead] = useState(true);
   return (
     <>
-    <Header />
+     <Header newHead={newHead} />
          <div className="main-home">
             
             <div className="home-top-banner">
                     <img src={homeMain} alt="" />
             </div>
-            <HomeBanner />
+            <HomeBanner setNewHead={setNewHead}/>
             <div className="home-banner">
                  <motion.h1
                  initial={{y:"15rem",opacity:"0"}}
@@ -33,8 +36,8 @@ export default function Home() {
                   transition={{
                     duration:1,
                   }}
-                 >WELCOME TO PLUSPOINT <br />
-                 <span>Your One Stop Hardware Solution.</span> </motion.h1>
+                  >WELCOME TO PLUS POINT <br />
+                 <span>#YourOneStopHardwareSolution.</span> </motion.h1>
 
                  <motion.h2
                   initial={{y:"15rem",opacity:"0"}}
@@ -114,7 +117,7 @@ export default function Home() {
                      }}
                      viewport={{once:true}}
                     className="home-content-6">
-                        <HomeTest />
+                         <HomeTestMod />
                     </motion.div>
             </div>
          

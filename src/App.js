@@ -12,6 +12,7 @@ import Header from './Main-Contents/Header/Header';
 import PreFooter from './Main-Contents/PreFooter/PreFooter';
 import Footer from './Main-Contents/Footer/Footer';
 import Welcome from './Main-Contents/Welcome/Welcome';
+import ContactUS from './Main-Contents/Contact/ContactUs';
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
               <Route path='/experties' element={<Experties />} />
               <Route path='/blogInsides' element={<BlogInside />} />
               <Route path='/about' element={<Welcome />} />
+              <Route path='/contact' element={<ContactUS />} />
       {/* <Footer />  */}
            </Routes>
         </BrowserRouter>
