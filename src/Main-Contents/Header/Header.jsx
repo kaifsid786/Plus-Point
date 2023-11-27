@@ -8,21 +8,35 @@ export default function Header(props){
 
     const navigate = useNavigate('/');
 
+    
     useEffect(()=>{
         if(window.innerWidth <= 480)
         setPh(true);
     },window.addEventListener("scroll",()=>{
-         if( window.innerWidth > 1000 && window.pageYOffset > 10 && window.pageYOffset < 2000)
-           setShowHead(false);
-         else if( window.innerWidth <= 1000 && window.pageYOffset > 10 && window.pageYOffset < 600){
-             setShowHead(false);
-             setPh(false);
-         }
-
-        else{
-            setShowHead(true);
-        }
+        if(props.newHead === undefined){
+            if( window.innerWidth > 1000 && window.pageYOffset > 10 && window.pageYOffset < 2000)
+            setShowHead(false);
+          else if( window.innerWidth <= 1000 && window.pageYOffset > 10 && window.pageYOffset < 600){
+              setShowHead(false);
+              setPh(false);
+          }
  
+         else{
+             setShowHead(true);
+         }
+        }
+        else{
+            if( window.innerWidth > 1000 && window.pageYOffset > 10 && window.pageYOffset < props.height)
+            setShowHead(false);
+          else if( window.innerWidth <= 1000 && window.pageYOffset > 10 && window.pageYOffset < 600){
+              setShowHead(false);
+              setPh(false);
+          }
+ 
+         else{
+             setShowHead(true);
+         }
+        }
     }))
     
     const [showHead,setShowHead]=useState(true);

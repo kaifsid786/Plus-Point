@@ -15,7 +15,7 @@ export default function Vision() {
                 <img src={img} alt="" />
             </div>
             <div className="vision-text-slide">
-               Mission  Vission
+               {/* Mission  Vission */}
                 {/* <div className="vision-marque">
                   <span>Mission, Mission, Mission,</span>
                 </div>

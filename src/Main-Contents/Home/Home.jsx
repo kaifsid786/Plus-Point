@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import {motion} from 'framer-motion';
 import Header from '../Header/Header';
 import PreFooter from '../PreFooter/PreFooter';
@@ -19,16 +19,17 @@ import homeMain from '../../images/home-main.png';
 export default function Home() {
 
   const [newHead,setNewHead] = useState(true);
+  const ref = useRef(null);
   return (
     <>
-    <Header newHead={newHead} />
+    <Header newHead={newHead} height={ref.current?ref.current.clientHeight+(window.innerHeight/2):2000} />
          <div className="main-home">
             
             <div className="home-top-banner">
                     <img src={homeMain} alt="" />
             </div>
             <HomeBanner setNewHead={setNewHead}/>
-            <div className="home-banner">
+            <div ref={ref} className="home-banner">
                  <motion.h1
                  initial={{y:"15rem",opacity:"0"}}
                  whileInView={{y:"0",opacity:"1"}}

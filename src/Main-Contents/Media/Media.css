@@ -224,19 +224,18 @@
 }
 
 /* Show Awards seection */
-.media-content-showAwards{
-    width: 100%;
-    min-height: 20rem;
-    background-color: #fff;
+
+.showAwards-1,.showAwards-2{
+    width: 30%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 500px;
-    cursor: pointer;
 }
-.media-content-showAwards img{
-    width: 15rem;
+.showAwards-1 img,.showAwards-2 img{
+   height: 15rem;
 }
+
 /* Earth Agency ------------> */
 .med-hOn{
     position: absolute;
@@ -353,13 +352,6 @@
     .main-media{
         top:6rem;
     }
-    .media-content-showAwards{
-        gap: 300px;
-        margin-top: 5rem;
-    }
-    .media-content-showAwards img{
-        width: 12rem;
-    }
 }
 @media screen and (max-width:768px){
     .Media-content-1-btn{
@@ -469,12 +461,8 @@
     .media-content-3-award{
         width: 20rem;
     }
-    .media-content-showAwards{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .media-content-showAwards img{
-        width: 6rem;
-    }
+    .showAwards-1 img,.showAwards-2 img{
+        height: 10rem;
+     }
 }
 

@@ -17,10 +17,22 @@ import vector2 from '../../images/media-vector2.svg'
 import Award1 from '../../images/Award1.png'
 import Award2 from '../../images/Award2.png'
 
+const varients1={
+  initial:{
+    x:-20
+  },
+  animate:{
+     x:0,
+     duration:1,
+     type:"spring"
+  }
+}
+
 export default function Media() {
 
   const [height,setHeight] = useState(false);
-  const [showAwrds,setShowAwards] = useState(false);
+  const [showAwrds1,setShowAwards1] = useState(false);
+  const [showAwrds2,setShowAwards2] = useState(false);
 
   useEffect(()=>{
   },window.addEventListener("scroll",()=>{
@@ -138,48 +150,55 @@ export default function Media() {
                            </div>
                      </div>
                </div>
-               <div className="media-content-3"style={showAwrds?{display:"none"}:{}} onClick={()=>setShowAwards(!showAwrds)} >
+               <div className="media-content-3">
                  <div className="media-content-3-title">AWARDS</div>
                    <div className="media-content-3-info"> 
                    Indexcellence award 2023 Indexcellence award 2023 award
                    </div>
                   <div className="media-content-3-wrapper">
-                    <div className="media-content-3-award">
+                    <div className="media-content-3-award" style={showAwrds1?{display:"none"}:{}} onClick={()=>setShowAwards1(!showAwrds1)} >
                          <img src={vector1} alt="" />
                          <p>PLUS POINT BUILDSWARE <br />
                               PVT. LTD. <br />
+                              <span> Award by ABP News 2018-19</span>
+                         </p>
+                         <img src={vector2} alt="" />
+                    </div>
+                      <div className="showAwards-1" style={!showAwrds1?{display:"none"}:{}} onClick={()=>setShowAwards1(!showAwrds1)}>
+                        <motion.img
+                        initial={{
+                          x:"-10rem"
+                        }}
+                        whileInView={{
+                          x:"0"
+                        }}
+                         transition={{
+                          duration:1,
+                         }}
+                         src={Award1} alt="" />
+                        </div>
+                      <div className="showAwards-2" style={!showAwrds2?{display:"none"}:{}} onClick={()=>setShowAwards2(!showAwrds2)}>
+                        <motion.img
+                        initial={{
+                          x:"10rem"
+                        }}
+                        whileInView={{
+                          x:"0"
+                        }}
+                         transition={{
+                          duration:1,
+                         }}
+                         src={Award2} alt="" />
+                        </div>
+                    <div className="media-content-3-award" style={showAwrds2?{display:"none"}:{}} onClick={()=>setShowAwards2(!showAwrds2)}>
+                         <img src={vector1} alt="" />
+                         <p>BEST DOOR & HARDWARE <br />
+                             & ACCESSORIES<br />
                               <span>Indexcellence award 2023</span>
                          </p>
                          <img src={vector2} alt="" />
                     </div>
-                    <div className="media-content-3-award">
-                         <img src={vector1} alt="" />
-                         <p>BEST DOOR & HARDWARE <br />
-                             & ACCESSORIES<br />
-                              <span>Award by ABP News 2018-19</span>
-                         </p>
-                         <img src={vector2} alt="" />
-                    </div>
                   </div>
-               </div>
-
-               <div className="media-content-showAwards" style={!showAwrds?{display:"none"}:{}} onClick={()=>setShowAwards(!showAwrds)}>
-               <motion.img
-               initial={{x:"-10rem"}}
-               whileInView={{x:"0",opacity:'1'}}
-               transition={{
-                 duration:1,
-                 type:'ease'
-               }} 
-                src={Award1} alt="" />
-               <motion.img
-               initial={{x:"10rem"}}
-               whileInView={{x:"0",opacity:'1'}}
-               transition={{
-                 duration:1,
-                 type:'ease'
-               }} 
-                src={Award2} alt="" />
                </div>
         </div>
         </div>

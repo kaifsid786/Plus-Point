@@ -4,14 +4,15 @@ import { TiTick } from "react-icons/ti";
 import arrow from '../../../images/contact-arrow.svg'
 import builder from '../../../images/builder.png';
 import interio from '../../../images/interio.png';
-import customer from '../../../images/custo.png';
+import customer from '../../../images/CustWh.png'
+import other from '../../../images/custo.png';
 import rightImg from "../../../images/contact-img.png";
 import arch from '../../../images/arch.png';
 import archWh from '../../../images/architect.svg';
 import builderWh from '../../../images/builder.svg';
 import interioWh from '../../../images/interio.svg';
 import otherWh from '../../../images/others.svg';
-
+import custBrown from '../../../images/CustBrown.jpg'
 
 
 export default  function Form(props){
@@ -103,7 +104,7 @@ export default  function Form(props){
                               }))
                              }} style={st4?{background:" #FFFCC8"}:{}}>
                                 <div className="contactBox-wrapper">
-                                 <img src={st4 || chImg4 ?otherWh:customer} alt="" />
+                                 <img src={st4 || chImg4 ?custBrown:customer} alt="" />
                                  <h1 ref={elm4} style={st4?{color: "#4C341F"}:{}}>CUSTOMER</h1>
                                  </div>
                                  <div className="contactBox-check">
@@ -120,7 +121,7 @@ export default  function Form(props){
                               }))
                              }} style={st5?{background:" #FFFCC8"}:{}}>
                                 <div className="contactBox-wrapper">
-                                 <img src={st5 || chImg5?otherWh:customer} alt="" />
+                                 <img src={st5 || chImg5?otherWh:other} alt="" />
                                  <h1 ref={elm5} style={st5?{color: "#4C341F"}:{}}>Others</h1>
                                  </div>
                                  <div className="contactBox-check">

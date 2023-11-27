@@ -76,6 +76,30 @@ export default function TestSlider() {
                 <p>Hear from our satisfied customers: Discover their stories, experiences, and heartfelt testimonials. </p>
             </div>
         </SwiperSlide>
+        <SwiperSlide>
+            <div className="testSlider-content">
+               <div className="testSlider-bgimg">
+                   <img className='testSlider-img' src={img} alt="" />
+                   <div className='testSlider-gradient'></div>
+                   <img className='pauseBtn' src={pauseBtn} alt="" />
+                   <div className="testSlider-name">Mr malikni shetu nira</div>
+                   <div className="testSlider-place">Noida</div>
+               </div>
+                <p>Hear from our satisfied customers: Discover their stories, experiences, and heartfelt testimonials. </p>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className="testSlider-content">
+               <div className="testSlider-bgimg">
+                   <img className='testSlider-img' src={img} alt="" />
+                   <div className='testSlider-gradient'></div>
+                   <img className='pauseBtn' src={pauseBtn} alt="" />
+                   <div className="testSlider-name">Mr malikni shetu nira</div>
+                   <div className="testSlider-place">Noida</div>
+               </div>
+                <p>Hear from our satisfied customers: Discover their stories, experiences, and heartfelt testimonials. </p>
+            </div>
+        </SwiperSlide>
       </Swiper>
     </>
   );

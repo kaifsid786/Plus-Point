@@ -13,7 +13,7 @@
     position: relative;
     display: block;
     width: 100%;
-    height: 10rem;
+    height: 5rem;
     overflow: hidden;
     margin: 2rem 0;
     color: rgba(0, 0, 0, 0.08);
@@ -245,7 +245,7 @@
         padding: 0 2rem;
     }
     .vision-text-slide{
-        height: 4.2rem;
+        height: 2rem;
         margin: 0 0;
         font-size: 2.5rem;
     }
