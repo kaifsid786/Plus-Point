@@ -167,22 +167,21 @@
 /* Content-3 */
 .media-content-3{
     width: 100%;
-    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    margin: 4rem 0;
+}
+.media-content-3-wrapper{
+    width: 100%;
+    max-width: 1920px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    margin: 4rem 0;
-    cursor: pointer;
-}
-.media-content-3-wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    margin: 4rem 0;
+    padding: 4rem 8rem;
+    gap: 10px;
 }
 .media-content-3-title{
     color: #1F1F1F;
@@ -202,26 +201,61 @@
     font-weight: 400;
     line-height: 2.5rem;
 }
-.media-content-3-award{
-    width: calc(40% - 20px);
+.media-content-3-awards{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 4rem 0;
 }
-.media-content-3-award p{
+.media-content-3-award{
+    width: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.media-content-3-award-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.media-content-3-award-wrapper img{
+    width: 8rem;
+}
+.media-content-3-awardBox{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.media-awardBox-title{
     color: #1F1F1F;
     text-align: center;
     font-family: Poppins;
-    font-size: 1.90188rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
 }
-.media-content-3-award p span{
+.media-awardBox-info{
+    color: #1F1F1F;
+    font-family: Poppins;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
+.media-content-3-award-top img{
+    width: 8rem;
+}
+
+
 
 /* Show Awards seection */
 
@@ -351,6 +385,18 @@
 @media screen and (max-width:1400px) {
     .main-media{
         top:6rem;
+    }
+    .media-content-3-award-wrapper{
+        gap: 0;
+    }
+    .media-content-3-awardBox{
+        width: 25rem;
+    }
+    .media-awardBox-title{
+        font-size: 1.3rem;
+    }
+    .media-awardBox-info{
+        font-size: 1.3rem;
     }
 }
 @media screen and (max-width:768px){

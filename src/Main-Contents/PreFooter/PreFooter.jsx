@@ -14,7 +14,7 @@ export default function PreFooter(){
                        </p>
                  </div>
                  <div className="pre-right">
-                       <button className="pre-contact">Click Here</button>
+                       <a href="/contact"><button className="pre-contact">Contact Us</button></a>
                  </div>
              </div>
            </div>

@@ -150,55 +150,40 @@ export default function Media() {
                            </div>
                      </div>
                </div>
+
                <div className="media-content-3">
-                 <div className="media-content-3-title">AWARDS</div>
-                   <div className="media-content-3-info"> 
-                   Indexcellence award 2023 Indexcellence award 2023 award
-                   </div>
-                  <div className="media-content-3-wrapper">
-                    <div className="media-content-3-award" style={showAwrds1?{display:"none"}:{}} onClick={()=>setShowAwards1(!showAwrds1)} >
-                         <img src={vector1} alt="" />
-                         <p>PLUS POINT BUILDSWARE <br />
-                              PVT. LTD. <br />
-                              <span> Award by ABP News 2018-19</span>
-                         </p>
-                         <img src={vector2} alt="" />
+                 <div className="media-content-3-wrapper">
+                 <div className='media-content-3-title'>Awards</div>
+                    <div className='media-content-3-info'>Indexcellence award 2023 Indexcellence award 2023 award </div>
+                    <div className="media-content-3-awards">
+                          <div className="media-content-3-award">
+                               <div className="media-content-3-award-wrapper">
+                                  <img src={vector1} alt="" />
+                                  <div className="media-content-3-awardBox">
+                                       <div className="media-awardBox-title">Best door & hardware & accessories 2018-19</div>
+                                       <div className="media-awardBox-info">Brand Leadership Award</div>
+                                  </div>
+                                  <div className="media-content-3-award-top">
+                                    <img src={Award1} alt="" style={{width:"7rem"}} />
+                                   </div>
+                                  <img src={vector2} alt="" />
+                               </div>
+                          </div>
+                          <div className="media-content-3-award">
+                               <div className="media-content-3-award-wrapper">
+                                  <img src={vector1} alt="" />
+                                  <div className="media-content-3-awardBox">
+                                       <div className="media-awardBox-title">The Indexcellence award Innovative space concept</div>
+                                       <div className="media-awardBox-info">Delhi 2023</div>
+                                  </div>
+                                  <div className="media-content-3-award-top">
+                                    <img src={Award2} alt="" />
+                                   </div>
+                                  <img src={vector2} alt="" />
+                               </div>
+                          </div>
                     </div>
-                      <div className="showAwards-1" style={!showAwrds1?{display:"none"}:{}} onClick={()=>setShowAwards1(!showAwrds1)}>
-                        <motion.img
-                        initial={{
-                          x:"-10rem"
-                        }}
-                        whileInView={{
-                          x:"0"
-                        }}
-                         transition={{
-                          duration:1,
-                         }}
-                         src={Award1} alt="" />
-                        </div>
-                      <div className="showAwards-2" style={!showAwrds2?{display:"none"}:{}} onClick={()=>setShowAwards2(!showAwrds2)}>
-                        <motion.img
-                        initial={{
-                          x:"10rem"
-                        }}
-                        whileInView={{
-                          x:"0"
-                        }}
-                         transition={{
-                          duration:1,
-                         }}
-                         src={Award2} alt="" />
-                        </div>
-                    <div className="media-content-3-award" style={showAwrds2?{display:"none"}:{}} onClick={()=>setShowAwards2(!showAwrds2)}>
-                         <img src={vector1} alt="" />
-                         <p>BEST DOOR & HARDWARE <br />
-                             & ACCESSORIES<br />
-                              <span>Indexcellence award 2023</span>
-                         </p>
-                         <img src={vector2} alt="" />
-                    </div>
-                  </div>
+                 </div>
                </div>
         </div>
         </div>

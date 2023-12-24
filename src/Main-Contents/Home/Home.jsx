@@ -31,13 +31,14 @@ export default function Home() {
             <HomeBanner setNewHead={setNewHead}/>
             <div ref={ref} className="home-banner">
                  <motion.h1
-                 initial={{y:"15rem",opacity:"0"}}
-                 whileInView={{y:"0",opacity:"1"}}
+                 initial={{y:"15rem",opacity:0}}
+                 whileInView={{y:"0",opacity:1}}
                   transition={{
                     duration:1,
                   }}
+                  exit={{opacity:0}}
                  >WELCOME TO PLUS POINT <br />
-                 <span>#YourOneStopHardwareSolution.</span> </motion.h1>
+                 <span>#YourOneStopHardwareSolution</span> </motion.h1>
 
                  <motion.h2
                   initial={{y:"15rem",opacity:"0"}}

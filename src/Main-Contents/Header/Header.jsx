@@ -71,7 +71,7 @@ export default function Header(props){
             <div className={!showMenu ? "right" : "disp"}>
                 <ul>
                     <li> <a href="/">Home</a></li>  
-                    <li> <a href="#">Who we are <span> <AiOutlineDown/> </span></a>
+                    <li> <a>Who we are <span> <AiOutlineDown/> </span></a>
                       <ul className="drop-down">
                           <li onClick={()=> navigate('/about')}>About Us</li>
                           <li onClick={()=> navigate('/ourTeam')}>Our Team</li>
@@ -87,7 +87,7 @@ export default function Header(props){
                           <li> <a href="">Media-4</a></li>
                       </ul>
                     </li>
-                    <li> <a href="">Products <span> <AiOutlineDown/> </span></a>
+                    <li> <a href="/products">Products <span> <AiOutlineDown/> </span></a>
                     <ul className="drop-down" style={{display:"none"}}>
                           <li> <a href="">Products-1</a></li>
                           <li> <a href="">Products-2</a></li>

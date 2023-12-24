@@ -40,8 +40,7 @@ export default function Vision() {
                        At Plus Point, we have a passion to achieve this vision. We believe in our process, and truly stand by it.
                     </p>
                   </div>
-                  <div className="vision-content-img"><img src={vision1} alt="" /></div>
-                    
+                  <div className="vision-content-img"><img src={vision1} alt="" /></div>    
                </div>
                <div className="vision-content-2">
                   <div className="vision-content-info vision-add">

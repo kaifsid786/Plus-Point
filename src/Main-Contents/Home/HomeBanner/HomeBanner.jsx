@@ -11,7 +11,6 @@ const HomeBanner = (props) => {
   
   const [scrol,setScrol] = useState(0);
   const height = window.innerHeight;
-
   useEffect(()=>{
     if(window.pageYOffset < 1500)
     props.setNewHead(false);
