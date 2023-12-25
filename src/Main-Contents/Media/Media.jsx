@@ -160,12 +160,12 @@ export default function Media() {
                                <div className="media-content-3-award-wrapper">
                                   <img src={vector1} alt="" />
                                   <div className="media-content-3-awardBox">
+                                      <div className="media-content-3-award-top">
+                                         <img src={Award1} alt="" style={{width:"5.5rem"}} />
+                                      </div>
                                        <div className="media-awardBox-title">Best door & hardware & accessories 2018-19</div>
                                        <div className="media-awardBox-info">Brand Leadership Award</div>
                                   </div>
-                                  <div className="media-content-3-award-top">
-                                    <img src={Award1} alt="" style={{width:"7rem"}} />
-                                   </div>
                                   <img src={vector2} alt="" />
                                </div>
                           </div>
@@ -173,12 +173,12 @@ export default function Media() {
                                <div className="media-content-3-award-wrapper">
                                   <img src={vector1} alt="" />
                                   <div className="media-content-3-awardBox">
+                                      <div className="media-content-3-award-top">
+                                       <img src={Award2} alt="" />
+                                      </div>
                                        <div className="media-awardBox-title">The Indexcellence award Innovative space concept</div>
                                        <div className="media-awardBox-info">Delhi 2023</div>
                                   </div>
-                                  <div className="media-content-3-award-top">
-                                    <img src={Award2} alt="" />
-                                   </div>
                                   <img src={vector2} alt="" />
                                </div>
                           </div>

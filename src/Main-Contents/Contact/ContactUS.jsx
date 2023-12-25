@@ -28,13 +28,13 @@ export default function ContactUS() {
         <Header />
        <div className="m-main-contact">
        <div className="main-contact">
-           <div className="contact-title" style={(i != 0)?{display:"none"}:{}}>Contact Us</div>
-           <div className="contact-info" style={(i != 0)?{display:"none"}:{}}>
+           <div className="contact-title">Contact Us</div>
+           <div className="contact-info">
               <h5 style={{fontWeight:"normal"}}>Need more guidance ?</h5>
               <p>Connect with our expert team at Godrej for guided assistance and answers to all your queries on our dedicated helpdesk.</p>
               <h3>Plus Point Customer Care Number: 18002095511</h3>
            </div>
-           <div className="contact-link" style={(i != 0)?{display:"none"}:{}}>
+           <div className="contact-link">
               <div className="contact-link-wrapper">
                   <BsTelephone />
                   <span>+91-9760-792792,</span>
@@ -50,7 +50,7 @@ export default function ContactUS() {
                 <span>202 001Uttar Pradesh (India)</span>
               </div>
            </div>
-           <div className="contact-content">
+           <div className="contact-content" style={{marginTop:"5rem"}}>
               {handleForm()}
            </div>
        </div>

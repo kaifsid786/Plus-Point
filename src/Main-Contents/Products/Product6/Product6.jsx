@@ -5,6 +5,7 @@ import PreFooter from '../../PreFooter/PreFooter';
 import  Footer from '../../Footer/Footer'
 import PBannerCard from '../PBannerCard/PBannerCard';
 import img1 from '../../../images/prod-3.jpg'
+import ProductPhone from '../ProductPhone/ProductPhone';
 import {AiOutlineDown} from 'react-icons/ai';
 import { FaRegSquare } from "react-icons/fa";
 export default function Product6() {
@@ -195,7 +196,7 @@ export default function Product6() {
                     <PBannerCard title="Main Door Locks"/>
                 </div>
 
-                <div className="product1-section3">
+                <div className="product1-section3" style={window.innerWidth<=500?{display:"none"}:{}}>
                 <div className="product1-section3-left">
                       <div className="p-afford">
                          <div className="p-afford-main">
@@ -274,6 +275,10 @@ export default function Product6() {
                          )
                      })}
                 </div>
+            </div>
+
+            <div className="product1-mob-section3" style={window.innerWidth>500?{display:"none"}:{}}>
+                <ProductPhone imgArr={img5} img={img1} />
             </div>
        </div>
        <PreFooter />

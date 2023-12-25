@@ -133,6 +133,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 /* content4 */
@@ -323,4 +324,104 @@
     border-radius: 10px;
     margin-top: 10px;
     object-fit: cover;
+}
+
+
+/* responsivnesss */
+
+@media screen and (max-width:900px) {
+    .product6-content2{
+        padding: 4rem !important;
+    }
+    .product6-content3{
+        padding: 4rem !important;
+    }
+    .product6-content4-wrapper{
+        padding: 4rem !important;
+        gap: 20px;
+    }
+    .product6-content2-img{
+        width: calc(50% - 20px);
+        margin-top: 0 !important;
+    }
+    .product6-content4-style{
+        padding: 0 4rem !important;
+    }
+    .product6-content4-img{
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .product6-content4-img img{
+        width: calc(33% - 20px) !important;
+    }
+    .product6-content7{
+        padding: 4rem !important;
+    }
+    .product6-content7 .product6-content4-wrapper{
+        padding: 0 !important;
+    }
+    .product6-content9{
+        padding: 4rem !important;
+    }
+}
+@media screen and (max-width:480px) {
+
+    .product6-topbanner{
+        height: 20rem;
+    }
+    .product6-title{
+        font-size: 2rem !important;
+    }
+
+    .product6-content2{
+        padding: 2rem !important;
+    }
+    .product6-content3{
+        padding: 2rem !important;
+    }
+    .product6-content4{
+        padding: 0 !important;
+    }
+    .product6-content4-wrapper{
+        padding: 2rem !important;
+        gap: 20px;
+    }
+    .product6-content1-info{
+        width: 25rem;
+        font-size: 1rem;
+    }
+    .product6-content1-title{
+        font-size: 2rem !important;
+    }
+    .product6-content2-title{
+        font-size: 1.5rem !important;
+    }
+    .product6-content3-title{
+        font-size: 1rem !important;
+    }
+    .product6-content3-wrapper{
+        gap: 20px !important;
+    }
+    .product6-content4-style{
+        padding: 0 2rem !important;
+    }
+   .product6-content4-style-title{
+    font-size: 1.2rem;
+   }
+   .product6-content4-img{
+    gap: 30px !important;
+   }
+    .product6-content4-img img{
+        width: calc(50% - 20px) !important;
+        height: 8rem !important;
+    }
+    .product6-content7{
+        padding: 2rem !important;
+    }
+    .product6-content7 .product6-content4-wrapper{
+        padding: 0 !important;
+    }
+    .product6-content9{
+        padding: 2rem !important;
+    }
 }
