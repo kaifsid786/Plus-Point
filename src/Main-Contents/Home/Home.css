@@ -39,6 +39,9 @@
     align-items: center;
     overflow-x: hidden;
 }
+.obs{
+    opacity: 0.3 ;
+}
 .home-banner h1{
     color: #E8CD9C;
     text-align: center;

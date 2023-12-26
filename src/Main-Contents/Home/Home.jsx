@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState,useEffect } from 'react'
 import {motion} from 'framer-motion';
 import Header from '../Header/Header';
 import PreFooter from '../PreFooter/PreFooter';
@@ -20,6 +20,32 @@ export default function Home() {
 
   const [newHead,setNewHead] = useState(true);
   const ref = useRef(null);
+
+  let box = window.innerWidth<=1550?3:4;
+
+  useEffect(()=>{
+    if(window.innerWidth>1000){
+      const observer = new IntersectionObserver((enteries)=>{
+        enteries.forEach((entry)=>{
+           if(entry.isIntersecting)
+            entry.target.style.opacity = 1;
+           else
+           entry.target.style.opacity = 0.3;
+        })
+     },{
+       rootMargin:`-${window.innerHeight/box}px`,
+       threshold:0.7
+     })
+ 
+     const elm = document.querySelectorAll(".obs");
+       elm.forEach((item)=>{
+         observer.observe(item);
+       })
+ 
+       return () => observer.disconnect();
+    }
+  },[])
+
   return (
     <>
     <Header newHead={newHead} height={ref.current?ref.current.clientHeight+(window.innerHeight/2):2000} />
@@ -31,38 +57,49 @@ export default function Home() {
             <HomeBanner setNewHead={setNewHead}/>
             <div ref={ref} className="home-banner">
                  <motion.h1
-                 initial={{y:"15rem",opacity:0}}
-                 whileInView={{y:"0",opacity:1}}
+                 initial={{y:"15rem"}}
+                 whileInView={{y:"0"}}
                   transition={{
                     duration:1,
                   }}
-                  exit={{opacity:0}}
+                  viewport={{once:true}}
+                  className='obs'
+                  style={window.innerWidth<1000?{opacity:1}:{}}
                  >WELCOME TO PLUS POINT <br />
                  <span>#YourOneStopHardwareSolution</span> </motion.h1>
 
                  <motion.h2
-                  initial={{y:"15rem",opacity:"0"}}
-                  whileInView={{y:"0",opacity:"1"}}
+                  initial={{y:"15rem"}}
+                  whileInView={{y:"0"}}
                   transition={{
                     duration:1,
                   }}
+                  viewport={{once:true}}
+                  className='obs'
+                  style={window.innerWidth<1000?{opacity:1}:{}}
                  >Carrying forward a legacy of more than 80 years, 
                     we have inherited the art, quality & sheer craftsmanship of hardware creation.</motion.h2>
 
                  <motion.h3
-                 initial={{y:"15rem",opacity:"0"}}
-                 whileInView={{y:"0",opacity:"1"}}
+                 initial={{y:"15rem"}}
+                 whileInView={{y:"0"}}
                   transition={{
                     duration:1,
                   }}
+                  viewport={{once:true}}
+                  className='obs'
+                  style={window.innerWidth<1000?{opacity:1}:{}}
                  >We mix our special touch with new ideas to get the best of old and new.</motion.h3>
 
                  <motion.h4
-                   initial={{y:"15rem",opacity:"0"}}
-                   whileInView={{y:"0",opacity:"1"}}
+                   initial={{y:"15rem"}}
+                   whileInView={{y:"0"}}
                   transition={{ 
                     duration:1,
                   }}
+                  viewport={{once:true}}
+                  className='obs'
+                  style={window.innerWidth<1000?{opacity:1}:{}}
                  >This journey of revolutionising hardware began from Aligarh, 
                     and now we envision to represent India on the globe.</motion.h4>
             </div>
