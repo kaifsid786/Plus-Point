@@ -16,6 +16,7 @@ import vector1 from '../../images/media-vector1.svg'
 import vector2 from '../../images/media-vector2.svg'
 import Award1 from '../../images/Award1.png'
 import Award2 from '../../images/Award2.png'
+import col from './col.json';
 
 const varients1={
   initial:{
@@ -33,6 +34,7 @@ export default function Media() {
   const [height,setHeight] = useState(false);
   const [showAwrds1,setShowAwards1] = useState(false);
   const [showAwrds2,setShowAwards2] = useState(false);
+  console.log(col.data[0].attributes.Images.data.length);
 
   useEffect(()=>{
   },window.addEventListener("scroll",()=>{
@@ -47,6 +49,11 @@ export default function Media() {
     } 
   }));
 
+  const idx1=Math.ceil(col.data[0].attributes.Images.data.length/3);
+  const idx2=idx1+1;
+  const idx3=idx1+idx2+Math.ceil(col.data[0].attributes.Images.data.length%3);
+
+
   
   return (
     <>
@@ -60,7 +67,8 @@ export default function Media() {
                   <div className={height?"media-content-1-wrapper med-wrapOn":"media-content-1-wrapper"}>
                       <div className="media-content-1-col1 med-col1">
                          <div className="media-content-1-img">
-                           {col1.map((val)=>{
+                           {col.data[0].attributes.Images.data.map((val,i)=>{
+                             if(i <= idx1){
                               return(
                                 <motion.div 
                                 initial={(window.innerWidth<1000)?{y:"5rem"}:{y:"15rem"}}
@@ -70,15 +78,17 @@ export default function Media() {
                                   type:'ease'
                                 }}
                                 className="div" style={{width:"100%",height:"fit-content",overflow:"hidden",top:""}}>
-                                <img src={val.img} alt="" />
+                                <img src={col.data[0].attributes.Images.data[i].attributes.url} alt="" />
                                 </motion.div>
                               )
+                             }
                            })}
                          </div>
                       </div>
                       <div className="media-content-1-col2 med-col2">
                           <div className="media-content-1-img">
-                          {col2.map((val)=>{
+                          {col.data[0].attributes.Images.data.map((val,i)=>{
+                            if(i >= idx2){
                               return(
                                 <motion.div 
                                 initial={(window.innerWidth<1000)?{y:"5rem"}:{y:"15rem"}}
@@ -87,15 +97,18 @@ export default function Media() {
                                   duration:1,
                                   type:'ease'
                                 }} className="div" style={{width:"100%",height:"fit-content",overflow:"hidden"}}>
-                                <img src={val.img} alt="" />
+                                <img src={col.data[0].attributes.Images.data[i].attributes.url} alt="" />
                                 </motion.div>
                               )
+                            }
+          
                            })}
                           </div>
                       </div>
                       <div className="media-content-1-col3 med-col3">
                            <div className="media-content-1-img">
-                           {col3.map((val)=>{
+                           {col.data[0].attributes.Images.data.map((val,i)=>{
+                             if(i >= idx3){
                               return(
                                 <motion.div 
                                 initial={(window.innerWidth<1000)?{y:"5rem"}:{y:"15rem"}}
@@ -104,9 +117,11 @@ export default function Media() {
                                   duration:1,
                                   type:'ease'
                                 }} className="div" style={val.blank?{width:"100%",height:"13%",visibility:"hidden"}:{width:"100%",height:"fit-content",overflow:"hidden"}}>
-                                <img src={val.img} alt="" />
+                                <img src={col.data[0].attributes.Images.data[i].attributes.url} alt="" />
                                 </motion.div>
                               )
+                             }
+                    
                            })}
                           </div>
                       </div>
