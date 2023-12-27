@@ -67,6 +67,10 @@
     .our-team-card-post{
         font-size: 1rem;
     }
+    .our-team-card-info{
+        min-height: 6rem !important;
+        margin-top: -1rem;
+    }
 }
 @media screen and (max-width:768px) {
     .our-team-card{

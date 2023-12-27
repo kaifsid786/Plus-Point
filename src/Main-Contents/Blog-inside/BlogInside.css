@@ -9,11 +9,11 @@
 /*
 .later-images{
     display: flex;
-    gap: 1rem;
+    gap: 4rem;
    
 }
 .later-image-1{
-    display: flex;
+    display: flex;  
     flex: 1;
     height: 20rem;
     
@@ -41,7 +41,8 @@
 .prev-next{
     display: flex;
     justify-content: space-between;
-    color: rgb(140, 143, 146);
+    color: rgba(31, 31, 31, 0.70);
+    cursor: pointer;
 }
 .prev-next>:nth-child(1){
     display: flex;
@@ -121,6 +122,7 @@
     }
     .t-h{
         font-size: 16px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     .t-h-c{
         height: 25vh;
@@ -132,38 +134,38 @@
 }  */
 
 
-.blog-inside{
-    position: relative;
-    top: 8rem;
-}
-.container{
-    margin-bottom: 100px;
+
+.blog-inside-image{
+    height: 65vh;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.blog-inside-image>img {
+/* .blog-inside-image>img {
     border-radius: 10px;
     height: 25rem;
-    /* width: 25rem; */
-}
+
+/* }  */
 .process-img{
     width: 100%;
 }
 
 .later-images{
     display: flex;
-    gap: 1rem;
+    gap: 4rem;
 
 }
 .later-image-1{
     display: flex;
     flex: 1;
-    height: 16rem;
+    
 
 }
 .later-image-2{
     display: flex;
     flex: 1;
-    height: 16rem;
+    
 }
 .later-image-1>img{
     border-radius: 10px;
@@ -172,6 +174,11 @@
     border-radius: 10px;
 }
 
+.blog-inside{
+    position: relative;
+    top: 8rem;
+    margin-bottom: 80px;
+}
 .inside-blog-icon>li>ul{
     border-radius: 100%;
     justify-content: center;
@@ -185,6 +192,7 @@
     justify-content: space-between;
     color: rgba(31, 31, 31, 0.70);
     cursor: pointer;
+    width: 100%;
 }
 .prev-next>:nth-child(1){
     display: flex;
@@ -206,13 +214,13 @@
     color: black;
     align-items: center;
 }
+.blog-comments{
+    width: 100%;
+}
 .cmt-img>img{
     width: 5rem;
     height: 5rem;
 }
-
-
-
 
 .main-homeNews{
     width: 100%;
@@ -260,7 +268,6 @@
     width: 100%;
     border-radius: 20px;
 
-
 }
 .homeNews-content h3{
     color: #000;
@@ -275,12 +282,12 @@
     border-radius: 20px;
     padding: 1rem;
     background: white;
-    width: fit-content;
+    /* width: fit-content; */
     gap: 0.8rem;
     box-shadow: 1px 1px 1px 1px #F3EEEC;
 }
 .h-c-b>img{
-    height: 15rem;
+    /* height: 15rem; */
     /* width: 20rem; */
 }
 .homeNews-content p{
@@ -293,7 +300,6 @@
     text-align: left;
 }
 .main-cmt{
-
     font-size:11px;
     margin-left: 6rem;
     margin-top: -3rem;
@@ -302,7 +308,6 @@
 
 .process-info-upper{
     color: #1F1F1F;
-
 
 }
 .s-m-btn{
@@ -315,7 +320,15 @@
     padding: 8px 18px;
     opacity: 0;
 }
+.t-h-c{
+    height: 55vh;
+}
 /* Responsiveness -----------------------------> */
+@media screen and (min-width:1921px){
+    .blog-inside-image{
+        height: 50vh;
+      }
+}
 @media screen and (max-width:1400px) {
     .main-homeNews{
         gap: 50px;
@@ -333,6 +346,7 @@
     .homeNews-content p{
         font-size: 0.85rem;
     }
+    
 }
 @media screen and (max-width:900px){
     .homeNews-para{
@@ -349,29 +363,8 @@
     .homeNews-content>img{  
         height: 20rem;
     }
-
-}
-@media screen and (max-width:480px){
-  .top-container{
-    margin-bottom: 0;
-    gap: 2rem;
-  }
-  .top-container-right{
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-  .top-container-right li ul{
-    font-size: 10px;
-  }
-  .process-card{
-    gap: 2rem !important;
-  }
 }
 @media screen and (max-width:768px){
-    .blog-inside{
-        top: 6rem;
-    }
     .h-c-b{
         justify-content: center;
     align-items: center;
@@ -389,6 +382,10 @@
         align-items: center;
         display: flex;
 
+    }
+    .blog-inside{
+      
+        top: 6rem;
     }
     .main-cmt{
 
@@ -419,12 +416,7 @@
     .later-images{
         flex-direction: column;
     }
-    .later-image-1>img{
-        max-height:12rem;
-    }
-    .later-image-2>img{
-        max-height:12rem;
-    }
+  
     .t-h{
         font-size: 16px;
     }
@@ -439,9 +431,29 @@
         height: 20rem;
         width: 100%;
     }
-    .container{
-        margin-bottom: 70px !important;
+    .blog-inside-image{
+        height: auto;
     }
-    
 
+}
+@media screen and (max-width:550px){
+    .main-homeNews{
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .homeNews-title{
+        font-size: 1.125rem;
+    }
+    .homeNews-para{
+        display: none;
+    }
+    .homeNews-content{
+        padding: 0;
+    }
+    .homeNews-content h3{
+        font-size: 1.125rem;
+    }
+    .homeNews-content p{
+        font-size: 0.75rem;
+    }
 }

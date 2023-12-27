@@ -14,7 +14,7 @@ import s8 from '../../images/2023.png';
 const sliderData=[
     {
       heading: (
-        <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+        <div className="s-y-ph" >
           1942<br />Building a Legacy:
         </div>
       ),
@@ -28,7 +28,7 @@ const sliderData=[
     },
     {
       heading: (
-        <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+        <div className="s-y-ph" >
           1983<br />New Begining:
         </div>
       ),
@@ -41,7 +41,7 @@ const sliderData=[
     },
     {
       heading: (
-        <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+        <div className="s-y-ph">
           1996 <br/>Revolutionary<br/>Product Launch:
         </div>
       ),
@@ -55,7 +55,7 @@ const sliderData=[
     },
     {
       heading: (
-        <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+        <div className="s-y-ph" >
           2009 - Corporate Milestone:
         </div>
       ),
@@ -69,7 +69,7 @@ const sliderData=[
     },
     {
       heading: (
-        <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+        <div className="s-y-ph" >
           2015<br/>Continuing the Legacy:
         </div>
       ),
@@ -84,7 +84,7 @@ const sliderData=[
     },
     {
       heading: (
-        <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+        <div className="s-y-ph" >
           2015<br/>Continuing the Legacy:
         </div>
       ),
@@ -98,7 +98,7 @@ const sliderData=[
     },
     {
       heading: (
-        <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+        <div className="s-y-ph">
           2016<br/>Mark on the Global Stage:
         </div>
       ),
@@ -112,7 +112,7 @@ const sliderData=[
     },
     {
       heading: (
-        <div className="s-y" style={{  color: "#4C341F", fontSize: "3rem" }}>
+        <div className="s-y-ph" >
          2023<br/>Stainless Steel Excellence:
         </div>
       ),
@@ -134,11 +134,14 @@ const SliderPh = () => {
         <div className="t-cont">
             <TimelineV />
       <div className="sliderPh-container">
+        
       {sliderData.map((data,index)=>{
           return(
+            <div className="slide-timeline">
+            
             <div className="slide1-ph panel-ph" key={index}>
             <div className="s-left-ph">
-              <h1 className="s-y" style={{  color: "#4C341F", fontSize: "3rem",lineHeight:'3.5rem' }}>
+              <h1 className="s-y" >
                 {data.heading}
               </h1>
               <span>
@@ -155,6 +158,7 @@ const SliderPh = () => {
                 />
               </div>
             </div>
+          </div>
           </div>
           )
         })}

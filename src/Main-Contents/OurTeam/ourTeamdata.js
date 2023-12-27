@@ -19,7 +19,7 @@ const data =
     {
         img:img2,
         name:"Niket Agarwal",
-        post:"CEO",
+        post:"Chief Executive Officer",
         desc:" AstheChief Executive O cer, Niket Agarwal provides visionary leadership, driving the company towards its goals. Under his guidance, Plus Point has experienced signi cant growth and has further established its name as a leading hardware provider. "
     },
     {

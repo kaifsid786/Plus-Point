@@ -10,16 +10,22 @@ import DirectionsIcon from "@mui/icons-material/Directions";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import {truncate} from 'lodash';
-import Header from '../Header/Header';
-import PreFooter from '../PreFooter/PreFooter';
-import Footer from '../Footer/Footer';
+import { motion } from "framer-motion";
 
 import "./Blogs.css";
+import Header from "../Header/Header";
+import PreFooter from "../PreFooter/PreFooter";  
+import Footer from "../Footer/Footer";
+import m1 from "../../images/beautiful-door-house-with-beautiful-handle-it-s-nice-open-close-door.png"
+import m2 from "../../images/image 39.png";
+import m3 from "../../images/interior-door-beautiful-canvas-expensive-fittings-made-natural-veneer-door-fittings.png"
+import m4 from "../../images/beautiful-hotel-insights-details.png";
+import m5 from "../../images/detail-two-bronze-sphinx-heads-old-wooden-door-around-100-years-old-italian-palace-north-italy 1.png"
 
 const Blogs = () => {
   const data = [
     {
-      img: "https://s3-alpha-sig.figma.com/img/d0a9/82c6/3dec605b805b03b7f4470690dfc7e56a?Expires=1697414400&Signature=En1VQvor9vaXNM-~LTMIck0V9pjZeo~dRX2If0hvOTqKebi74cRKqe5G-yXD81pQ7nC9jJLeRuXMHRoCXGVwad2Kqz-yaej8NsdmGw8U8Ia95hRUhrSmrITM9Itt5CMyaEtur06c3PGIHghljxj9jUiirRT1cobK~aFr~vQCPt~xAh83yiVBcvByjnc4YSu8xKfmKCZAbC-eQj-lQnidAeqxATxxJhrEES2Lt2chVAxlPCCLliJNqiTBGLJL0syDoD1fhdu1dk8Dp~8ZClinQWOonFUoUNwej3~18A7v2dIL~1fCRY8MeMz1R8AdKSAU0E0fucTvuT7HKIQ-jEBEzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      img: m1,
       heading:
         "How to select the best material for your door hardware? Here’s a guide.",
       info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
@@ -28,7 +34,8 @@ const Blogs = () => {
       comment: "1 comment",
     },
     {
-      img: "https://s3-alpha-sig.figma.com/img/d0a9/82c6/3dec605b805b03b7f4470690dfc7e56a?Expires=1697414400&Signature=En1VQvor9vaXNM-~LTMIck0V9pjZeo~dRX2If0hvOTqKebi74cRKqe5G-yXD81pQ7nC9jJLeRuXMHRoCXGVwad2Kqz-yaej8NsdmGw8U8Ia95hRUhrSmrITM9Itt5CMyaEtur06c3PGIHghljxj9jUiirRT1cobK~aFr~vQCPt~xAh83yiVBcvByjnc4YSu8xKfmKCZAbC-eQj-lQnidAeqxATxxJhrEES2Lt2chVAxlPCCLliJNqiTBGLJL0syDoD1fhdu1dk8Dp~8ZClinQWOonFUoUNwej3~18A7v2dIL~1fCRY8MeMz1R8AdKSAU0E0fucTvuT7HKIQ-jEBEzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+
+      img: m2,
       heading:
         "How to select the best material for your door hardware? Here’s a guide.",
       info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
@@ -37,7 +44,7 @@ const Blogs = () => {
       comment: "1 comment",
     },
     {
-      img: "https://s3-alpha-sig.figma.com/img/69b2/05cd/1048693d55afb8cdf5c5235a2fc8894e?Expires=1697414400&Signature=N9ndWpOCfc20Xfy5qxIsiEkJChzyclZC8-tpxq2CWIr2ZZKc4kAWTPGTuSJAxS1FXimqvwdRQEoasp9tcqaGv0rwaqW5JI8uWY6vttiicIWPZIhV9dHdbQRVtkfCqSe9JqPaXzXhvO0-KWClkMngY3VFpWD7S6qd66iKfZIJB8IvKELWdTdzT5azGBVs~GaSECdP1lVITlK6LLOtZJtD98dDz1WXWS82jZl-g3lRS6JO8erDclL6BBjIpb84SGuOSF6OfyHrDzqVbFo3HwA1-sG6A7XmSQNVh06DSV8Au5BffSiN5SGlWOTlruM104W58LrhFDApqHXMEw04Fh3nSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      img: m3,
       heading:
         "How to select the best material for your door hardware? Here’s a guide.",
       info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
@@ -46,7 +53,16 @@ const Blogs = () => {
       comment: "1 comment",
     },
     {
-      img: "https://s3-alpha-sig.figma.com/img/948f/19bb/a889073bb8e5f3f0273f1f69bc419cb0?Expires=1697414400&Signature=G5eiosnm4lUOAZHJphUitxjVGqBQ--O8pVAa7oKe-FQGYzmHf1I69qmyaqCa1vidhP8yHd0njp~f-gX0G8tYHIqHaJ~W-X5JTiiCLG3EgV5H-k6WD~FLKWbaceejOLSTJH7yJ24OMrjtgpy~-pCqQ3hrAHQF5HDyMjRfz3Yrlq-EhiS9iAKpVepC1nD26bdKebXw3KBwwykEPZrLEAJqjyESiXYv98Fr182tHofvYe2XZJjV3qumADuZwLg7ZwHXTe2YEwK5nG-9TvtMcPZ-jCXQOlprBkQ2Qd5gaW7-eKwMoLyXnQKvcOsAKn3vHylahljJSIUmRRsmoMiEbZKbgw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      img: m4,
+      heading:
+        "How to select the best material for your door hardware? Here’s a guide.",
+      info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      date: "08-Jan-2023",
+      views: "23 views",
+      comment: "1 comment",
+    },
+    {
+      img: m5,
       heading:
         "How to select the best material for your door hardware? Here’s a guide.",
       info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
@@ -57,7 +73,8 @@ const Blogs = () => {
   ];
   return (
     <>
-    <Header />
+    <Header/>
+   
     <div className="blogs">
       <div className="top-sec">
         <div
@@ -68,12 +85,12 @@ const Blogs = () => {
             color: "#FFFBDB",
             alignItems: "center",
           }}
-          className="top-image"
+          className="top-image-blog"
         >
           <h1>Blogs</h1>
         </div>
-        <div className="container">
-          <div style={{ marginBottom: "2rem" }} className="top-container">
+        <div className="container" style={{justifyContent:'center',alignItems:'center'}}>
+          <div style={{ marginBottom: "2rem" }} className="top-container m-w-c">
             <div className="top-container-left">
               <Paper
                 component="form"
@@ -113,16 +130,26 @@ const Blogs = () => {
           </div>
 
           {/* items */}
-          <div className="process">
+          <div className="process m-w-c">
             {data.map((item, i) => {
               return (
-                <div className="process-card" key={i}>
+                <motion.div
+                initial={{ y: "5rem" }}
+                whileInView={{ y: 0,  }}
+                exit={{ opacity: 0, y: "2rem" }}
+                transition={{
+                  duration: 1,
+                  type: "ease-in",
+                }}
+                viewport={{once:true}}
+                
+                className="process-card" key={i}>
                   <div className=" bolgs-imgs">
                     <img width="100%" src={item.img} alt="" />
                   </div>
-                  <div className="process-info">
-                    <div className="process-info-upper">{item.heading}</div>
-                    <div className="process-info-bottom">{truncate(item.info,{length:400})}</div>
+                  <div className="process-info-blog">
+                    <div className=" blog-info-upper">{item.heading}</div>
+                    <div className=" blog-info-bottom">{truncate(item.info,{length:400})}</div>
 
                     <div
                       style={{
@@ -147,15 +174,8 @@ const Blogs = () => {
                       />
                       <span>{item.comment}</span>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                        color: "rgba(76, 52, 31, 1), rgba(181, 134, 94, 1)",
-                        fontSize:'1.5rem',
-                        fontWeight: "600",
-                      }}
+                    <div className="read-more"
+                      
                     >
                       <span>Read more</span>
                       <span className="arrow">
@@ -163,12 +183,12 @@ const Blogs = () => {
                       </span>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
           {/* items end */}
-            <div style={{justifyContent:'center',display:'flex',alignItems:'center'}}  className="pagination">
+            <div style={{justifyContent:'center',display:'flex',alignItems:'center', width:"100vw"}}  className="pagination">
             <Stack style={{justifyContent:'center',display:'flex'}} spacing={2}>
             <Pagination count={15} shape="rounded" />
           </Stack>
@@ -177,8 +197,8 @@ const Blogs = () => {
         </div>
       </div>
     </div>
-    <PreFooter />
-    <Footer />
+            <PreFooter/>
+            <Footer/>
     </>
   );
 };

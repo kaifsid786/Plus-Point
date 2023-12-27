@@ -7,8 +7,38 @@ import PBannerCard from '../PBannerCard/PBannerCard';
 import img1 from '../../../images/prod-3.jpg'
 import ProductPhone from '../ProductPhone/ProductPhone';
 import {AiOutlineDown} from 'react-icons/ai';
-import { FaRegSquare } from "react-icons/fa";
+import PSquare from "../PSquare/PSquare"
 export default function Product6() {
+
+   const [clickedIndex, setClickedIndex] = useState(null);
+   const [clickedIndexS, setClickedIndexS] = useState(null);
+   const [clickedIndexM, setClickedIndexM] = useState(null);
+ 
+   const handleClick = (index) => {
+    // Update the clickedIndex to the current clicked element
+    setClickedIndex(index);
+  };
+   const handleClickS = (index) => {
+    // Update the clickedIndex to the current clicked element
+    setClickedIndexS(index);
+  };
+   const handleClickM = (index) => {
+    // Update the clickedIndex to the current clicked element
+    setClickedIndexM(index);
+  };
+  const isClicked = (index) => {
+    // Check if the current element is clicked
+    return index === clickedIndex;
+  };
+  const isClickedS = (index) => {
+    // Check if the current element is clicked
+    return index === clickedIndexS;
+  };
+  const isClickedM = (index) => {
+    // Check if the current element is clicked
+    return index === clickedIndexM;
+  };
+ 
  
     const img=[1,2,3];
     const img2=[1,2,3,4,5,6];
@@ -18,6 +48,9 @@ export default function Product6() {
     const [dd,setDd] = useState(true);
     const [dd1,setDd1] = useState(false);
     const [dd2,setDd2] = useState(false);
+    const app=["Luxurious","Pocket Friendly","Super Friendly"];
+    const style=["Classic (All time fav)","Mordern & Minimalist","Bold","Traditional"];
+    const material = ["Brass","Zinc","Aluminium","Stainless Steel"];
 
   return (
     <>
@@ -203,19 +236,17 @@ export default function Product6() {
                               <div className="p-afford-title">Affordability</div>
                               <span onClick={()=>{setDd(!dd)}} ><AiOutlineDown /></span>
                          </div>
-                         <div className="p-afford-dropDown" style={dd?{height:"10rem"}:{height:"0"}}>
-                                <div className="p-afford-dd-wrapper" style={!dd?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Luxurious</div>
-                                </div>
-                                <div className="p-afford-dd-wrapper" style={!dd?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Pocket Friendly</div>
-                                </div>
-                                <div className="p-afford-dd-wrapper" style={!dd?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Super Friendly</div>
-                                </div>
+                         <div className="p-afford-dropDown" style={dd?{height:`calc(${app.length} * 4rem - 1rem)`}:{height:"0"}}>
+                           {
+                              app.map((val,i)=>{
+                                 return(
+                                    <div className="p-afford-dd-wrapper" style={!dd?{display:"none"}:{}}>
+                                    <span onClick={() => {handleClick(i);console.log(val)}}><PSquare st={isClicked(i) ? true : false} /></span>
+                                    <div className="p-afford-dd-title">{val}</div>
+                                    </div>
+                                 )
+                              })
+                           }
                          </div>
                       </div>
                       <div className="p-afford">
@@ -223,53 +254,42 @@ export default function Product6() {
                               <div className="p-afford-title">Style</div>
                               <span onClick={()=>{setDd1(!dd1)}} ><AiOutlineDown /></span>
                          </div>
-                         <div className="p-afford-dropDown" style={dd1?{height:"15rem"}:{height:"0"}}>
-                                <div className="p-afford-dd-wrapper" style={!dd1?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Classic (All time fav)</div>
-                                </div>
-                                <div className="p-afford-dd-wrapper" style={!dd1?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Mordern & Minimalist</div>
-                                </div>
-                                <div className="p-afford-dd-wrapper" style={!dd1?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Bold</div>
-                                </div>
-                                <div className="p-afford-dd-wrapper" style={!dd1?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Traditional</div>
-                                </div>
+                         <div className="p-afford-dropDown" style={dd1?{height:`calc(${style.length} * 4rem - 1rem)`}:{height:"0"}}>
+                             {
+                              style.map((val,i)=>{
+                                 return(
+                                    <div className="p-afford-dd-wrapper" style={!dd1?{display:"none"}:{}}>
+                                    <span onClick={() => {handleClickS(i);console.log(val)}}><PSquare st={isClickedS(i) ? true : false} /></span>
+                                    <div className="p-afford-dd-title">{val}</div>
+                                    </div>
+                                 )
+                              })
+                             }
+                               
                          </div>
                       </div>
                       <div className="p-afford">
-                         <div className="p-afford-main"> 
+                         <div className="p-afford-main">
                               <div className="p-afford-title">Material</div>
                               <span onClick={()=>{setDd2(!dd2)}} ><AiOutlineDown /></span>
                          </div>
-                         <div className="p-afford-dropDown" style={dd2?{height:"15rem"}:{height:"0"}}>
-                                <div className="p-afford-dd-wrapper" style={!dd2?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Brass</div>
-                                </div>
-                                <div className="p-afford-dd-wrapper" style={!dd2?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Zinc</div>
-                                </div>
-                                <div className="p-afford-dd-wrapper" style={!dd2?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Aluminium</div>
-                                </div>
-                                <div className="p-afford-dd-wrapper" style={!dd2?{display:"none"}:{}}>
-                                   <span><FaRegSquare /></span>
-                                   <div className="p-afford-dd-title">Stainless Steel</div>
-                                </div>
+                         <div className="p-afford-dropDown" style={dd2?{height:`calc(${material.length} * 4rem - 1rem)`}:{height:"0"}}>
+                           {
+                              material.map((val,i)=>{
+                                 return(
+                                    <div className="p-afford-dd-wrapper" style={!dd2?{display:"none"}:{}}>
+                                    <span onClick={() =>{ handleClickM(i);console.log(val)}}><PSquare st={isClickedM(i) ? true : false} /></span>
+                                    <div className="p-afford-dd-title">{val}</div>
+                                    </div>
+                                 )
+                              })
+                           }
                          </div>
                       </div>
                 </div>
 
                 <div className="product1-section3-right">
-                     {img5.map((val)=>{
+                     {img3.map((val)=>{
                          return(
                               <img src={img1} alt=""/>
                          )

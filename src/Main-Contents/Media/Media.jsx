@@ -49,9 +49,9 @@ export default function Media() {
     } 
   }));
 
-  const idx1=Math.ceil(col.data[0].attributes.Images.data.length/3);
-  const idx2=idx1+1;
-  const idx3=idx1+idx2+Math.ceil(col.data[0].attributes.Images.data.length%3);
+  // const idx1=Math.ceil(col.data[0].attributes.Images.data.length/3);
+  // const idx2=idx1+1;
+  // const idx3=idx1+idx2+Math.ceil(col.data[0].attributes.Images.data.length%3);
 
 
   
@@ -67,8 +67,8 @@ export default function Media() {
                   <div className={height?"media-content-1-wrapper med-wrapOn":"media-content-1-wrapper"}>
                       <div className="media-content-1-col1 med-col1">
                          <div className="media-content-1-img">
-                           {col.data[0].attributes.Images.data.map((val,i)=>{
-                             if(i <= idx1){
+                           {col1.map((val,i)=>{
+                            //  if(i <= idx1){
                               return(
                                 <motion.div 
                                 initial={(window.innerWidth<1000)?{y:"5rem"}:{y:"15rem"}}
@@ -78,17 +78,17 @@ export default function Media() {
                                   type:'ease'
                                 }}
                                 className="div" style={{width:"100%",height:"fit-content",overflow:"hidden",top:""}}>
-                                <img src={col.data[0].attributes.Images.data[i].attributes.url} alt="" />
+                                <img src={val.img} alt="" />
                                 </motion.div>
                               )
-                             }
+                            //  }
                            })}
                          </div>
                       </div>
                       <div className="media-content-1-col2 med-col2">
                           <div className="media-content-1-img">
-                          {col.data[0].attributes.Images.data.map((val,i)=>{
-                            if(i >= idx2){
+                          {col2.map((val,i)=>{
+                            // if(i >= idx2){
                               return(
                                 <motion.div 
                                 initial={(window.innerWidth<1000)?{y:"5rem"}:{y:"15rem"}}
@@ -97,18 +97,18 @@ export default function Media() {
                                   duration:1,
                                   type:'ease'
                                 }} className="div" style={{width:"100%",height:"fit-content",overflow:"hidden"}}>
-                                <img src={col.data[0].attributes.Images.data[i].attributes.url} alt="" />
+                                <img src={val.img} alt="" />
                                 </motion.div>
                               )
-                            }
+                            // }
           
                            })}
                           </div>
                       </div>
                       <div className="media-content-1-col3 med-col3">
                            <div className="media-content-1-img">
-                           {col.data[0].attributes.Images.data.map((val,i)=>{
-                             if(i >= idx3){
+                           {col3.map((val,i)=>{
+                            //  if(i >= idx3){
                               return(
                                 <motion.div 
                                 initial={(window.innerWidth<1000)?{y:"5rem"}:{y:"15rem"}}
@@ -117,10 +117,10 @@ export default function Media() {
                                   duration:1,
                                   type:'ease'
                                 }} className="div" style={val.blank?{width:"100%",height:"13%",visibility:"hidden"}:{width:"100%",height:"fit-content",overflow:"hidden"}}>
-                                <img src={col.data[0].attributes.Images.data[i].attributes.url} alt="" />
+                                <img src={val.img} alt="" />
                                 </motion.div>
                               )
-                             }
+                            //  }
                     
                            })}
                           </div>

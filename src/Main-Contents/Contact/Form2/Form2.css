@@ -96,6 +96,9 @@
     .main-form2{
         height: 75rem;
     }
+    .form2-wrapper{
+        padding: 2rem 12rem;
+    }
     .form2-left , .form2-right{
         height: 70rem;
     }

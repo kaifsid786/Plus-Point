@@ -139,13 +139,17 @@ import React, { useEffect, useState } from "react";
 import Exp1 from "../../images/Experties.png";
 import "./Welcome.css";
 import { useRef } from "react";
-import Header from '../Header/Header';
-import PreFooter from '../PreFooter/PreFooter';
-import Footer from '../Footer/Footer';
+import {motion} from "framer-motion"
+import img1 from "../../images/1.png"
+import img2 from "../../images/2.png"
 
 import Gallery from "../Gallery/index";
 import Slider from "../Slider/Slider";
+import Header from "../Header/Header";
+import PreFooter from "../PreFooter/PreFooter";
+import Footer from "../Footer/Footer";
 import SliderPh from "../SliderPh/SliderPh";
+import TimelineV from '../Timeline/TimelineV';
 const Welcome = () => {
   const [seeContent,setSeeContent]=useState(true);
   const handleSeeMore=()=>{
@@ -154,15 +158,27 @@ const Welcome = () => {
   return (
     <>
     <Header/>
-  
+   
     <div className="welcome">
       <div className="top-sec">
         <div className="top-image welcome-image">
           <img width="100%" height="100%" src={Exp1} />
         </div>
       </div>
-      <div className="container-welcome">
-        <div className="w-pp">
+      <div className="container-welcome ">
+        
+        <div className="w-pp-center">
+        <motion.div
+        initial={{ y: "5rem" }}
+        whileInView={{ y: 0,  }}
+        exit={{ opacity: 0, y: "2rem" }}
+        transition={{
+          duration: 1,
+          type: "ease-in",
+        }}
+        viewport={{once:true}}
+        className="w-pp m-w-c">
+       
           <div className="left-pp">
             <h1 className="wel-h" style={{ color: "rgba(0, 0, 0, 0.51)"}}>
               Welcome to the <br /> World of
@@ -198,7 +214,7 @@ const Welcome = () => {
               <button onClick={handleSeeMore} className="s-m-btn">{seeContent?"See Less":"See More"}</button>
             </div>
             {seeContent?
-            <div style={{ color: "1F1F1F" }} className="w-h-1">
+            <div style={{ color: "1F1F1F" }} className="w-h-1 w-h-11">
               <span>
                 Having jewelled up lacs of homes during this course, we now
                 stand on a mission to be your{" "}
@@ -222,13 +238,18 @@ const Welcome = () => {
             </div>
             :""}
           </div>
-        </div> 
-        
+          
+        </motion.div> 
+       </div>
         
           <Slider />
         <SliderPh/>
+        
            
-       
+       <div className="iso">
+        <img src={img1} alt="" />
+        <img src={img2} alt="" />
+       </div>
 
       </div>
     </div>
@@ -239,5 +260,3 @@ const Welcome = () => {
 };
 
 export default Welcome;
-
-

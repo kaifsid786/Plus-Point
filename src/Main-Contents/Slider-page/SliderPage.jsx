@@ -526,207 +526,207 @@ function GalleryItem({
 //         <div class="timeline">
 //           <div class="timeline__progress"></div>
 
-//           <ul class="years">
-//             <li data-position="1" class="year year--highlight">
-//               <span class="year__value">1680</span>
-//             </li>
+          // <ul class="years">
+          //   <li data-position="1" class="year year--highlight">
+          //     <span class="year__value">1680</span>
+          //   </li>
 
-//             <li data-position="2" class="year ">
-//               <span class="year__value">1684</span>
-//             </li>
+          //   <li data-position="2" class="year ">
+          //     <span class="year__value">1684</span>
+          //   </li>
 
-//             <li data-position="3" class="year ">
-//               <span class="year__value">1688</span>
-//             </li>
+          //   <li data-position="3" class="year ">
+          //     <span class="year__value">1688</span>
+          //   </li>
 
-//             <li data-position="4" class="year ">
-//               <span class="year__value">1692</span>
-//             </li>
+          //   <li data-position="4" class="year ">
+          //     <span class="year__value">1692</span>
+          //   </li>
 
-//             <li data-position="5" class="year ">
-//               <span class="year__value">1694</span>
-//             </li>
+          //   <li data-position="5" class="year ">
+          //     <span class="year__value">1694</span>
+          //   </li>
 
-//             <li data-position="6" class="year ">
-//               <span class="year__value">1696</span>
-//             </li>
+          //   <li data-position="6" class="year ">
+          //     <span class="year__value">1696</span>
+          //   </li>
 
-//             <li data-position="7" class="year ">
-//               <span class="year__value">1698</span>
-//             </li>
+          //   <li data-position="7" class="year ">
+          //     <span class="year__value">1698</span>
+          //   </li>
 
-//             <li data-position="8" class="year year--highlight">
-//               <span class="year__value">1701</span>
-//             </li>
+          //   <li data-position="8" class="year year--highlight">
+          //     <span class="year__value">1701</span>
+          //   </li>
 
-//             <li data-position="9" class="year ">
-//               <span class="year__value">1704</span>
-//             </li>
+          //   <li data-position="9" class="year ">
+          //     <span class="year__value">1704</span>
+          //   </li>
 
-//             <li data-position="10" class="year ">
-//               <span class="year__value">1707</span>
-//             </li>
+          //   <li data-position="10" class="year ">
+          //     <span class="year__value">1707</span>
+          //   </li>
 
-//             <li data-position="11" class="year ">
-//               <span class="year__value">1709</span>
-//             </li>
+          //   <li data-position="11" class="year ">
+          //     <span class="year__value">1709</span>
+          //   </li>
 
-//             <li data-position="12" class="year ">
-//               <span class="year__value">1711</span>
-//             </li>
+          //   <li data-position="12" class="year ">
+          //     <span class="year__value">1711</span>
+          //   </li>
 
-//             <li data-position="13" class="year ">
-//               <span class="year__value">1737</span>
-//             </li>
+          //   <li data-position="13" class="year ">
+          //     <span class="year__value">1737</span>
+          //   </li>
 
-//             <li data-position="14" class="year ">
-//               <span class="year__value">1763</span>
-//             </li>
+          //   <li data-position="14" class="year ">
+          //     <span class="year__value">1763</span>
+          //   </li>
 
-//             <li data-position="15" class="year year--highlight">
-//               <span class="year__value">1778</span>
-//             </li>
+          //   <li data-position="15" class="year year--highlight">
+          //     <span class="year__value">1778</span>
+          //   </li>
 
-//             <li data-position="16" class="year ">
-//               <span class="year__value">1790</span>
-//             </li>
+          //   <li data-position="16" class="year ">
+          //     <span class="year__value">1790</span>
+          //   </li>
 
-//             <li data-position="17" class="year ">
-//               <span class="year__value">1800</span>
-//             </li>
+          //   <li data-position="17" class="year ">
+          //     <span class="year__value">1800</span>
+          //   </li>
 
-//             <li data-position="18" class="year ">
-//               <span class="year__value">1805</span>
-//             </li>
+          //   <li data-position="18" class="year ">
+          //     <span class="year__value">1805</span>
+          //   </li>
 
-//             <li data-position="19" class="year ">
-//               <span class="year__value">1810</span>
-//             </li>
+          //   <li data-position="19" class="year ">
+          //     <span class="year__value">1810</span>
+          //   </li>
 
-//             <li data-position="20" class="year ">
-//               <span class="year__value">1820</span>
-//             </li>
+          //   <li data-position="20" class="year ">
+          //     <span class="year__value">1820</span>
+          //   </li>
 
-//             <li data-position="21" class="year year--highlight">
-//               <span class="year__value">1830</span>
-//             </li>
+          //   <li data-position="21" class="year year--highlight">
+          //     <span class="year__value">1830</span>
+          //   </li>
 
-//             <li data-position="22" class="year ">
-//               <span class="year__value">1831</span>
-//             </li>
+          //   <li data-position="22" class="year ">
+          //     <span class="year__value">1831</span>
+          //   </li>
 
-//             <li data-position="23" class="year ">
-//               <span class="year__value">1832</span>
-//             </li>
+          //   <li data-position="23" class="year ">
+          //     <span class="year__value">1832</span>
+          //   </li>
 
-//             <li data-position="24" class="year ">
-//               <span class="year__value">1833</span>
-//             </li>
+          //   <li data-position="24" class="year ">
+          //     <span class="year__value">1833</span>
+          //   </li>
 
-//             <li data-position="25" class="year ">
-//               <span class="year__value">1834</span>
-//             </li>
+          //   <li data-position="25" class="year ">
+          //     <span class="year__value">1834</span>
+          //   </li>
 
-//             <li data-position="26" class="year ">
-//               <span class="year__value">1835</span>
-//             </li>
+          //   <li data-position="26" class="year ">
+          //     <span class="year__value">1835</span>
+          //   </li>
 
-//             <li data-position="27" class="year year--highlight">
-//               <span class="year__value">1836</span>
-//             </li>
+          //   <li data-position="27" class="year year--highlight">
+          //     <span class="year__value">1836</span>
+          //   </li>
 
-//             <li data-position="28" class="year ">
-//               <span class="year__value">1842</span>
-//             </li>
+          //   <li data-position="28" class="year ">
+          //     <span class="year__value">1842</span>
+          //   </li>
 
-//             <li data-position="29" class="year ">
-//               <span class="year__value">1848</span>
-//             </li>
+          //   <li data-position="29" class="year ">
+          //     <span class="year__value">1848</span>
+          //   </li>
 
-//             <li data-position="30" class="year ">
-//               <span class="year__value">1854</span>
-//             </li>
+          //   <li data-position="30" class="year ">
+          //     <span class="year__value">1854</span>
+          //   </li>
 
-//             <li data-position="31" class="year ">
-//               <span class="year__value">1860</span>
-//             </li>
+          //   <li data-position="31" class="year ">
+          //     <span class="year__value">1860</span>
+          //   </li>
 
-//             <li data-position="32" class="year ">
-//               <span class="year__value">1866</span>
-//             </li>
+          //   <li data-position="32" class="year ">
+          //     <span class="year__value">1866</span>
+          //   </li>
 
-//             <li data-position="33" class="year ">
-//               <span class="year__value">1872</span>
-//             </li>
+          //   <li data-position="33" class="year ">
+          //     <span class="year__value">1872</span>
+          //   </li>
 
-//             <li data-position="34" class="year year--highlight">
-//               <span class="year__value">1876</span>
-//             </li>
+          //   <li data-position="34" class="year year--highlight">
+          //     <span class="year__value">1876</span>
+          //   </li>
 
-//             <li data-position="35" class="year ">
-//               <span class="year__value">1900</span>
-//             </li>
+          //   <li data-position="35" class="year ">
+          //     <span class="year__value">1900</span>
+          //   </li>
 
-//             <li data-position="36" class="year ">
-//               <span class="year__value">1920</span>
-//             </li>
+          //   <li data-position="36" class="year ">
+          //     <span class="year__value">1920</span>
+          //   </li>
 
-//             <li data-position="37" class="year ">
-//               <span class="year__value">1940</span>
-//             </li>
+          //   <li data-position="37" class="year ">
+          //     <span class="year__value">1940</span>
+          //   </li>
 
-//             <li data-position="38" class="year ">
-//               <span class="year__value">1960</span>
-//             </li>
+          //   <li data-position="38" class="year ">
+          //     <span class="year__value">1960</span>
+          //   </li>
 
-//             <li data-position="39" class="year ">
-//               <span class="year__value">1980</span>
-//             </li>
+          //   <li data-position="39" class="year ">
+          //     <span class="year__value">1980</span>
+          //   </li>
 
-//             <li data-position="40" class="year year--highlight">
-//               <span class="year__value">1989</span>
-//             </li>
+          //   <li data-position="40" class="year year--highlight">
+          //     <span class="year__value">1989</span>
+          //   </li>
 
-//             <li data-position="41" class="year ">
-//               <span class="year__value">1993</span>
-//             </li>
+          //   <li data-position="41" class="year ">
+          //     <span class="year__value">1993</span>
+          //   </li>
 
-//             <li data-position="42" class="year ">
-//               <span class="year__value">1997</span>
-//             </li>
+          //   <li data-position="42" class="year ">
+          //     <span class="year__value">1997</span>
+          //   </li>
 
-//             <li data-position="43" class="year ">
-//               <span class="year__value">2001</span>
-//             </li>
+          //   <li data-position="43" class="year ">
+          //     <span class="year__value">2001</span>
+          //   </li>
 
-//             <li data-position="44" class="year ">
-//               <span class="year__value">2005</span>
-//             </li>
+          //   <li data-position="44" class="year ">
+          //     <span class="year__value">2005</span>
+          //   </li>
 
-//             <li data-position="45" class="year ">
-//               <span class="year__value">2009</span>
-//             </li>
+          //   <li data-position="45" class="year ">
+          //     <span class="year__value">2009</span>
+          //   </li>
 
-//             <li data-position="46" class="year year--highlight">
-//               <span class="year__value">2015</span>
-//             </li>
+          //   <li data-position="46" class="year year--highlight">
+          //     <span class="year__value">2015</span>
+          //   </li>
 
-//             <li data-position="47" class="year ">
-//               <span class="year__value">2017</span>
-//             </li>
+          //   <li data-position="47" class="year ">
+          //     <span class="year__value">2017</span>
+          //   </li>
 
-//             <li data-position="48" class="year ">
-//               <span class="year__value">2019</span>
-//             </li>
+          //   <li data-position="48" class="year ">
+          //     <span class="year__value">2019</span>
+          //   </li>
 
-//             <li data-position="49" class="year ">
-//               <span class="year__value">2021</span>
-//             </li>
+          //   <li data-position="49" class="year ">
+          //     <span class="year__value">2021</span>
+          //   </li>
 
-//             <li data-position="50" class="year ">
-//               <span class="year__value">2022</span>
-//             </li>
-//           </ul>
+          //   <li data-position="50" class="year ">
+          //     <span class="year__value">2022</span>
+          //   </li>
+          // </ul>
 //         </div>
 //       </div>
 //     </section>

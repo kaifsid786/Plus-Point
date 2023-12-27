@@ -44,7 +44,7 @@
     transition: all 0.5s ease;
 }
 .media-content-1 video{
-    width: 65%;
+    width: 66.2%;
     height: 25vw;
     position: absolute;
     top: -5vw;
@@ -368,6 +368,7 @@
    }
    .media-content-1 video{
      height: 25rem;
+     width: 65%;
     top: -5rem;
    }
    .media-content-1-title2{

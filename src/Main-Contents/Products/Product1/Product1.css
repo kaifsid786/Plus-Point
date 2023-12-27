@@ -111,6 +111,9 @@
     gap: 10px;
     color: #797979;
 }
+.p-afford-dd-wrapper span{
+    margin-bottom: 6px;
+}
 .p-afford-dd-title{
     color: #797979;
     font-family: Poppins;
