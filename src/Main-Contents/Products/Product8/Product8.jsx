@@ -45,6 +45,24 @@ export default function Product8() {
                      })}
                 </div>
 
+                {/* section added */}
+                <div className="product8-section-added">
+                    <div className="product8-section-added-wrapper">
+                        <div className="product8-section-added-title">Sliding Cupboard Locks</div>
+                   <div className="product8-section-added-left">
+                    <img src={img1} alt="" />
+                    <div className="product8-section-added-left-info"></div>
+                   </div>
+                   <div className="product8-section-added-right">
+                   <div className="product8-section1-wrapper">
+                                <img src={img1} alt="" />
+                                <div className="product8-section1-title"></div>
+                    </div>
+                   </div>
+                    </div>
+                   
+                </div>
+
                 {/* section2 */}
                 <div className="product8-section2">
                     <div className="product8-banner">
