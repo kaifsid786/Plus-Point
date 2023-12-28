@@ -8,7 +8,8 @@ import HomeAccordian from './HomeAccordian/HomeAccordian';
 import HomePhAccord from './HomePhAccord/HomePhAccord';
 import HomeUSP from './HomeUSP/HomeUSP';
 import HomeMedia from './HomeMedia/HomeMedia';
-import HomeTestMod from './HomeTestMod/HomeTestMod';
+import HomeTestMod from './HomeTestMod/HomeTestMod'  
+import HomeUSPMod from './HomeUSPMod/HomeUSPMod';
 import HomeNews from './HomeNews/HomeNews';
 import './Home.css';
 import trust from '../../images/home-1.png'
@@ -128,7 +129,7 @@ export default function Home() {
                         <HomePhAccord />
                     </div>
                     <div className="home-content-3">
-                           <HomeUSP />
+                           <HomeUSPMod />
                     </div>
                     <div className="home-content-4">
                         <HomeMedia />

@@ -154,7 +154,7 @@ export default function Media() {
                <div className="media-content-3">
                  <div className="media-content-3-wrapper">
                  <div className='media-content-3-title'>Awards</div>
-                    <div className='media-content-3-info'>Indexcellence award 2023 Indexcellence award 2023 award </div>
+                    <div className='media-content-3-info'>Celebrating the milestones and accolades that set us apart</div>
                     <div className="media-content-3-awards">
                           <div className="media-content-3-award">
                                <div className="media-content-3-award-wrapper">

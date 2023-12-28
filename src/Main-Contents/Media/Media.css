@@ -110,7 +110,7 @@
     justify-content: center;
     align-items: center;
     color: #FFF;
-    font-family: Proxima Nova;
+    font-family: Poppins;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 600;
@@ -129,7 +129,18 @@
      justify-content: flex-start;
      align-items: center;
      gap: 80px;
+     position: relative;
+     padding: 2rem 0; 
 }
+.media-content-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    border-top: 1px solid #5D422A; /* Adjust the color and thickness as needed */
+  }
  /* content -2 slider  */
  .media-content-2-slider{
     margin: auto;
@@ -182,7 +193,17 @@
     align-items: center;
     padding: 4rem 8rem;
     gap: 10px;
+    position: relative;
 }
+.media-content-3-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    border-top: 1px solid #5D422A; /* Adjust the color and thickness as needed */
+  }
 .media-content-3-title{
     color: #1F1F1F;
     text-align: center;

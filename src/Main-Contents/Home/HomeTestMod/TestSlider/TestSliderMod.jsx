@@ -50,7 +50,8 @@ export default function TestSliderMod(){
                     return(
                         <div className={i===imgIndx?"testSlider-content activeSlide":"testSlider-content"}>
                             <div className="testSlider-bgimg">
-                           <img className='testSlider-img' src={img} alt="" />
+                           {/* <img className='testSlider-img' src={img} alt="" /> */}
+                           <iframe className='testSlider-img' src="https://www.youtube.com/embed/PPLrjjtplCk?si=hyPFIjdpjZuBi9AW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             <div className='testSlider-gradient'></div>
                             <img className='pauseBtn' src={pauseBtn} alt="" />
                             <div className="testSlider-name">Mr malikni shetu nira</div>

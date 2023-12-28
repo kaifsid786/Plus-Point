@@ -16,22 +16,24 @@ export default function Product1() {
   const section = [
    {
       img:[1,2,3,4,5],
-      title:"By Application"
+      title:"By Application",
+      info:"Info here"
    },
    {
       img:[1,2,3],
-      title:"By Type"
+      title:"By Type",
+      info:"Info here"
    },
   ];
   const img3=["30%","30%","30%","30%","30%","30%","30%","30%","30%"];
-  const des1="Step up the character of your entryways with our artistic collection of pull handles. These pieces aren't just door furniture; they're expressions of style that greet every guest with a touch of personal flair. ";
-  const des2="From sleek, minimalist designs to bold, sculptural statements, our pull handles are curated to cater to the discerning tastes of those who appreciate the finer details in life. Add a signature touch to your doors and draw in a sense of sophistication that resonates throughout your space.";
+   const des1="Our mortise lock sets combine security with sophistication, offering a range of options for both commercial and residential applications. Our selection features durable materials and finishes that withstand daily use and enhance your door's aesthetics. ";
+   const des2="Each set is engineered for smooth operation and reliable locking mechanisms, ensuring peace of mind. Explore our collection to find the perfect blend of function and style for your space.";
   return (
     <>
         <Header />
         <div className='main-product1'>
             <div className="product1-banner">
-                 <PBannerCard title="Door Pull Handles" img={pimg} des1={des1} des2={des2} />
+                 <PBannerCard title="Mortise Lock Sets" img={pimg} des1={des1} des2={des2} />
             </div>
 
             {/* sections */}
@@ -40,10 +42,14 @@ export default function Product1() {
                   return(
                      <div className="product1-section1">
                        <div className="product1-section1-title">{section[i].title}</div>
+                       <div className="product1-section1-info" style={{fontSize:"1.5rem"}}>{section[i].info}</div>
                        <div className="product1-section1-img-wrapper">
                           {section[i].img.map((val,i)=>{
                              return(
-                              <img src={img1} alt="" />
+                               <div className="product1-section1-img-wrapper-w">
+                                 <img src={img1} alt="" />
+                                 <p>Title</p>
+                               </div>
                              )
                           })}
                        </div>
@@ -60,7 +66,7 @@ export default function Product1() {
                               <div className="p-afford-title">Affordability</div>
                               <span onClick={()=>{setDd(!dd)}} ><AiOutlineDown /></span>
                          </div>
-                         <div className="p-afford-dropDown" style={dd?{height:"10rem"}:{height:"0"}}>
+                         <div className="p-afford-dropDown" style={dd?{height:"calc(3 * 4rem - 1rem)"}:{height:"0"}}>
                                 <div className="p-afford-dd-wrapper" style={!dd?{display:"none"}:{}}>
                                    <span><FaRegSquare /></span>
                                    <div className="p-afford-dd-title">Luxurious</div>
@@ -80,7 +86,7 @@ export default function Product1() {
                               <div className="p-afford-title">Style</div>
                               <span onClick={()=>{setDd1(!dd1)}} ><AiOutlineDown /></span>
                          </div>
-                         <div className="p-afford-dropDown" style={dd1?{height:"15rem"}:{height:"0"}}>
+                         <div className="p-afford-dropDown" style={dd1?{height:"calc(4 * 4rem - 1rem)"}:{height:"0"}}>
                                 <div className="p-afford-dd-wrapper" style={!dd1?{display:"none"}:{}}>
                                    <span><FaRegSquare /></span>
                                    <div className="p-afford-dd-title">Classic (All time fav)</div>
@@ -104,7 +110,7 @@ export default function Product1() {
                               <div className="p-afford-title">Material</div>
                               <span onClick={()=>{setDd2(!dd2)}} ><AiOutlineDown /></span>
                          </div>
-                         <div className="p-afford-dropDown" style={dd2?{height:"15rem"}:{height:"0"}}>
+                         <div className="p-afford-dropDown" style={dd2?{height:"calc(5 * 4rem - 1rem)"}:{height:"0"}}>
                                 <div className="p-afford-dd-wrapper" style={!dd2?{display:"none"}:{}}>
                                    <span><FaRegSquare /></span>
                                    <div className="p-afford-dd-title">Brass</div>
@@ -137,7 +143,6 @@ export default function Product1() {
             <div className="product1-mob-section3" style={window.innerWidth>500?{display:"none"}:{}}>
                 <ProductPhone imgArr={img3} img={img1} />
             </div>
-
         </div>
         <PreFooter />
         <Footer />

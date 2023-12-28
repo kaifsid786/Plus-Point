@@ -17,12 +17,14 @@ export default function Product2() {
 
   const section = [
    {
-      img:[1,2,3,4,5,6,7],
-      title:"By Application"
+      img:[1,2,3,4,5],
+      title:"By Application",
+      info:"Info here"
    },
    {
       img:[1,2,3],
-      title:"By Type"
+      title:"By Type",
+      info:"Info here"
    },
   ];
 
@@ -43,15 +45,19 @@ export default function Product2() {
                section.map((val,i)=>{
                   return(
                      <div className="product1-section1">
-                       <div className="product1-section1-title">{section[i].title}</div>
-                       <div className="product1-section1-img-wrapper">
-                          {section[i].img.map((val,i)=>{
-                             return(
-                              <img src={img1} alt="" />
-                             )
-                          })}
-                       </div>
-                    </div>
+                     <div className="product1-section1-title">{section[i].title}</div>
+                     <div className="product1-section1-info" style={{fontSize:"1.5rem"}}>{section[i].info}</div>
+                     <div className="product1-section1-img-wrapper">
+                        {section[i].img.map((val,i)=>{
+                           return(
+                             <div className="product1-section1-img-wrapper-w">
+                               <img src={img1} alt="" />
+                               <p>Title</p>
+                             </div>
+                           )
+                        })}
+                     </div>
+                  </div>
                   )
                })
             }
