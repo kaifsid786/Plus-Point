@@ -1,5 +1,6 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Home from "./Main-Contents/Home/Home";
 import Ourteam from "./Main-Contents/OurTeam/Ourteam";
 import Vision from "./Main-Contents/Vision/Vision";
@@ -20,39 +21,39 @@ import Product7 from "./Main-Contents/Products/Product7/Product7";
 import Product8 from "./Main-Contents/Products/Product8/Product8";
 import Product9 from "./Main-Contents/Products/Product9/Product9";
 import ContactUS from "./Main-Contents/Contact/ContactUS";
-import Header from "./Main-Contents/Header/Header";
-import PreFooter from "./Main-Contents/PreFooter/PreFooter";
-import Footer from "./Main-Contents/Footer/Footer";
 import HomeUSPMod from "./Main-Contents/Home/HomeUSPMod/HomeUSPMod";
 function App() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/test" element={<HomeUSPMod />} />
-          <Route path="/ourTeam" element={<Ourteam />} />
-          <Route path="/ourVision" element={<Vision />} />
-          <Route path="/media" element={<Media />} />
-          <Route path="/faqs" element={<FAQs />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/experties" element={<Experties />} />
-          <Route path="/blogInsides" element={<BlogInside />} />
-          <Route path="/about" element={<Welcome />} />
-          <Route path="/contact" element={<ContactUS />} />
-          <Route path="/products" element={<ProductMain />} />
-          <Route path="/products/mortoise" element={<Product1 />} />
-          <Route path="/products/aldrop" element={<Product2 />} />
-          <Route path="/products/pullhandles" element={<Product3 />} />
-          <Route path="/products/maindoor" element={<Product4 />} />
-          <Route path="/products/locks&latches" element={<Product6 />} />
-          <Route path="/products/hinges" element={<Product5 />} />
-          <Route path="/products/furniturelock" element={<Product8 />} />
-          <Route path="/products/decoratives" element={<Product7 />} />
-          <Route path="/products/doorAccessories" element={<Product9 />} />
-          {/* <Footer />  */}
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/test" element={<HomeUSPMod />} />
+        <Route path="/ourTeam" element={<Ourteam />} />
+        <Route path="/ourVision" element={<Vision />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/experties" element={<Experties />} />
+        <Route path="/blogInsides" element={<BlogInside />} />
+        <Route path="/about" element={<Welcome />} />
+        <Route path="/contact" element={<ContactUS />} />
+        <Route path="/products" element={<ProductMain />} />
+        <Route path="/products/mortoise" element={<Product1 />} />
+        <Route path="/products/aldrop" element={<Product2 />} />
+        <Route path="/products/pullhandles" element={<Product3 />} />
+        <Route path="/products/maindoor" element={<Product4 />} />
+        <Route path="/products/locks&latches" element={<Product6 />} />
+        <Route path="/products/hinges" element={<Product5 />} />
+        <Route path="/products/furniturelock" element={<Product8 />} />
+        <Route path="/products/decoratives" element={<Product7 />} />
+        <Route path="/products/doorAccessories" element={<Product9 />} />
+        {/* <Footer />  */}
+      </Routes>
     </div>
   );
 }
